@@ -1,0 +1,11 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+
+<f:for each="{offers}" as="offer" iteration="objIterator">
+	<h4>
+		<f:format.printf arguments="{0: objIterator.cycle, 1: offer.votes}"><f:translate key="offer.results.votes"/></f:format.printf>
+	</h4>
+	<f:render partial="OfferEntry" arguments="{offer : offer, returnAction : 'sortedOffers', actSorting: FALSE, rights : rights }"/>
+</f:for>
+</f:section>	

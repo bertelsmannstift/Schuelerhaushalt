@@ -1,0 +1,58 @@
+<style>
+	.tpm-title-cell {display: none;}
+	.sideContent{
+		background: none repeat scroll 0 0 #F5F6DB;
+		border-left: 1px solid #3FA535;
+		border-right: 1px solid #3FA535;
+	}
+	#templavoilabackend th{
+		background-color: #5B5B5B;
+		background-image: -moz-linear-gradient(center top , #7F7F7F 10%, #5B5B5B 100%);
+		background-repeat: repeat-x;
+		color: #FFFFFF;
+		font-size: 10px;
+		height: 20px;
+		line-height: 19px;
+		padding: 2px 5px;
+	}
+	#templavoilabackend table{
+		border-collapse: collapse;
+	}
+	
+	#templavoilabackend .tpm-content-cell{
+		border-left: none;
+	}
+	.tpm-preview{
+		padding: 0px;
+	}
+	.tpm-sub-elements{
+		border-bottom: 1px solid #CACACA;
+		border-left: 1px solid #CACACA;
+		border-right: none;
+	}
+	
+</style>
+<div id="templavoilabackend">
+	<table width="100%">
+		<tr>
+			<th>
+				Hauptinhalt
+			</th>
+			<th>
+				Marginalspalte
+			</th>
+		</tr>
+		<tr>
+			<td rowspan="3" width="65%">###field_maincontent###</td>
+			<td class="sideContent" width="35%">###field_sidebar_content_top###</td>
+		</tr>
+		<tr>
+			<td class="sideContent">
+				<img src="/fileadmin/templates/img/login.jpg" alt="login"/>
+			</td>
+		</tr>
+		<tr>
+			<td class="sideContent">###field_sidecontent###</td>
+		</tr>
+	</table>
+</div>

@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Template file for the&quot;macina_searchbox&quot;extension.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head>
+<body>
+<h3>Template file for the &quot;macina_searchbox&quot; extension.</h3>
+<p><b>Available Markers:</b></p>
+<ul>
+  <li>###HEADLINE### Displays the Headline</li>
+  <li>###ADVANCED### Advanced Search Link</li>
+  <li>###SUBMIT### Alttext for the submit button</li>
+  <li>###ACTLANG### UID of the actual language</li>
+  <li>###SEARCHPID### PID of the Searchpage</li>
+</ul>
+<!-- ###TEMPLATE### begin -->
+<form id="searchform" action="###SEARCHPID###" method="post" name="searchform" onsubmit="if (document.getElementById('searchinput').value == 'Suchbegriff') return false;">
+    <input type="text" value="Suchbegriff" onfocus="if (this.value != 'Suchbegriff') this.select(); else this.value='';" onblur="if (this.value == '') this.value='Suchbegriff';" class="searchInput" name="tx_indexedsearch[sword]" id="sword">
+	<input type="submit" value="" id="submit">
+    <input type="hidden" name="tx_indexedsearch[_sections]" value="0" />
+    <input type="hidden" name="tx_indexedsearch[pointer]" value="0" />
+    <input type="hidden" name="tx_indexedsearch[ext]" value="0" />
+    <input type="hidden" name="tx_indexedsearch[lang]" value="###ACTLANG###" />
+</form>
+<!-- ###TEMPLATE### end -->
+</body>
+</html>                   

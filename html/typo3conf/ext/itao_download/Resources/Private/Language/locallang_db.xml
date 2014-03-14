@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'itao_download'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_itaodownload_domain_model_download">Download</label>
+			<label index="tx_itaodownload_domain_model_download.title">Title</label>
+			<label index="tx_itaodownload_domain_model_download.file">File</label>
+			<label index="tx_itaodownload_domain_model_download.short_description">Short Description</label>
+			<label index="tx_itaodownload_domain_model_download.long_description">Long Description</label>
+			<label index="tx_itaodownload_domain_model_download.category">Category</label>
+			<label index="tx_itaodownload_domain_model_category">Category</label>
+			<label index="tx_itaodownload_domain_model_category.title">Title</label>
+			<label index="tx_itaodownload_domain_model_category.decription">Decription</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="tx_itaodownload_domain_model_download">Download</label>
+			<label index="tx_itaodownload_domain_model_download.title">Titel</label>
+			<label index="tx_itaodownload_domain_model_download.file">Datei</label>
+			<label index="tx_itaodownload_domain_model_download.short_description">Kurzbeschreibung</label>
+			<label index="tx_itaodownload_domain_model_download.long_description">Beschreibung</label>
+			<label index="tx_itaodownload_domain_model_download.category">Kategorie</label>
+			<label index="tx_itaodownload_domain_model_category">Kategorie</label>
+			<label index="tx_itaodownload_domain_model_category.title">Titel</label>
+			<label index="tx_itaodownload_domain_model_category.decription">Beschreibung</label>
+		</languageKey>
+	</data>
+</T3locallang>

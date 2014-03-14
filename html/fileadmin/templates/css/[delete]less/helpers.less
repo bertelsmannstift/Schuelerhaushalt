@@ -1,0 +1,42 @@
+//creates a simple vertical gradient with two colors 
+.simpleVGradient(@color1 , @color2,@offset1:0%, @offset2:100%) {
+	/* Old browsers */
+	background: @color1; 
+	/* FF3.6+ */
+	background: -moz-linear-gradient(top,  @color1 @offset1, @color2 @offset2);
+	 /* Chrome,Safari4+ */ 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(@offset1,@color1), color-stop(@offset2,@color2));
+	/* Chrome10+,Safari5.1+ */
+	background: -webkit-linear-gradient(top, @color1 @offset1,@color2 @offset2); 
+	/* Opera 11.10+ */
+	background: -o-linear-gradient(top, @color2 @offset1,@color2 @offset2); 
+	/* IE10+ */
+	background: -ms-linear-gradient(top, @color1 @offset1, @color2 @offset2); 
+	/* W3C */
+	background: linear-gradient(to bottom, @color1 @offset1, @color2 @offset2); 
+}
+
+//creates a simple horizontal gradient with two colors
+.simpleHGradient(@color1, @color2,@offset1,@offset2) {
+	/* Old browsers */
+	background: @color1;
+	/* FF3.6+ */
+	background: -moz-linear-gradient(left, @color1 @offset1, @color2 @offset2); 
+	/* Chrome,Safari4+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(@offset1,@color1), color-stop(@offset2,@color2)); 
+	/* Chrome10+,Safari5.1+ */
+	background: -webkit-linear-gradient(left,  @color1 @offset1,@color2 @offset2); 
+	/* Opera 11.10+ */
+	background: -o-linear-gradient(left, @color2 @offset1,@color2 @offset2); 
+	/* IE10+ */
+	background: -ms-linear-gradient(left,  @color1 @offset1, @color2 @offset2); 
+	/* W3C */
+	background: linear-gradient(to right, @color1 @offset1, @color2 @offset2); 
+}
+
+.padding-box {
+	box-sizing: padding-box;
+	-moz-box-sizing: padding-box;
+	-webkit-box-sizing: padding-box;
+}
+

@@ -1,0 +1,12 @@
+<f:form id="filterOffers" name="filter" method="get">
+	<f:form.hidden id="schoolFilter" name="filter[school]" value="{filter.school}"/>
+	<f:form.hidden id="orderings" name="orderings" value="{orderings}"/>
+	<f:form.hidden id="additionalFilter" name="filter[additional]" value="{filter.additional}"/>
+	
+	<f:form.hidden id="actTab" name="actTab" value="{actTab}"/>
+	
+	<f:if condition="{markAsEdited}">
+		<f:form.hidden id="markAsEdited_mark" name="markAsEdited[mark]" value="0"/>
+		<f:form.hidden id="markAsEdited_offer" name="markAsEdited[offer]" value="0"/>
+	</f:if>
+</f:form>

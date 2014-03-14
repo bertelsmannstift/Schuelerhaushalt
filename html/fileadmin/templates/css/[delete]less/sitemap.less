@@ -1,0 +1,31 @@
+.sitemap {
+	& ul {
+		margin: 0;
+		padding-left: 0px;
+		& li {
+			display: block;
+			
+		}
+		&.level-1  {
+			& > li > a{
+				color: @darkGreen;	
+			}
+		}
+		&.level-2  {
+			margin-left: 1em;
+			&  li {
+				background: url(../img/sitemap_divider.png) no-repeat left 5px transparent;
+				padding-left: 20px;
+			}
+			& > li > a {
+				color: @baseColor;
+			}
+		}
+		&.level-3  {
+			margin-left: 1em;
+			&  > li> a {
+				color: @sitemapGrey;
+			}
+		}
+	}
+}

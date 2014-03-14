@@ -1,0 +1,105 @@
+<div class="meta offerNumber">
+	<f:translate key="offer.show.number"/>: {offer.internalId}
+</div>
+<h1>{offer.title}</h1>
+<p class="offerDescription">
+	<f:format.nl2br>{offer.description}</f:format.nl2br>
+</p>
+<f:if condition="{offer.images}">
+	<div class="offerImages">
+		<f:for each="{offer.images}" as="image">
+			<div class="OfferImage">
+				<f:image src="uploads/tx_itaoshhoffers/{image}" maxHeight="200" maxWidth="300" alt="{offer.title}" title="{offer.title}"/>
+			</div>
+		</f:for>
+	</div>	
+</f:if>
+<f:if condition="{ 0: offer.costs, 1: offer.costsHelp }">
+	<f:then>
+		<div class="costs">
+			<span class="print"><f:translate key="offer.show.print.costs"/></span>
+			<span class="printHide"><f:translate key="offer.show.costs"/></span>
+			<f:if condition="{offer.costsFixed}">
+				<f:then>
+					<span>{offer.costsFixed}&euro;</span>
+				</f:then>
+				<f:else>
+					<f:if condition="{offer.costs}">
+						<f:then>
+							<span>{offer.costs}&euro;</span>
+						</f:then>
+						<f:else>
+							<em><f:translate key="offer.show.edit.noCosts"/></em>
+						</f:else>
+					</f:if>
+				</f:else>
+			</f:if>
+		</div>
+	</f:then>		
+</f:if>
+
+<f:if condition="{offer.comments}">
+	<f:then>
+		<f:for each="{offer.comments}" as="comment">
+			<div class="commentEntry">
+				<p>
+					<strong><f:translate key="show.comment.heading"/>:</strong> <f:format.nl2br>{comment.text}</f:format.nl2br>
+				</p>
+			</div>
+		</f:for>
+	</f:then>
+</f:if>
+
+<f:if condition="{rights.showStudents}">
+	<div class="ideas">
+		<h3><f:translate key="show.ideas.heading" /></h3>
+		<ul class="studentList">
+			<li>
+				<span class="name">
+					<strong><f:translate key="print.label.idea.name"/></strong>
+				</span>
+				<span class="class">
+					<strong><f:translate key="print.label.idea.class"/></strong>
+				</span>
+			</li>
+			<f:for each="{offer.ideaFrom}" as="idea">
+				<li>
+					<span class="name">
+						{idea.name}
+					</span>
+					<span class="class">
+						{idea.class}
+					</span> 
+				</li>
+			</f:for>
+		</ul>	
+	</div>
+	<f:if condition="{offer.promotedFrom}">
+		<div class="promoter">
+			<h3 class="promoterHeading">
+				<f:translate key="show.promoter.heading" />
+			</h3>
+
+			<ul class="studentList">
+				<li>
+					<span class="name">
+						<strong><f:translate key="print.label.promoter.name"/></strong>
+					</span>
+					<span class="class">
+						<strong><f:translate key="print.label.promoter.class"/></strong>
+					</span>
+				</li>
+				<f:for each="{offer.promotedFrom}" as="promoter">
+					<li>
+						<span class="name">
+							{promoter.name}
+						</span>
+						<span class="promoterClass">
+							{promoter.class}
+						</span>
+					</li>
+				</f:for>
+			</ul>	
+		</div>
+	</f:if>	
+</f:if>	

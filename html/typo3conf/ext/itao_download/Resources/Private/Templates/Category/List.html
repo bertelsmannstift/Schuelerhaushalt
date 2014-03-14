@@ -1,0 +1,42 @@
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+
+If you modify this template, do not forget to change the overwrite settings 
+in /Configuration/Kickstarter/settings.yaml:
+  Resources:
+    Private: 
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the kickstarter
+
+<f:section name="main">
+
+<f:flashMessages />
+
+<f:if condition="{categories}">
+	<f:then>
+		<div class="test">
+			<f:for each="{categories}" as="category">
+				<h3>{category.title}</h3>
+				<f:if condition="{category.data}">
+					<f:then>
+						<f:for each="{category.data}" as="download">
+							<div class="download-list-box">
+								<div class="download-list-element {download.filetype}">
+									<f:link.external uri="{url}{download.downloadLinkPath}{download.file}" additionalAttributes="{title:'Download {download.title}.{download.fileType}'}">{download.title}<span class="hidden">Download {download.title}.{download.fileType}</span></f:link.external>
+									<span>{download.filesize}</span>
+									<div class="download-list-element-description">{download.shortDescription}</div>
+								</div>
+							</div>
+						</f:for>
+					</f:then>
+				</f:if>
+			</f:for>
+		</div>
+	</f:then>
+</f:if>
+
+</f:section>

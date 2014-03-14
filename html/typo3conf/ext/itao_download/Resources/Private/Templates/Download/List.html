@@ -1,0 +1,98 @@
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+
+If you modify this template, do not forget to change the overwrite settings 
+in /Configuration/Kickstarter/settings.yaml:
+  Resources:
+    Private: 
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the kickstarter
+
+<f:section name="main">
+
+<f:flashMessages />
+	
+	<f:if condition="{download-list}">
+		<!-- list view -->
+		<f:then>
+			<div class="sideBox">
+				<header>
+				<div class="headerLeft">&nbsp;</div>
+						<div class="headerContent download"><div class="sideBoxIcon">&nbsp;</div><f:if condition="{boxTitle}"><f:then><h4>{boxTitle}</h4></f:then></f:if></div>
+							<div class="download-list">
+								<ul>
+									<f:for each="{download-list}" as="download">
+										<li class="{download.filetype}">
+											<!-- edited by Steffen Frosch, because markup was not valid -->
+											<div class="download-list-category">{download.categoryTitles}</div>
+											<f:link.external uri="{url}{download.downloadLinkPath}{download.file}">
+												<f:if condition="{linkText}">
+													<f:then>{linkText}</f:then>
+													<f:else>{download.title}</f:else>
+												</f:if>
+												<span class="filesize">({download.filesize})</span>
+											</f:link.external>
+												<f:if condition="{download.shortDescription}">
+													<f:then>
+														<span class="shortDescription">{download.shortDescription}</span>
+													</f:then>
+												</f:if>
+											</li>
+									</f:for>
+								</ul>
+							</div>
+				<div class="headerRight">&nbsp;</div>
+				</header>
+			</div>
+		</f:then>
+	</f:if>
+	<f:if condition="{download-box}">
+		<!-- box view -->
+		<f:then>
+			<div class="sideBox">
+				<header>
+				<div class="headerLeft">&nbsp;</div>
+				<div class="headerContent download"><div class="sideBoxIcon">&nbsp;</div><f:if condition="{boxTitle}"><f:then><h4>{boxTitle}</h4></f:then></f:if></div>
+				<div class="headerRight">&nbsp;</div>	
+				</header>
+				<div class="boxBody download-list">
+					<f:if condition="{boxText}"><f:then><f:format.html>{boxText}</f:format.html></f:then></f:if>
+					<ul>
+						<f:for each="{download-box}" as="download">
+							<f:if condition="{boxTitle}">
+								<f:then>
+									<li class="{download.filetype}">
+								</f:then>
+								<f:else>
+									<li class="{download.filetype}">
+								</f:else>
+							</f:if>
+								<f:link.external uri="{url}{download.downloadLinkPath}{download.file}" additionalAttributes="{title:'Download {download.title}.{download.fileType}'}">
+									<f:if condition="{linkText}">
+										<f:then>{linkText}</f:then>
+										<f:else>{download.title}</f:else>
+									</f:if>
+									<span class="hidden">Download {download.title}.{download.fileType}</span></f:link.external>
+								<f:if condition="{boxText}">
+									<f:then></f:then>
+									<f:else><span class="shortDescription">{download.shortDescription}</span></f:else>
+								</f:if>
+								<f:if condition="{boxTitle}">
+									<f:then></f:then>
+									<f:else>
+										<span class="filesize">({download.filesize})</span>
+									</f:else>
+								</f:if>
+							</li>
+						</f:for>
+					</ul>
+				</div>
+			</div>
+		</f:then>
+	</f:if>
+	
+</f:section>

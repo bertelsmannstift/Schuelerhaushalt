@@ -1,0 +1,108 @@
+	0.2.19	- added possibility to configure the layout per filetype (thx. to Reinhard Handler)	
+	
+	0.2.18	- #6643 fixed
+
+	0.2.17	- ereg_replace replaced by preg_replace
+
+	0.2.16	- New parameter added to hook "getFileUrl"(due to the new dam_filelinks functionality linkProc.jumpurl.damSecure).
+
+	0.2.15	- layout.decimalPoint added
+
+	0.2.14	- Bug repaired by getIcon hookfunction
+
+	0.2.13	- Bug repaired by(linkProc.iconCObject.makeThumbs=1)(thx. to Robert Lockerbie for patch)
+
+	0.2.12	- “title.trimExt” added.
+	
+	0.2.11	- “Path to file icons” added
+	
+	0.2.10	- bug repaired (thx. to Peter Bachmann for hint)
+	
+	0.2.9	- bug #3796 repaired (thx. to Jan-Claas Dirks)
+
+	0.2.8	- classes.ext.prefixIfFirstNumber added
+			- bug repaired by XCLASS definition
+	
+	0.2.7	- iconCObject.makeThumbs has now stdWrap properties
+	
+	0.2.6	- Changes by "Read from path" typoscript and php to allow all "stdWrap.filelist" parameters
+
+	0.2.5	- Because the CSS Multimedia change the media field to DAM reference field if DAM is installed the CSS Filelinks did not work correct, this problem is now solved
+	
+	0.2.4	- "Read from path" field added	
+
+	0.2.3	- just some changes in manual
+
+	0.2.2	- css updated: try to find icons on 2 places: t3lib/gfx/ and typo3/gfx/	
+
+	0.2.1	- bug repaired thx. to Pieter for hint	
+
+	0.2.0	- all dam stuff is removed from css_filelinks and dam_filelinks use now hooks
+
+	0.1.8	- bug repaired
+
+	0.1.7	- try to find the default icon configuration on 2 places: t3lib/gfx/ and typo3/gfx/
+
+	0.1.6	- bug repaired by jumpurl.secure (thx. to Herbert Roider)
+			- alternativeIconPath added (thx. to Alex Widschwendter for patch)
+			- manual changed
+
+	0.1.5	- manual changed
+	
+	0.1.4	- hooks to every function added for better extending
+			- ###FILENAME### placeholder added
+			- description_ifElementEmpty property added
+			- manual changed
+
+	0.1.3	- stdWrap properties for: layout.global, layout.file, layout.filesize.layout
+
+	0.1.2	- bug repaired (thx. to Daniel Costas)
+
+	0.1.1	- properties linkProc.target, linkProc.jumpurl, linkProc.jumpurl.secure and linkProc.removePrependedNumbers added
+			- added marker ###TARGET###
+			- added marker ###ICON###
+			- manual changes
+			
+	0.1.0	- manual changes
+			- if file don't exist on disk it will not appear on frontend
+			- icon added
+
+	0.0.11	- page TSconfig added
+			- css changes
+			- default layout changes
+			- manual changes
+			
+	0.0.10	- description.field property added
+			- manual changes
+
+	0.0.9	- Better Dam integration
+			- manual changes
+
+	0.0.8	- PHP changes
+			- better PHP comments
+
+	0.0.7	- New default CSS
+			- New default file and global layout
+			- Edit icon for frontend editing added
+			- added property layout.hideNotProcessedMarkers
+			- added layout.userMarkers.dam
+
+	0.0.6	- added markerData.fileCount and markerData.fileLayout to layout.userMarker.file
+			- added ###FILEEXT###, ###ADDITIONALCLASS###, ###FIRSTLASTODDEVEN###
+			- added classes.addFirst=1, classes.addLast=1, classes.addOdd=1, classes.addEven=1
+			- manual changes
+			
+	0.0.5	- manual changes
+			- userdefined markers
+
+	0.0.4	- manual changes
+			- bug repair
+			
+	0.0.3	- manual changes
+
+	0.0.2	- layout.Filesize.format=auto added
+
+	0.0.1	- first release
+
+
+	* Initial release

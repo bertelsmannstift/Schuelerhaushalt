@@ -1,0 +1,29 @@
+<f:form id="schools" enctype="multipart/form-data" name="schools" method="get">
+	<select onchange="setFilter('schoolFilter', jQuery(this).val()); return false;" id="schoolDropdown" name="tx_itaoshhoffers_offers[school]">
+		<option value="">
+			<em><f:translate key="school.select.choose" /></em>
+		</option>
+		<f:if condition="{ 0: actSchool } == { 0: 'ALL'}">
+			<f:then>
+				<option value="ALL" selected>
+			</f:then>
+			<f:else>
+				<option value="ALL">
+			</f:else>
+		</f:if>	
+			<f:translate key="offer.allOffers.heading"/>
+		</option>
+		<f:for each="{schools}" as="school">
+			<f:if condition="{ 0: school.uid } == { 0: actSchool}">
+				<f:then>
+					<option value="{school.uid}" selected>
+				</f:then>
+				<f:else>
+					<option value="{school.uid}">
+				</f:else>
+			</f:if>
+				{school.title} 
+			</option>
+		</f:for>
+	</select>
+</f:form>

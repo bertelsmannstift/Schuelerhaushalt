@@ -1,0 +1,1169 @@
+/************************************* Kundendetails neu***********************************************************************/
+
+
+table.typo3-dyntabmenu td.tab A:hover  {background-color:#eeeeee;border-color:#adadad;color:#606060;}
+table.typo3-dyntabmenu td.tab A, table.typo3-dyntabmenu td.tabact A {padding-left:25px; padding-right:25px; }
+div.typo3-dyntabmenu-divs {background-color:#ffffff;background-image:none;}
+.c-tablayer {overflow:hidden;}
+
+.maps_link A {text-decoration:underline; color:#095495;}
+
+.back_to_overview {font-weight:bold;color: #ffffff; background: url("images/view-go-back.png") no-repeat scroll 5px -1px transparent; padding-left: 24px;padding-top:1px;}
+
+
+/************************************ Status & Stammdaten *********************************************************/
+.dt_stammdaten_all {width:100%; padding-top:8px;}
+.dt_stammdaten_all_1 {width:5px;  float:left;}
+.dt_stammdaten_all_2 {width:63%;float:left; }
+.dt_stammdaten_all_3 {width:2%;float:left;}
+.dt_stammdaten_all_4 {width:32%;float:left;}
+.dt_stammdaten_all_5 {width:2%;float:left;}
+
+
+.sidebox { margin-bottom:10px; margin-top: 10px;}
+.sidebox H3 {/*border-bottom: 1px solid #dddddd;*/ line-height:25px; cursor:pointer; float:left; clear:both; margin-bottom:0;}
+.edit.kunde { float:right; width:80px;line-height: 25px; padding-top:10px;}
+.boxheader {border-bottom: 1px solid #dddddd; width:100%; overflow:hidden;margin-bottom:10px;}
+
+.sidebox H3 .edit {font-size:11px; float:right; font-weight:normal;}
+.sidebox H3 .edit A { color: #095495;}
+.sidebox H3.boxauf, .contentbox.status H3.boxauf  {background: url("images/module-menu-down.png") no-repeat scroll 5px 12px transparent; padding-left: 20px;padding-top:1px;}
+.sidebox H3.boxzu , .contentbox.status H3.boxzu {background: url("images/module-menu-right.png") no-repeat scroll 5px 10px transparent; padding-left: 20px;padding-top:1px;}
+.sidebox .content_zu {display:none;}
+.sidebox .content_auf {display:block; padding:7px;}
+
+
+.dt_stammdaten_all_4 .ansprechperson {background: url("images/eval/ansprechpartner.png") no-repeat scroll 0px 0px transparent; padding-left: 25px;padding-top:1px; margin-bottom:5px;}
+.dt_stammdaten_all_4 .email {background: url("images/eval/mail.png") no-repeat scroll 0px 1px transparent; padding-left: 25px;padding-top:1px;margin-bottom:5px; text-decoration:underline;}
+.dt_stammdaten_all_4 .unt_tel {background: url("images/tel1.png") no-repeat scroll 0px 1px transparent; padding-left: 25px;padding-top:1px;margin-bottom:5px;}
+
+.dt_stammdaten_all_4 .mitarbeiter {background: url("images/eval/mitarbeiter.png") no-repeat scroll 0px 0px transparent; padding-left: 25px;padding-top:1px;margin-bottom:10px;}
+.dt_stammdaten_all_4 .boss {background: url("images/eval/geschaeftsfuehrer.png") no-repeat scroll 0px 0px transparent; padding-left: 25px;padding-top:1px;margin-bottom:10px;}
+.dt_stammdaten_all_4 .www {background: url("images/eval/www.png") no-repeat scroll 0px 0px transparent; padding-left: 25px;padding-top:1px;margin-bottom:10px; text-decoration:underline;}
+.dt_stammdaten_all_4 .address {background: url("images/eval/adresse.png") no-repeat scroll 0px 3px transparent; padding-left: 25px;padding-top:1px;margin-bottom:10px;}
+.dt_stammdaten_all_4 .bemerkung {background: url("images/eval/bemerkung.png") no-repeat scroll 0px 0px transparent; padding-left: 25px;padding-top:1px;margin-bottom:10px;}
+.dt_stammdaten_all_4 .export {background: url("images/eval/export.png") no-repeat scroll 0px 5px transparent; padding-left: 25px;padding-top:1px;margin-bottom:10px;}
+.dt_stammdaten_all_4 .termin {background: url("images/eval/termine.png") no-repeat scroll 0px 2px transparent; padding-left: 25px;padding-top:1px;margin-bottom:10px;line-height: 20px;}
+.verlauf5 {background: url("images/eval/verlauf.png") no-repeat scroll 0px 0px transparent; padding-left: 25px;padding-top:1px;margin-bottom:10px;}
+.dt_stammdaten_all_4 .terminliste {margin-left:25px;}
+ 
+/*.dt_stammdaten_all_4 .edit.kunde {background: url("images/edit.png") no-repeat scroll 3px 15px transparent; padding-left: 25px;	}*/
+
+
+.sidebox.emails UL.mailoverview LI.mail_1 {background: url("images/eval/mail-send.png") no-repeat scroll 0px 3px transparent; padding-left: 25px;padding-top:0px;line-height: 20px;}
+.sidebox.emails .allmails {margin-left:25px;}
+
+
+.sidebox.downloads UL.mailoverview LI.dl_list {background: url("images/word.png") no-repeat scroll 0px 3px transparent; padding-left: 21px;padding-top:0px;line-height: 20px;}
+.sidebox.downloads UL.mailoverview LI.dl_list.ppt {background: url("images/ppt.png") no-repeat scroll 0px 3px transparent; padding-left: 21px;padding-top:0px;line-height: 20px;}
+
+
+
+/* Content-boxen:*/
+.contentbox {border:1px solid #cccccc; margin-bottom:10px;}
+.contentbox .header {background-color:#dddddd; padding:5px;}
+.contentbox .boxcontent {background-color:#f6f6f6;/*padding:5px;*/}
+
+.contentbox.datenerhebung .header H3 {background: url("images/copy.png") no-repeat scroll 0px 0px transparent; padding-left: 25px; margin:0; overflow:hidden;}
+.contentbox.zwischenpruefung .header H3 {background: url("images/kustat_5_ev.png") no-repeat scroll 0px 0px transparent; padding-left: 25px; margin:0;}
+.contentbox.zwischenbericht .header H3 {background: url("images/eval/vororttermin.png") no-repeat scroll 0px 0px transparent; padding-left: 25px; margin:0;} /*berichterstellen.png*/
+.contentbox.endbericht .header H3 {background: url("images/eval/berichterstellen.png") no-repeat scroll 0px 0px transparent; padding-left: 25px; margin:0;}
+.contentbox.vorort .header H3 {background: url("images/eval/vororttermin.png") no-repeat scroll 0px 0px transparent; padding-left: 25px; margin:0;}
+.contentbox.endpruefung .header H3 {background: url("images/kustat_7_ev.png") no-repeat scroll 0px 0px transparent; padding-left: 25px; margin:0;}
+.contentbox.zertifizierung .header H3 {background: url("images/medal.png") no-repeat scroll 0px 0px transparent; padding-left: 25px; margin:0;}
+
+
+.contentbox.vorbereitung .header H3 {background: url("images/document-edit-access.png") no-repeat scroll 0px 0px transparent; padding-left: 25px; margin:0;}
+.contentbox.online .header H3 {background: url("images/document-localize.png") no-repeat scroll 0px 0px transparent; padding-left: 25px; margin:0;}
+.contentbox.abstimmung .header H3 {background: url("images/abstimmung.png") no-repeat scroll 0px 0px transparent; padding-left: 25px; margin:0;}
+.contentbox.ergebnis .header H3 {background: url("images/document-view.png") no-repeat scroll 0px 0px transparent; padding-left: 25px; margin:0;}
+
+.contentbox.verwkommune  .header H3 {background: url("images/usergroup.png") no-repeat scroll 0px 0px transparent; padding-left: 25px; margin:0;}
+.contentbox.verwschule  .header H3 {background: url("images/usergroup.png") no-repeat scroll 0px 0px transparent; padding-left: 25px; margin:0;}
+.contentbox.schuelervertretung  .header H3 {background: url("images/usergroup_sc.png") no-repeat scroll 0px 0px transparent; padding-left: 25px; margin:0;}
+.contentbox.schueler  .header H3 {background: url("images/usergroup_sc.png") no-repeat scroll 0px 0px transparent; padding-left: 25px; margin:0;}
+.contentbox.modkommune  .header H3 {background: url("images/usergroup_mod.png") no-repeat scroll 0px 0px transparent; padding-left: 25px; margin:0;}
+.contentbox.modschule  .header H3 {background: url("images/usergroup_mod.png") no-repeat scroll 0px 0px transparent; padding-left: 25px; margin:0;}
+.contentbox.gast  .header H3 {background: url("images/usergroup_gast.png") no-repeat scroll 0px 0px transparent; padding-left: 25px; margin:0;}
+
+/* BE-User*/
+.contentbox.redadminkommune  .header H3 {background: url("images/usergroup.png") no-repeat scroll 0px 0px transparent; padding-left: 25px; margin:0;}
+.contentbox.redadminschule  .header H3 {background: url("images/usergroup.png") no-repeat scroll 0px 0px transparent; padding-left: 25px; margin:0;}
+.contentbox.bemodkommune  .header H3 {background: url("images/usergroup_sc.png") no-repeat scroll 0px 0px transparent; padding-left: 25px; margin:0;}
+.contentbox.bemodschule  .header H3 {background: url("images/usergroup_sc.png") no-repeat scroll 0px 0px transparent; padding-left: 25px; margin:0;}
+
+
+.contentbox .content_zu {display:none;}
+
+.contentbox.inaktivschl {
+	/* IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  /* IE 5-7 */
+  filter: alpha(opacity=50);
+  /* Netscape */
+  -moz-opacity: 0.5;
+  /* Safari 1.x */
+  -khtml-opacity: 0.5;
+  /* Good browsers */
+  opacity: 0.5;	
+  filter: alpha(opacity=50);
+}
+
+
+/*div.typo3-dyntabmenu-tabs, div.typo3-dyntabmenu-divs p.c-descr {margin: 30px 0 0; }*/
+
+
+
+
+.actstateclass_1 {color:#919293;} 
+.actstateclass_2 {color:#0d9e23;} 
+.actstateclass_3 {color:#ff9502;} 
+.actstateclass_4 {color:#d21312;} 
+
+
+.tactstateclass_1 {color:#919293;}
+.tactstateclass_3 {color:#0d9e23;}
+.tactstateclass_2 {color:#ff9502;}
+
+.editContentBox {float:right;background: url("images/edit.png") no-repeat scroll 0px 0px transparent; padding-left: 20px;padding-top:1px;}
+.editContentBox A {color:#095495; font-weight: normal; font-size:11px;}
+
+.infotext {/*float:right;*/background: url("images/eval/information.png") no-repeat scroll 0px 0px transparent; padding-left: 20px;padding-top:1px;}
+
+.colheader {background-color:#dddddd; font-weight:bold;padding:7px;}
+.colbody {padding:7px;}
+
+.box2cols_1 {width: 38%; float:left;/*border-right:1px solid #acadaf;*/}
+.box2cols_2 {width: 61.7%; float:left;border-left:1px solid #acadaf;}
+
+.bodycont .infotext {margin-left:7px;margin-bottom:10px;}
+.infotext_l {background: url("images/eval/information.png") no-repeat scroll 0px 0px transparent; padding-left: 20px;padding-top:1px;margin-top:10px;}
+.notice12 {background-color:#f8f8b9; /*margin-bottom: -5px;    margin-left: -5px;    margin-right: -5px;*/    padding: 5px;border-top:1px solid #acadaf;}
+
+.de_stichtag {padding:7px;}
+.bodycont {overflow:hidden;}
+
+
+.balken_unternehmen {width:140px; height:19px; border:1px solid black;float:left; display:block;}
+.balken_unt_verlauf {height:19px; float:left; }
+
+.balken_unternehmen.small {height:10px;}
+.balken_unt_verlauf.small {height:10px;}
+
+.balken_unternehmen.onechoice {border:none;height:15px;}
+.balken_unt_verlauf.onechoice {height:15px;}
+.balken_anzwerte {padding-left:10px;}
+.tbl_onechoice TD {padding:3px 5px 3px 5px;}
+
+.tbl_onechoice {width:40%;}
+
+#gegenueberst  .tbl_onechoice {width:80%;}
+
+
+UL.untynmatrix {}
+/*UL.untynmatrix*/ .untansw_yes  {background: url("/typo3conf/ext/itao_zfa_datamanager/mod1/images/tick.png") no-repeat scroll 0px 1px transparent; color: #009900; display: block;padding-bottom: 2px;padding-left: 20px;padding-top: 1px;}
+/*UL.untynmatrix*/ .untansw_no {background: url("images/cross-script.png") no-repeat scroll 0px 2px transparent; color: #CC0000; display: block; padding-bottom: 2px; padding-left: 20px; padding-top: 1px;
+    text-decoration: line-through;}
+.grey.no_answ { color:grey; text-decoration:line-through; }
+/*UL.untynmatrix*/ .untansw_nix  {background: url("images/no_answer.png") no-repeat scroll 0px 0px transparent; padding-left: 20px;padding-top:1px;/*margin-top:10px;*/padding-bottom:5px;}
+/*UL.untynmatrix LI.lirow {line-height:18px;}*/
+
+UL.untans_mc {list-style-type: disc; list-style-position: outside; margin-left:20px; /*list-style-type: square; list-style-position: inside;*/}
+.unanswered UL.untans_mc {list-style-type: circle;}
+
+.skala_sel {float:left; border:1px solid #343233; background-color: #666666;padding:3px; margin-left:3px; color:white; font-weight:bold; width:16px; height:16px;text-align:center;}
+.skala_norm {float:left; border:1px solid #cecacb; background-color: #dcdcdc;padding:3px; margin-left:3px;width:16px; height:16px;text-align:center;}
+.skala_vorgabeV {float:left; margin-right:5px; padding-top:4px; margin-left:5px;}
+
+
+
+.row_balken {display:block;overflow:hidden;}
+.balken_unternehmen {margin-right:10px;}
+.anz_fra_unt {font-weight: bold; padding-top: 3px;}
+.anz_fra_unt.weight_nom {font-weight: normal; }
+.ziel_center {margin-left: 40px;}
+.ziel_center .grey, .colbody .grey {color:#999999;}
+.colbody .grey.abst {padding-left:8px;}
+
+.fertig {background: url("images/ok.png") no-repeat scroll 0px 0px transparent; padding-left: 20px;padding-top:3px; color:#17a73c;}
+.nicht_fertig {background: url("images/eval/aufrufezeichen.png") no-repeat scroll 0px 0px transparent; padding-left: 20px;padding-top:3px;/*margin-top:10px;*/ color:#b56007;}
+
+.download {padding-left: 20px;padding-top:1px; line-height: 16px;}
+.download.unternehmer {background: url("images/key_txt.png") no-repeat scroll 0px 0px transparent; }
+.download.mitarbeiter {background: url("images/document-excel-table.png") no-repeat scroll 0px 0px transparent;  }
+.download.mitarbeiterpdf {background: url("images/pdf_icon.png") no-repeat scroll 0px 0px transparent;  }
+.download.mitarbeiterpdf_update {background: url("images/refresh.png") no-repeat scroll 0px 0px transparent;  }
+
+
+.zwpruefung_body {padding:7px;}
+/*
+.zu_bewertung INPUT {
+				background: url("images/eval/bewertung_bg.png") no-repeat scroll 0px 0px transparent; padding-left: 20px;padding-top:2px; cursor: pointer;}
+.zu_bewertung INPUT:hover {	background: url("images/eval/bewertung_bg_hover.png")}	*/			
+.zu_bewertung {float:left; margin-right:50px; margin-top:0px;}
+.bew_fortschr {float:left; margin-right:20px; padding-top: 2px;}
+
+
+.bereichsbewertung table.typo3-dblist TD {padding-right:7px;}
+/*.durchgestr { color:#999999;}*/   /*text-decoration:line-through;*/
+
+
+.act_gen_accounts { background: url("images/mail-open-table.png") no-repeat scroll 0px 0px transparent; padding-left: 20px;padding-top:3px; color:#17a73c;}
+
+
+
+.statusbody {padding:7px;}
+.contentbox.status .header h3 {margin:0px;}
+.contentbox.vertrag .header h3 {margin:0px;}
+.contentbox.rechnung .header h3 {margin:0px;}
+.contentbox.pruefer .header h3 {margin:0px;}
+
+.ev_box_unt {width: 49%; float:left;border:1px solid #acadaf;}
+.ev_box_ma {width: 49%; float:right;border:1px solid #acadaf;}
+.ev_box_unt .colbody, .ev_box_ma .colbody {background-color:#F6F6F6;}
+
+.ev_unternehmen {background: url("images/eval/home.png") no-repeat scroll 0px 0px transparent; padding-left: 20px;padding-top:3px; margin:0px;}
+.ev_mitarbeiter {background: url("images/eval/mitarbeiter.png") no-repeat scroll 0px 0px transparent; padding-left: 20px;padding-top:3px;margin:0px; }
+
+.unt_pflicht_right {text-align:left; }
+.ggueberst  {background: url("images/eval/document-convert.png") no-repeat scroll 0px 5px transparent; padding-left: 20px;padding-top:5px;margin:0px; margin-bottom:9px;padding-bottom: 5px;}
+.ev_copy{background: url("images/copy.png") no-repeat scroll 0px 0px transparent; padding-left: 20px;padding-top:1px;margin:0px; margin-bottom:5px;}
+.einzelans{background: url("images/eval/blue-document-view-thumbnail.png") no-repeat scroll 0px 0px transparent; padding-left: 20px;padding-top:3px;margin:0px;padding-bottom: 7px; }
+.einzelans.print { background: url("images/eval/document-invoice.png") no-repeat scroll 0px 0px transparent; padding-left: 20px;padding-top:3px;margin:0px;padding-bottom: 14px; margin-top: 4px;margin-bottom:1px;}
+
+.frageboegen_overview A {color:#095495; text-decoration:underline;}
+.kunde H3.uppercase.noBorder {border-top:none; text-align:left;}
+
+.kunde TABLE TABLE.typo3-dblist TR.odd {background-color:#F7F7F7;}
+/*.kunde TABLE TABLE.typo3-dblist TR:hover {background-color:#dedede;}*/
+
+
+.bigStarsOld {float: left; height: 16px; overflow: hidden; width: 82px;}
+
+.stars_big_0, .stars_big_1, .stars_big_2, .stars_big_3,.stars_big_4,.stars_big_5, 
+.stars_big_15, .stars_big_25, .stars_big_35,.stars_big_45,.stars_big_05 {
+background: url("images/stars_0.png") no-repeat scroll 0px 0px transparent; padding-left: 0px;padding-top:3px;margin-top:2px; width:82px; float:left;/*margin-left:20px;*/}
+.stars_big_1 {background: url("images/stars_1.png") no-repeat scroll 0px 0px transparent; }
+.stars_big_2 {background: url("images/stars_2.png") no-repeat scroll 0px 0px transparent; }
+.stars_big_3 {background: url("images/stars_3.png") no-repeat scroll 0px 0px transparent; }
+.stars_big_4 {background: url("images/stars_4.png") no-repeat scroll 0px 0px transparent; }
+.stars_big_5 {background: url("images/stars_5.png") no-repeat scroll 0px 0px transparent; }
+
+
+
+.stars_big_g0, .stars_big_g1, .stars_big_g2, .stars_big_g3,.stars_big_g4,.stars_big_g5
+ {background: url("images/stars_g0.png") no-repeat scroll 0px 0px transparent; padding-left: 0px;padding-top:3px;margin-top:2px; width:82px; float:left;height:16px;}
+.stars_big_g1 {background: url("images/stars_g1.png") no-repeat scroll 0px 0px transparent; }
+.stars_big_g2 {background: url("images/stars_g2.png") no-repeat scroll 0px 0px transparent; }
+.stars_big_g3 {background: url("images/stars_g3.png") no-repeat scroll 0px 0px transparent; }
+.stars_big_g4 {background: url("images/stars_g4.png") no-repeat scroll 0px 0px transparent; }
+.stars_big_g5 {background: url("images/stars_g5.png") no-repeat scroll 0px 0px transparent; }
+
+
+
+.stars_none {display:none;}
+.stars_0, .stars_1, .stars_2, .stars_3,.stars_4,.stars_5, 
+.stars_15, .stars_25, .stars_35,.stars_45,.stars_05 {background: url("images/stars_small_0.png") no-repeat scroll 0px 5px transparent; padding-left: 0px;/*padding-top:3px;margin-top:2px;*/ width:45px; float:left;/*margin-left:20px;*/}
+.stars_1 {background: url("images/stars_small_1.png") no-repeat scroll 0px 5px transparent; }
+.stars_2 {background: url("images/stars_small_2.png") no-repeat scroll 0px 5px transparent; }
+.stars_3 {background: url("images/stars_small_3.png") no-repeat scroll 0px 5px transparent; }
+.stars_4 {background: url("images/stars_small_4.png") no-repeat scroll 0px 5px transparent; }
+.stars_5 {background: url("images/stars_small_5.png") no-repeat scroll 0px 5px transparent; }
+
+.stars_05 {background: url("images/stars_small_05.png") no-repeat scroll 0px 5px transparent; }
+.stars_15 {background: url("images/stars_small_15.png") no-repeat scroll 0px 5px transparent; }
+.stars_25 {background: url("images/stars_small_25.png") no-repeat scroll 0px 5px transparent; }
+.stars_35 {background: url("images/stars_small_35.png") no-repeat scroll 0px 5px transparent; }
+.stars_45 {background: url("images/stars_small_45.png") no-repeat scroll 0px 5px transparent; }
+.stars_--- {display:none; }
+
+
+.stars_g0, .stars_g1, .stars_g2, .stars_g3,.stars_g4,.stars_g5, 
+.stars_g15, .stars_g25, .stars_g35,.stars_g45,.stars_g05 {background: url("images/stars_small_g0.png") no-repeat scroll 0px 3px transparent; padding-left: 0px;/*padding-top:3px;margin-top:2px;*/ width:45px; float:left; /*margin-left:20px;*/}
+.stars_g1 {background: url("images/stars_small_g1.png") no-repeat scroll 0px 3px transparent; }
+.stars_g2 {background: url("images/stars_small_g2.png") no-repeat scroll 0px 3px transparent; }
+.stars_g3 {background: url("images/stars_small_g3.png") no-repeat scroll 0px 3px transparent; }
+.stars_g4 {background: url("images/stars_small_g4.png") no-repeat scroll 0px 3px transparent; }
+.stars_g5 {background: url("images/stars_small_g5.png") no-repeat scroll 0px 3px transparent; }
+.stars_g05 {background: url("images/stars_small_g05.png") no-repeat scroll 0px 3px transparent; }
+.stars_g15 {background: url("images/stars_small_g15.png") no-repeat scroll 0px 3px transparent; }
+.stars_g25 {background: url("images/stars_small_g25.png") no-repeat scroll 0px 3px transparent; }
+.stars_g35 {background: url("images/stars_small_g35.png") no-repeat scroll 0px 3px transparent; }
+.stars_g45 {background: url("images/stars_small_g45.png") no-repeat scroll 0px 3px transparent; }
+.rating_value {margin-left:5px;}
+
+
+TABLE.typo3-dblist TR TD.td_center {text-align:center; vertical-align:middle;}
+.divnowrap {white-space: nowrap;}
+.divnowrap.balken {line-height:8px;width:180px;}
+.fixed_w.divnowrap {width: 145px;/*text-align:center;*/}
+/*.bereichstr {height:28px;}*/
+TABLE.typo3-dblist TR.bereichstr TD {padding-top:8px; padding-bottom:8px; vertical-align:middle;}
+TABLE.typo3-dblist TR.gesamtzeile_bew TD {border-top: 2px solid #424348;}
+
+.pruef_overv_ende  { width:98%;}
+.pruef_overv_ende .ev_infotext {float:left; width:60%;margin-right:20px;}
+.pruef_overv_ende .input_stoppen { width:30%;float:left;}
+
+
+.bereichsbewertung {}
+.bereichsbewertung A {color:#095495; text-decoration:underline;}
+
+.bereich_schliessen {}
+.bewDeta_toprow .toprow_left { float:left;}
+
+.bewDeta_toprow .toprow_right { float:right; margin-right:20px;}
+/*.bereichsbewertung .grey {color:#999999;}*/
+
+.bereichsbewertung .even {background-color:#F7F7F7;}
+.bereichsbewertung .even:hover,.bereichsbewertung .odd:hover,.bereichsbewertung .even:notbewertet  {background-color:#dedede;}
+.bereichsbewertung TR:hover  {background-color:#dedede;}
+
+.bereichsbewertung TR.even.unanswered:hover  {background-color:#F7F7F7;}
+
+
+.webwidget_rating_simple{
+    padding: 0px;
+    margin: 0px;
+    float: left;
+}
+.webwidget_rating_simple li{
+    line-height: 0px;
+    width: 16px;
+    height: 16px;
+    padding: 0px;
+    margin: 0px;
+    margin-left: 0px;
+    list-style: none;
+    float: left;
+    cursor: pointer;
+}
+.webwidget_rating_simple li span, .webwidget_rating_simple li span A{
+    width:16px;
+    height:16px;
+    display:block;
+}
+
+
+
+.rating_all { height:16px;overflow:hidden; width:82px; float:left; position:relative; top:1px;}
+				
+.bew_zahl {font-size:14px; font-weight: bold; margin-left:20px; overflow:hidden; float:left;padding-top:2px;}
+.del_bewertung A { margin-left:20px;background: url("images/eval/del_bewertung.png") no-repeat scroll 1px 0px transparent; padding-left: 20px;padding-bottom:5px; margin:0px; text-decoration:none;
+ margin-left:10px;}
+ .del_bewertung {padding-top:2px;}
+ 
+table.typo3-dblist .del_bewertung A, .pruefer_overview table.typo3-dblist ul.inakt_kundenlist li .del_bewertung A, .pruefer_overview table.typo3-dblist ul.akt_kundenlist li .del_bewertung A {
+	text-decoration:none;
+}
+ 
+
+.star1, .star2, .star3, .star4, .star5 {background: url("images/star.png") no-repeat scroll 0px 0px transparent; padding-top:0px;margin:0px;  float:left; }
+.staro1, .staro2, .staro3, .staro4, .staro5 {background: url("images/star-empty1.png") no-repeat scroll 0px 0px transparent; padding-top:0px;margin:0px;  float:left; }
+
+.notbewertet {/*background-color:#fecccb;*/}
+
+
+
+.mafr_ausw_links {width:29%; float:left;overflow:hidden; }
+.mafr_ausw_rechts {width:69%;overflow:hidden; }
+.mafr_ausw_links2 {/*height:100px; */padding:10px;overflow:hidden;} /*border-bottom:1px solid grey;*/
+.mafr_ausw_rechts2 {/*height:100px;*/padding:10px;overflow:hidden;} /*border-bottom:1px solid grey;*/
+.durchgestr { /*font-weight:normal;*/ /*color:#999999;*/} /*text-decoration:line-through;*/
+
+.tbl_skala TD {padding: 3px 5px;}
+.schnitt_aw_title {float:left;margin-right:20px;}
+.schnitt_balken {background-color:#efeeec;z-index:1; border:1px solid black;overflow:hidden;width:100px;float:left;  margin-right:10px;}
+.schnitt_bild {z-index:5;position:relative;width:20px; }
+.zeile_schnitt {overflow:hidden;}
+.bigschnitt {font-size:13px; font-weight:bold;}
+
+
+.statistik_all {border:1px solid #a6a6a6; overflow:hidden; height:29px; width:100px; float:left;margin-right:10px;}
+.stat_saeule_1, .stat_saeule_2, .stat_saeule_3, .stat_saeule_4, .stat_saeule_5  {border:1px solid #ffffff; background-color:#a6a6a6; width:17.6px;float:left;position:relative;}
+
+.einzelausw {float:left;margin-right:47px;}
+
+.balken_unternehmen.onechoice.ynmatrix {margin-bottom:5px;}
+
+.awopt_ynmatrix { float:left;}
+.yn_str_0 {float:right; margin-bottom:5px;}
+.yn_str_1 {float:right;text-align:right; width:100%;}
+.aw_yn_firstrow {background:red;}
+
+.no_vorauswahl_td {padding-top:10px; padding-bottom:10px;}
+
+
+#gegenueber .linke_spalte_ausw{ width:0%; }
+#gegenueber .mafr_ausw_links2 { display:none;}
+
+.linke_spalte_ausw {/*width:25%;*/}
+
+
+.noansw_ma {padding-top:10px;padding-left:5px;}
+
+.h3_right.bn_right {float:right;}
+
+
+
+.dt_stammdaten_all_2 .message-information {background-color:transparent; border: none;}
+.typo3-dyntabmenu-divs .kunde .message-information {background-color:transparent; border: none;}
+
+
+
+
+
+TABLE.navi {border-collapse:collapse;clear: both;}			
+
+TABLE.itao_table TR:hover {background-color: #E3E3E3;}
+TABLE.bereiche_unternehmen TR:hover {background-color: #F4F4F4;}
+						TR.tr_navi {height:25px;font-weight:bold;font-size:12px;}
+						
+						TD.navi_notActive {
+							vertical-align:middle; 
+							border-bottom:1px solid black;
+							width:200px;
+							text-align:center;
+							border-top:1px solid #CDCDCD;
+							border-right:1px solid #CDCDCD; 
+							background-color: #cdcdcd;
+							padding:5px;
+						}
+						td.navi_active {
+							vertical-align:middle; 
+							border-left:1px solid black; 
+							border-top:1px solid black;
+							border-right:1px solid black;
+							width:200px;
+							text-align:center;
+							padding:5px;
+						}
+
+						
+						td.navi_active.long, TD.navi_notActive.long  {width:300px;}
+						
+						TD.navi_spacer {width:5px;border-bottom:1px solid black;}
+						TD.navi_last {width:330px;border-bottom:1px solid black;}
+						
+						TD.nav_content {border-left:1px solid black;border-bottom:1px solid black;border-right:1px solid black;padding-left:10px; width:99%; /*max-width:840px; width:853px;*/}
+						
+						.breadcrumb_subm { padding-bottom:20px; color:#888888; width:100%;}
+						.breadcrumb_subm .bg_sp {  background: none repeat scroll 0 0 #333333; color: #FFFFFF; padding: 2px; width: 99%; display:block; /*width: 873px;*/}
+						.breadcrumb_subm A { color:#888888;}
+						.breadcrumb_subm .bg_sp A {  color:#ffffff;}
+						
+						TABLE.itao_table {border-collapse:collapse;clear: both;}
+						.itao_table TH {background-color:#aaaaaa;font-weight:bold;	border:1px solid black;	font-size:11px;padding-left:5px;padding-right:5px;vertical-align:middle;}	
+						
+						.itao_table.dark TH { background-color:#676767; color:white;}							
+						.itao_table TD {border:1px solid black;padding-left:5px;padding-right:5px;padding-bottom: 2px;height:30px;vertical-align:middle;}
+						.itao_table TR.statusRed {background-color:#fbe0e3;}
+						.itao_table TR.statusGreen {background-color:#bfe0bc;}
+						
+						
+						.itao_table TD.bew_view {text-align:center;}
+						.itao_table TD.bew_title {width: 200px;}
+						.itao_table TD.bew_desc {width: 200px;}
+						.itao_table TD.bew_name {width: 150px;}
+						.itao_table TD.bew_date {width: 80px;text-align:center;}
+						.itao_table TD.bew_status {width: 90px;text-align:center;}
+						.itao_table TD.td_center {text-align:center;}
+						
+						.itao_table TD.bew_annehmen {width: 100px;text-align:center;}
+						
+						/*.filter_oben DIV {float:left;}*/
+						.filter_oben .sortierung {margin-left:45px;}
+						
+						
+						.kunde {padding-right:10px;}
+						.kunde H3 {text-align: center; padding-top:10px; border-top:1px solid #cccccc;}
+						.kunde H3.first {border:none;}
+						
+						TABLE.kuBase {width:100%;}
+						.kuBase TD {padding:2px 10px 2px 10px;}
+						kuBase TD.td_33 {width:33%;}
+						kuBase TD.td_50 {width:50%;}
+						kuBase TD.td_66 {width:66%;}
+						.kuBase TD.kuBaseEdit, .kuBase TD.kuBaseEdit50  {vertical-align:middle; width:33%; border-left:1px solid #cccccc; line-height:20px;}
+						.kuBase TD.kuBaseEdit50  {width:50%;}
+						.kuBase TD.kuBaseEdit.altop, .kuBase TD.kuBaseEdit50.altop  {vertical-align: top;}
+						
+						.terminnotiz {/*margin-left:74px;*/}
+						UL.termineul,  UL.termineul LI{margin-left:0;}
+						
+				.termin_infos {margin-left:100px;}
+				.termine_date {float:left;background: url("images/eval/export.png") no-repeat scroll 5px -1px transparent; padding-left: 24px;padding-top:1px;}
+						.termine_date A {text-decoration:underline;}
+						.kuBase HR {border:none; border-bottom:1px solid #CCCCCC; border-collapse:collapse; height:1px; background-color:#F8F8F8;} /*#DEDEDE*/
+						
+						TABLE.ku_evaluation {width:100%;}
+						TABLE.ku_evaluation TR {border-bottom:1px solid #DEDEDE;}
+						TABLE.ku_evaluation TH {font-weight:bold; width:49%; text-align:center;height:30px; vertical-align:middle; background-color:#E3E3E3;}
+						TABLE.ku_evaluation .th_right {border-left:1px solid #DEDEDE;}
+						TABLE.ku_evaluation TD {padding: 5px;}
+						TABLE.ku_evaluation TR TABLE TR {border:none;}
+						.bereiche_unternehmen {border:1px solid #CDCDCD;border-collapse: collapse;}
+						TABLE.ku_evaluation .bereiche_unternehmen TH {background-color:#F0F0F0; padding:2px;border-bottom:1px solid #CDCDCD;}
+						.bereiche_unternehmen TR{border-bottom:1px solid #CDCDCD;}						
+						.bereiche_unternehmen TD {border-bottom:1px solid #CDCDCD;}
+						.bereiche_unternehmen .td_center {text-align:center;}
+						
+						/* Evaluation - Bereichsdetails*/
+						.bereichsnavi {color:#aaa8a8;}
+						 .bn_left, .bn_left A {color:grey;}
+						.bereichsnavi .bn_right {float:right;}
+						
+						.bn_selectBereich {float:right;clear:both;text-align: right; /*width: 99%;color:grey;*/}
+						
+						
+						TABLE.eval_eb2 TD {padding:3px;}
+						TABLE.eval_eb2 TD.ev_eb2_right {vertical-align:middle;border-left: 1px solid #CCCCCC; padding-left:10px;}
+						TABLE.eval_eb2 TD.ev_eb2_right.top {vertical-align:top;}
+						
+						TABLE.unternehmer_antworten {width:100%; border-collapse:collapse;}
+						TABLE.unternehmer_antworten TD, TABLE.unternehmer_antworten TH {padding:3px;border:1px solid grey;}
+						TABLE.unternehmer_antworten TH {background-color:#E3E3E3;}
+						
+						
+						TABLE.inline_table_maDetails TH {background-color:#f8f8f8;}
+						
+						
+						.kunde .kuBase H3 {text-align: center; padding-top:1px; border-top:none;}
+						.termine_overdue,  .termine_overdue UL LI {color:#d0263a;}
+						.termine_overdue UL LI {vertical-align:middle;}
+						.termine_overdue A {color:#d0263a;}
+						UL.verlaufsprotokoll {list-style-type: square; list-style-position:inside; margin-left:10px;}
+						
+						.state_termin {font-weight:normal; color:#888888;}
+						
+						
+						SELECT.bereiche_select {max-width: 440px;/*width:380px;*/  float:left;margin-right:15px; font-size:15px;} /* color:grey;*/
+						
+						SELECT.bereiche_select.long {max-width: 440px;/*width:280px;*/}
+						.points_selected {color:red;font-weight:bold; line-height: 20px; margin-top:10px;border:1px solid red; background-color:#FBDBDB;height:10px;padding:1px;}
+						
+						.display_none {display:none;}
+						.display_normal {display:block;}
+						
+			/*************** NEW MAIL*************************/	
+			
+			.newMailCl INPUT.eing {width:450px;line-height:1.5em; height:18px;}
+			.newMailCl TEXTAREA {width:450px;}
+			.newMailCl TD {padding:10px;}
+			.mail_best {color:red; font-weight:bold;}
+					
+						
+/*********************************** Fragebogenverwaltung ***************************/						
+	TABLE.navi.long {width:98%/*880px*/; overflow:auto; }
+	TABLE.fbBereich {margin-right:10px; width:98%;}
+	TABLE.navi.long TD.blindnav {border-bottom:1px solid black;}
+	
+	TABLE.fbBereich {border-collapse:collapse;/*clear: both;*/}
+	.fbBereich TH {background-color:#676767; color:white; height:30px;font-weight:bold;	border:1px solid black;	font-size:11px;padding-left:5px;padding-right:5px;vertical-align:middle;}								
+	.fbBereich TD {border:1px solid black;padding-left:5px;padding-right:5px;height:30px;vertical-align:middle;}
+	
+	.th_editicons {width:20px; text-align:center;}
+	.frage {width:300px;}
+	TD.align_center {text-align:center;}
+	
+	TABLE.ku_evaluation .bereiche_unternehmen TH {text-align:left;}
+	
+	
+	
+	.pagenav {padding-right:45px;}
+	.pagenav SPAN.pb_nav {margin-left:0px;}
+	.pagenav A, div#body_content .pagenav A {color:black;}
+	.pagenav SPAN {color:black;margin-left:20px;}
+	.pagenav SPAN.active A, div#body_content .pagenav SPAN.active A {color:black; font-weight: bold; text-decoration: underline;}
+	
+	
+	table.navi.long TR {border-right:1px solid black;}
+	table.navi.long TR.tr_navi {border-right:0px;}
+	
+/*********** wegen Scrollbalken, der sich nicht bewegen lässt: **********************/
+/*div#typo3-inner-docbody {overflow:scroll;}	*/
+
+/*div#typo3-docbody {width:99%; overflow:scroll;}*/
+/*BODY {overflow:auto;}*/
+/*table.navi.long {overflow:scroll;}*/
+h3.uppercase{/*width:99%; */}
+
+
+
+
+/*************************************************** NEU FÜR MOD1 - Unternehmensübersicht **************************************************************/
+.myRed {color:#d0263a; /*font-weight: bold;*/}
+.myRed.mytodo {background: url("images/slash.png") no-repeat scroll 5px -1px transparent; padding-left: 24px;padding-top:1px;}
+.rg_vt_state_1 {color: #81818c; background: url("images/mail-send.png") no-repeat scroll 5px -1px transparent; padding-left: 24px;padding-top:1px;}
+.rg_vt_state_2 {color: #39a524;background: url("images/tick-circle.png") no-repeat scroll 5px -1px transparent; padding-left: 24px;padding-top:1px;}
+
+
+.listgrey, table.typo3-dblist tr.db_list_normal TD.listgrey {color:#988998;}
+table.typo3-dblist tr.db_list_normal.even, table.typo3-dblist tr.db_list_normal.even TD {background-color:#F7F7F7;}
+table.typo3-dblist tr.db_list_normal.odd, table.typo3-dblist tr.db_list_normal.odd TD {background-color:#ffffff;}
+table.typo3-dblist tr.db_list_normal.state_3, table.typo3-dblist tr.db_list_normal.state_3 TD {background-color:#edd9d9;}
+table.typo3-dblist tr.db_list_normal.state_9, table.typo3-dblist tr.db_list_normal.state_9 TD {background-color:#edf5ea;}
+table.typo3-dblist tr.db_list_normal.even2, table.typo3-dblist tr.db_list_normal.even2 TD {background-color:#dae4f1;}
+table.typo3-dblist tr.db_list_normal.odd2, table.typo3-dblist tr.db_list_normal.odd2 TD {background-color:#e7f1fe;}
+table.typo3-dblist tr.db_list_normal:hover, table.typo3-dblist tr.db_list_normal:hover TD {background-color:#dedede;}
+
+table.typo3-dblist tr.db_list_normal.warning, table.typo3-dblist tr.db_list_normal.warning TD {background-color:#FBF6DE;}
+
+UL.mess_fehl_pruef {margin-top:7px;}
+UL.mess_fehl_pruef LI {margin-bottom:3px;}
+
+
+.kundenstate_1 {color: #81818c; background: url("images/kustat_1.png") no-repeat scroll 5px -1px transparent; padding-left: 24px;padding-top:1px;} /*registriert*/
+.kundenstate_2 {color: #81818c; background: url("images/kustat_2.png") no-repeat scroll 5px -1px transparent; padding-left: 24px;padding-top:1px;} /* Reg. angenommen*/
+.kundenstate_3 {color: #81818c; background: url("images/kustat_3.png") no-repeat scroll 5px -1px transparent; padding-left: 24px;padding-top:1px;} /* abgelehnt*/
+.kundenstate_4 {color: #81818c; background: url("images/kustat_4.png") no-repeat scroll 5px 0px transparent; padding-left: 24px;padding-top:1px; padding-bottom:5px;} /*Evaluationsbogen freigeschaltet*/
+.kundenstate_5 {color: #81818c; background: url("images/kustat_5.png") no-repeat scroll 5px -1px transparent; padding-left: 24px;padding-top:1px;} /*Zwischenprüfung läuft*/
+.kundenstate_6 {color: #81818c; background: url("images/kustat_6.png") no-repeat scroll 5px -1px transparent; padding-left: 24px;padding-top:1px;} /*Zwischenprüfung abgeschlossen*/
+.kundenstate_7 {color: #81818c; background: url("images/kustat_7.png") no-repeat scroll 5px -1px transparent; padding-left: 24px;padding-top:1px;} /*Endprüfung läuft*/
+.kundenstate_8 {color: #81818c; background: url("images/kustat_8.png") no-repeat scroll 5px -1px transparent; padding-left: 24px;padding-top:1px;} /*Endprüfung abgeschlossen*/
+.kundenstate_9 {color: #81818c; background: url("images/kustat_9.png") no-repeat scroll 5px -1px transparent; padding-left: 24px;padding-top:1px;} /* abgeschlossen*/
+.kundenstate_10 {color: #81818c; background: url("images/kustat_10.png") no-repeat scroll 5px -1px transparent; padding-left: 24px;padding-top:1px;} /*Erhebung abgeschlossen*/
+
+
+.anz_ergebnisse {float:left;display: block;padding-top: 0px; color:#81818C;}
+
+
+.pruefer_suche.kunden {margin-bottom:10px;}
+
+.pruefer_filter div.kundeNew_link {float:right; padding-left: 5px;}
+
+/*Breadcrumb:*/
+.docheader-funcmenu {padding-top:3px;}
+
+/************************************************* FÜR MOD3 - EVALUATION *******************************************************************************/
+
+.evalstate_1 {color: #81818c; background: url("images/kustat_1.png") no-repeat scroll 5px -1px transparent; padding-left: 24px;padding-top:1px;} /*registriert*/
+.evalstate_2 {color: #81818c; background: url("images/kustat_2.png") no-repeat scroll 5px -1px transparent; padding-left: 24px;padding-top:1px;} /* Reg. angenommen*/
+.evalstate_3 {color: #81818c; background: url("images/kustat_3.png") no-repeat scroll 5px -1px transparent; padding-left: 24px;padding-top:1px;} /* abgelehnt*/
+.evalstate_4 {color: #81818c; background: url("images/kustat_4_ev.png") no-repeat scroll 5px 0px transparent; padding-left: 24px;padding-top:1px; padding-bottom:5px;} /*Evaluationsbogen freigeschaltet*/
+.evalstate_5 {color: #81818c; background: url("images/kustat_5_ev.png") no-repeat scroll 5px -1px transparent; padding-left: 24px;padding-top:1px;} /*Zwischenprüfung läuft*/
+.evalstate_6 {color: #81818c; background: url("images/eval/vororttermin.png") no-repeat scroll 5px 0px transparent; padding-left: 24px;padding-top:1px;} /*Zwischenprüfung abgeschlossen*/ 
+/* kustat_5_ev.png*/
+.evalstate_7 {color: #81818c; background: url("images/kustat_7_ev.png") no-repeat scroll 5px -1px transparent; padding-left: 24px;padding-top:1px;} /*Endprüfung läuft*/
+.evalstate_8 {color: #81818c; background: url("images/medal.png") no-repeat scroll 5px 1px transparent; padding-left: 24px;padding-top:1px;} /*Endprüfung abgeschlossen*/
+.evalstate_9 {color: #81818c; background: url("images/kustat_9.png") no-repeat scroll 5px -1px transparent; padding-left: 24px;padding-top:1px;} /* abgeschlossen*/
+.evalstate_10 {color: #81818c; background: url("images/kustat_10.png") no-repeat scroll 5px -1px transparent; padding-left: 24px;padding-top:1px;} /*Erhebung abgeschlossen*/
+
+.simulate_link {color: #618793; font-weight: bold;}
+.myRedBold{color:#d0263a; font-weight: bold;}
+.no_kunden .typo3-message {    margin-bottom: 0px;}
+table.typo3-dblist tr td.no_kunden {padding:0;}
+
+/************************************************* FÜR MOD4 - PRÜFER *******************************************************************************/
+
+.termine_list UL {margin-top:7px;}
+.termine_list UL LI{margin-bottom:3px;}
+
+
+
+.t3-row-header .th_center {text-align:center;}
+.t3-row-header TD {vertical-align:middle;}
+TABLE.typo3-dblist TR.t3-row-header TD {font-size:11px;}
+
+TABLE.typo3-dblist  A, .pruefer_overview TABLE.typo3-dblist UL.akt_kundenlist LI A { color:#003399; /*#618793;*//*#70939c*/; text-decoration:underline; font-weight:bold;}
+TABLE.typo3-dblist  A, .pruefer_overview TABLE.typo3-dblist UL.inakt_kundenlist LI A { color:#003399; /*#618793;*//*#70939c*/; text-decoration:underline; font-weight:bold;}
+
+/* Grautöne in den unterschiedlichen Stati*/
+.pruefer_grey, .pruefer_grey A, .pruefer_overview TABLE.typo3-dblist UL.inakt_kundenlist LI A {color: #8e95ac; font-weight:normal; }
+.tr_warning .pruefer_grey, .tr_warning .pruefer_grey A, .pruefer_overview TABLE.typo3-dblist TR.tr_warning UL.inakt_kundenlist LI A {color: #a19887/*#ad9f8a*/; font-weight:normal;}
+.tr_info .pruefer_grey, .tr_info .pruefer_grey A, .pruefer_overview TABLE.typo3-dblist TR.tr_info UL.inakt_kundenlist LI A {color: #8e95ac; font-weight:normal;}
+.tr_info.odd .pruefer_grey, .tr_info.odd .pruefer_grey A, .pruefer_overview TABLE.typo3-dblist TR.t.tr_info.odd UL.inakt_kundenlist LI A {color: #8e95ac; font-weight:normal;}
+
+.pointer_link {cursor: pointer;}
+
+
+
+TABLE.typo3-dblist TD  {vertical-align:middle;}
+TABLE.typo3-dblist TD.valign_top  {vertical-align:top;}
+
+
+/*TR.t3-db_list_normal-header TD*/
+/*
+div#typo3-docheader-row2, div#typo3-docheader-row2 div { height: 27px; vertical-align:bottom;}
+div#typo3-docheader-row2 {line-height:27px; vertical-align:bottom;line-height: 27px;}
+*/
+
+
+
+/*.pruefer_overview TABLE.typo3-dblist TR.db_list_normal, .pruefer_overview TABLE.typo3-dblist TR.db_list_normal TD {background-image:none;background-color:#ffffff;}*/
+.pruefer_overview TABLE.typo3-dblist TR.db_list_normal.even, .pruefer_overview TABLE.typo3-dblist TR.db_list_normal.even TD {background-image:none;background-color:#F7F7F7;}
+.pruefer_overview TABLE.typo3-dblist TR.db_list_normal.odd, .pruefer_overview TABLE.typo3-dblist TR.db_list_normal.odd TD {background-image:none;background-color:#ffffff;}
+.pruefer_overview TABLE.typo3-dblist TR.db_list_normal.tr_info, .pruefer_overview TABLE.typo3-dblist TR.db_list_normal.tr_info TD {background-image:none;background-color:#e7f1fe;}
+.pruefer_overview TABLE.typo3-dblist TR.db_list_normal.tr_info.odd, .pruefer_overview TABLE.typo3-dblist TR.db_list_normal.tr_info.odd TD {background-image:none; background-color:#dae4f1;}
+.pruefer_overview TABLE.typo3-dblist TR.db_list_normal.tr_warning, .pruefer_overview TABLE.typo3-dblist TR.db_list_normal.tr_warning TD {background-image:none; background-color:#f2e9cc;}
+
+.pruefer_overview TABLE.typo3-dblist SPAN.ueberfaellig {color:#db432b; font-weight:bold;}
+
+ TABLE.typo3-dblist UL.akt_kundenlist LI {padding-bottom:3px;}
+ TABLE.typo3-dblist UL.akt_kundenlist LI A {background: url("images/act_user.png") no-repeat scroll 5px -1px transparent; padding-left: 24px;padding-top:1px;}
+
+.pruefer_overview TABLE.typo3-dblist UL.inakt_kundenlist LI {padding-bottom:3px;}
+.pruefer_overview TABLE.typo3-dblist UL.inakt_kundenlist LI A {background: url("images/medal.png") no-repeat scroll 25px 1px transparent; padding-left: 45px;padding-top:1px;}
+.pruefer_overview TABLE.typo3-dblist UL.inakt_kundenlist {padding-top:3px;}
+
+.finished_closed {background: url("images/tree_plus.png") no-repeat scroll 10px 4px transparent;padding-left: 24px;padding-top:1px;}
+.finished_opened {background: url("images/tree_minus.png") no-repeat scroll 10px 4px transparent;padding-left: 24px;padding-top:1px;}
+
+.pruefer_overview TABLE.typo3-dblist UL.akt_kundenlist LI {line-height: 1.5em;}
+
+
+.opened {display:block;}
+.closed {display:none;}
+
+
+.pruefer_suche {margin-top:10px;}
+.pruefer_filter { width:98%; /*height:30px;*/ margin-top:8px;/*margin-bottom: 10px;*/}
+.pruefer_filter DIV {float:left; padding-right:20px;margin-bottom:10px;}
+.pruefer_filter div.prueferNew_link {float:right; padding-left: 5px;}
+.pruefer_suche INPUT.searchfield {height:18px; line-height:16px;}
+
+.kapsel INPUT {font-size: 11px;height: 24px;/*line-height: 19px;*/font-weight:normal;padding:3px 5px 5px; }
+
+
+.kapsel.active INPUT, .kapsel INPUT:hover {
+		background-color: #5B5B5B;
+    /*background-image: -moz-linear-gradient(center top , #7F7F7F 10%, #5B5B5B 100%);*/
+    background-image: url(../../../../typo3/sysext/t3skin/images/backgrounds/row-header.png);
+    background-repeat: repeat-x;
+    color: #FFFFFF;
+    font-weight:bold;
+ }
+ .kapsel INPUT:hover {color:#F4F4F4;font-weight:normal;}
+ .kapsel.active INPUT:hover {font-weight:bold;}
+
+.erklaerung_hell {color:#aaaaaa;padding-bottom:10px; /*width:400px;*/}
+.pruefer_suche {width:98%;height:30px; display:block;clear:both;}
+.prsu_inp {float:left; padding-right:10px; }
+.pruefer_filter {width:98%; clear:both; display:block; margin-top:0px;}
+
+.searchfield {color:#999999;}
+.filter_row {padding-top:4px;}
+
+.prueferNew_link {
+    background-image: url(../../../../typo3/sysext/t3skin/images/backgrounds/button.png);
+    background-repeat: repeat-x;
+    background-position: center bottom;
+    border: 1px solid #7C7C7C;
+    color: #434343;
+}
+.prueferNew_link:hover {
+    background-image: url(../../../../typo3/sysext/t3skin/images/backgrounds/button-hover.png);
+
+}
+
+.checkb_finished {cursor:pointer;}
+
+
+
+.link_newpruefer_text { position: relative;top: -3px;}
+
+/*.pruefer_overview TABLE.typo3-dblist .message-notice {background-image:none;}
+.pruefer_overview TABLE.typo3-dblist .message-ok {background-image:none;}
+.pruefer_overview TABLE.typo3-dblist .message-error {background-image:none;}
+*/
+
+
+/* PAGEBROWSER*/
+.pagebrowser {margin-top:15px; display:block;float: left;padding-right: 20px;}
+.pagebrowser .pb_nav {padding-left:5px; padding-right:2px;} /* nur die Zahlen*/
+.pagebrowser .pb_nav SPAN {background-color:#d8d8d8; border:1px solid #7f7f7f; color:#7f7f7f; padding:3px 7px; margin-right:3px;} /* einzelne Zahlen*/
+.pagebrowser .pb_nav SPAN.active {background-color:#7f7f7f;border:1px solid #7f7f7f; color:#ffffff; font-weight:bold;} /* aktives Element*/
+.pagebrowser .pb_nav SPAN:hover {background-color:#b8cce4; border:1px solid #4f81bd; color:#4f81bd;}
+.pagebrowser .pb_nav SPAN.active A {color:#ffffff;}
+/* icons:*/
+.pagebrowser .pb_p{vertical-align: middle; height:25px; padding-top: 5px;} /*, .pagebrowser .pb_n */
+
+/* sortierbare Header: */
+
+/*.sorted_asc, .sorted_desc {background-image: url("images/sort_asc.png");  height: 16px;width: 16px; display: inline-block; overflow: hidden; position: relative;background-repeat: no-repeat;   font-size: 1px; line-height: 0;cursor: pointer;}
+.sorted_desc {background-image: url("images/sort_desc.png") !important;}
+*/
+
+ .sorted_asc,  .sorted_desc {		
+ 		overflow: hidden; position: relative;
+ 		padding-left:17px;
+ }
+ .sorted_asc {background: url("images/sort_asc.png") no-repeat scroll 0px 2px transparent;}
+ .sorted_desc {background: url("images/sort_desc.png") no-repeat scroll 0px 2px transparent;  }
+    
+table.typo3-dblist A.abc {color:#ffffff;}
+table.typo3-dblist .sorted_asc A {text-decoration:underline;color:#ffffff;}
+
+table.typo3-dblist .sorted_desc A {text-decoration:underline;color:#ffffff;}
+
+
+H2.newH2 {margin-bottom:20px;/*clear: both; overflow: hidden;*/}
+/*
+#ext-itao-zfa-datamanager-mod3-index-php #typo3-messages {display:block; overflow:hidden; clear:both; 	background-color:yellow; width:100%;}
+.contentbereich_eval {overflow:hidden; display:block;}
+#ext-itao-zfa-datamanager-mod3-index-php  div#typo3-docbody {}
+*/
+
+.statistik_mail {/*margin-top:5px;*/}
+
+.form_inputs FORM { float:left; margin-right: 10px; margin-top:5px;}
+.form_inputs {clear:both;overflow: hidden;}
+
+.www A { color: #095495;}
+
+/*.unternehmen_overview .filter_oben*/
+
+
+
+
+HTML {overflow: auto !important;}
+
+.ubogenprint {
+    background: url("images/eval/blue-document-sticky-note.png") no-repeat scroll 0 0 transparent;
+    margin: 0;
+    padding-left: 20px;
+    padding-top: 1px;
+    padding-bottom: 5px;
+}
+
+TD.question_number {width: 45px;}
+/*
+TR.notbewertet .question .durchgestr:HOVER {color: #000000;} 
+tr.notbewertet:hover .question, tr.notbewertet:hover .question_number, tr.notbewertet:hover .question .durchgestr { color: #000; } 
+
+tr:hover .question, tr:hover .question_number, tr:hover .question .durchgestr { color: #000; } 
+tr:hover.unanswered .question, tr:hover.unanswered .question_number { color: #000; }
+*/
+.typo3-dblist TR TD {vertical-align:top;}
+
+
+.ku_evaluation TABLE.typo3-dblist TR.bereichstr A {text-decoration: none; color: black; font-weight: normal;}
+
+tr.t3-row-header.bewertung td {
+   background-color: #5B5B5B;
+    background-image: -moz-linear-gradient(center top , #7F7F7F 10%, #5B5B5B 100%);
+    background-repeat: repeat-x;
+    color: #FFFFFF;
+    font-size: 10px;
+    height: 20px;
+    line-height: 19px;
+}
+
+/*TABLE.typo3-dblist TR.t3-row-header TD {border:1px solid #ffffff;}*/
+
+TD.abstand_links.progress {padding-left:10px;}
+
+.unanswered UL.untans_mc {text-decoration: line-through;}
+TABLE.typo3-dblist A.mehrNoticeLink {font-weight:normal; text-decoration:none; text-align: right;color: #999999;}
+.smallstarts_zwiprue {background-color:lime; display:block; clear:both;}
+
+/*.bew_zahl.norating {margin-left:5px;}*/
+.bew_zahl.norating {margin-left:3px;}
+/*.bew_zahl SPAN.unanswered {width:35px; background-color:yellow;}*/
+.bew_zahl { width: 14px;}
+.bewDeta_toprow .toprow_left SELECT { margin-top: 7px;}
+.li_einz_durchgestr {text-decoration:line-through;color:#999999;}
+body {/*line-height:1.4;*/}
+.ta_right {text-align: right;}
+.gesamtzeile_bew.bereichstr .bewertung {display: compact;}
+table.typo3-dblist tr td, TABLE.typo3-dblist TR.bereichstr TD { padding: 5px; }
+TABLE.typo3-dblist TR.bereichstr {height:30px;}
+.gesamtzeile_bew.bereichstr .rating_value {line-height:1.4;}
+TABLE.typo3-dblist {width:100%;}
+A.note_add.onhover, .note_modify.onhover A{font-weight:normal;}
+A.note_add.onhover:hover, .note_modify.onhover A:hover, .note A:hover{text-decoration:none;}
+a.note_delete, TABLE.typo3-dblist A.note_delete {color: #CC0000;}
+.bereichsbewertung .even:hover {background-color:#F7F7F7;}
+.bereichsbewertung .odd:hover {background-color:#ffffff;}
+.skala_vorgabeV {
+    color: #666666;
+    float: left;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-top: 1px;
+    width: 120px;
+    text-align:right;
+}
+.skala_vorgabeV.left  {text-align:left;}
+.skala_vorgabeV.skala  {width:98px;}
+.unanswered .skala_vorgabeV {color:#999999;}
+.bew_zahl {color:#000099;font-size: 18px;margin-left: 5px;padding-top:0px; line-height:1;}
+.del_bewertung A { margin-left:3px;}
+element.style {
+    display: block;
+}
+.bew_zahl.norating.zwischenpr {
+    background: url("../../typo3conf/ext/itao_zfa_datamanager/mod1/images/exclamation.png") no-repeat scroll right 2px transparent;
+}
+.bew_zahl.norating {padding-right:3px !important;}
+.toprow_right .grey {color:#999999;}
+.bewDeta_toprow .toprow_right {text-align:right; margin-right:0px;}
+.unanswered UL.untynmatrix {line-height:16.8px;}
+.beurteilung_text A, TABLE.typo3-dblist .beurteilung_text A {font-weight:normal;}
+.beurteilung_text A:hover, TABLE.typo3-dblist .beurteilung_text A:hover {text-decoration:none;}
+.activeEntry {background-color:  #DDDDFF;}
+A.note_add.hoverShow { font-weight:normal;}
+A.note_add.hoverShow:hover {text-decoration:none !important;}
+.rating.note_edit A, .note_edit A, TABLE.typo3-dblist .note_edit A {font-weight:normal;}
+.rating.note_edit A:hover {text-decoration:none;}
+.hoverHide:hover {display:none;}
+.gesamtzeile_bew .td_right {text-align:right;}
+.td_center {text-align:center;}
+.td_right {text-align:right;}
+.bereichstr .grey {color:#999999;}
+.lightgrey, td.gewichtung.lightgrey  {color:#CCCCCC; font-size:11px;}
+.wo_value_beru {font-size:11px; text-align:center; /*width: 145px;*/color:#CCCCCC;}
+
+
+.ajaxblocker_wrap { position: relative; height: 100%; padding: 5px; }
+.ajaxblocker { 
+	background: #fff url(images/loading_big-white.gif) no-repeat center center; 
+	opacity:.75; 
+	-moz-opacity:.75; 
+	filter:alpha(opacity=75);
+	position: absolute; top: 0; left: 0; height: 100%; width: 100%; cursor: progress; z-index: 10;
+}
+.even .ajaxblocker { background-color: #f7f7f7; background-image: url(images/loading_big-lgray.gif); }
+
+tr:hover .ajaxblocker { background-color: #eef; background-image: url(images/loading_big-lblue.gif); }
+tr.odd.unanswered:hover .ajaxblocker { background-color: #fff; background-image: url(images/loading_big-white.gif); }
+tr.even.unanswered:hover .ajaxblocker { background-color: #f7f7f7; background-image: url(images/loading_big-lgray.gif); }
+
+.odd .unrated .ajaxblocker { background-color: #fee!important; background-image: url(images/loading_big-lred.gif)!important; }
+.even .unrated .ajaxblocker { background-color: #fdd!important; background-image: url(images/loading_big-mred.gif)!important; }
+.withBlocker { padding: 0px!important; }
+.blockercontent {  }
+
+#td_class_beurteilung .ajaxblocker_wrap { padding:0px !important;margin-top:0px;}
+#td_class_beurteilung.beurteilung.activeEntry {padding-top:0px !important;}
+
+.no_padding, .bereichsbewertung table.typo3-dblist TD.no_padding { padding:0px;}
+TABLE.typo3-dblist A.showLess, TABLE.typo3-dblist A.showMore, .showLess, .showMore, A.showLess, A.showMore{font-weight:normal;}
+.note_edit textarea {width:160px;}
+#typo3-inner-docbody, div#typo3-inner-docbody {line-height:1.4;}
+.td_left {text-align:left;}
+
+/*TR.t3-row-header.bewertung:hover {background-color:lime;}
+TR.t3-row-header.bewertung:hover TD{background-color:lime;}
+.kunde TABLE TABLE.typo3-dblist TR:hover, .kunde TABLE TABLE.typo3-dblist .t3-row-header:hover, .kunde TABLE TABLE.typo3-dblist TR.t3-row-header:hover {background-color:lime;}*/
+.bereichnr { color: #666666; font-size: 16px; line-height: 1; text-align: center; /* aus Prototyp tr.bereichstr td:first-child */}
+.bereichnr.gesamt {font-size: 13px; font-weight: bold;text-align: center; color: black;}
+.blockercontent .grey {color: #999999;}
+
+/*.progress .frage.pflicht { background: url(images/exclamation-white.png) no-repeat top left; }*/
+.bereichnr.gesamt.ta_right {text-align:right;}
+
+.bereichstr TD {height:28px !important;}
+TR.bereichstr  {height:28px !important;}
+TR.odd.gesamtzeile_bew.bereichstr TD {padding:3px 4px 2px 4px;}
+
+UL.genList { list-style: disc inside none;}
+UL.genList LI { margin-left:15px;}
+
+.td_class_beurteilung UL {list-style: circle inside none;}
+.td_class_beurteilung LI { padding-left:15px; margin-left:15px; list-style: circle inside none;}
+
+.cnotes .moreText { display: none; }
+.cnotes.long .ellipsis { display: none; }
+.cnotes.long .moreText { display: inline; }
+.cnotes.long .showMore { display: none; }
+
+.bereichsbewertung TABLE.typo3-dblist TR.t3-row-header TD {
+    font-size: 13px;
+}
+
+.oldratingbewz {color:#999999;/*padding-right: 20px;*/}
+
+.contentbox.zwischenbericht #bodycont_zwischenbericht A { color: #003399; text-decoration: underline;}
+.contentbox.zwischenbericht #bodycont_zwischenbericht A:hover {  text-decoration: none;}
+
+.presentation {
+    background: url("images/projection-screen-presentation.png") no-repeat scroll left top transparent;
+    padding: 2px 0 3px 20px;*
+}
+
+.ppt_vorlage {
+    background: url("images/ppt.png") no-repeat scroll left top transparent;
+    /*padding: 2px 0 3px 20px;*/
+}
+.ppt_vorlage_text {margin-left:20px;display:block;}
+
+a.action-edit {color: #000099 !important;}
+a.action-delete { color: #CC0000 !important;}
+
+.ubogenprint.zwiberi {background-image: url('images/script-attribute-z.png');}
+.ubogenprint.arbeitsblatt_view {margin-bottom:5px;}
+
+.inaktivschl a {
+    color: inherit;
+}
+
+.inaktivschl .zwpruefung_body A {color: black !important;}
+
+
+/* Aus Head des Prototyps 1.1 */
+.dummybox { width: 50%; }
+.dummybox h3 a { text-decoration: none; }
+.inaktivschl a { color: inherit; }
+
+/*.message-information { background-color: transparent; background-image: url('/typo3/sysext/t3skin/icons/gfx/information.png'); border: none; }*/
+
+/*.company-notes { border: 1px solid #ccc; background: #ffc; padding: 2px 3px; margin: 10px 0;  }*/
+.company-notes {
+	background: url('images/sticky-note-text.png') no-repeat left top;
+	margin: 10px 0; padding-left: 20px;
+	font-size: 12px;
+}
+.company-notes .notes {
+	border: 1px solid #ccc; background: #ffc;
+	padding: 2px 3px; margin-top: 5px;
+}
+.company-notes:hover .onhover { visibility: visible; } 
+.company-notes A {color:#000099;}
+
+.note_modify {
+    color: #999999;
+}
+
+
+/* fuer IEs*/
+tr.bereichstr:hover td { background: #eef!important; }
+
+tr.bereichstr td A { font-size: 13px; }
+tr.bereichstr td A { color: inherit; text-decoration: none; }
+
+tr.bereichstr:hover td A { color: #009 !important; text-decoration: underline !important; }
+tr.bereichstr:hover td a:hover { text-decoration: none !important; }
+
+/* Bereichsdetails - kein tr-Hover*/
+/*.bereichsbewertung tr:hover:not(.unanswered):not(.t3-row-header):not(.prototype) { background: #eef!important; }*/
+
+.bereichsbewertung tr:hover { background: #eef!important; }
+
+.bereichsbewertung tr.even.unanswered:hover { background: #F7F7F7 !important; }
+.bereichsbewertung tr.odd.unanswered:hover { background: transparent !important; }
+.bereichsbewertung tr.t3-row-header:hover {background-color: #5B5B5B !important; background-image: -moz-linear-gradient(center top , #7F7F7F 10%, #5B5B5B 100%) !important; background-repeat: repeat-x !important;}
+
+
+/* Weil Sterne im IE nicht funktionieren: */
+/*.webwidget_rating_simple:hover li { background-image: url(images/star.png); }
+.staro1:hover ~ li:not(.staro1), .staro2:hover ~ li:not(.staro2), .staro3:hover ~ li:not(.staro3), .staro4:hover ~ li:not(.staro4),
+.star1:hover ~ li:not(.star1), .star2:hover ~ li:not(.star2), .star3:hover ~ li:not(.star3), .star4:hover ~ li:not(.star4){ background-image: url(images/star-empty1.png); }
+*/
+
+SELECT.selMaQuestions {max-width:100%;}
+
+
+/* Beurteilungsbox*/
+/*table.typo3-dblist tr td#td_class_beurteilung {padding:0px !important;}*/
+
+
+
+#untnotice_edit .activeEntry {background-color:#F8F8F8;}
+
+TABLE.schooldetails TD label {font-weight:bold;}
+
+input[type="submit"] {
+    padding: 0 4px;
+}
+
+.imagesOffer {float:right;}
+.off_date {}
+.off_title {font-size: 13px; font-weight:bold; margin-top:10px; margin-bottom:10px;}
+
+/*.dt_stammdaten_all_2 TABLE {width:550px;}*/
+
+.off_detail_sidebox TD {height:25px;}
+
+.functions_offer {padding:8px; background-color:#F8F8F8; border-bottom:1px solid #666666;}
+
+.td_center_left {vertical-align:top; text-align: center;}
+
+.dt_stammdaten_all TABLE.typo3-dblist TR.t3-row-header TD {vertical-align:middle;}
+SPAN.statusRed {color:#ff381c /*fbe0e3*/;}
+SPAN.statusGreen {color:#53aa48/*bfe0bc*/;}
+
+TABLE.typo3-dblist A.th_sort {color:white;}
+
+.listgrey A {color:#988998;}
+
+	.dt_stammdaten_all_2 {width:70%;}
+	.dt_stammdaten_all_4 {width:25%;}
+
+@media screen and (max-width: 1310px) { /* vorher 1170*/
+	.dt_stammdaten_all_2 {width:100%;} /* magenta; jetzt okay bei 1310*/
+	.dt_stammdaten_all_4 {width:100%;}
+	.dt_stammdaten_all_2.vorschlaege {width:100%;}
+	.dt_stammdaten_all_4.vorschlaege {width:100%;}
+	div.typo3-dyntabmenu-divs {width: 100%;}
+}
+
+@media screen and (max-width: 1100px) {
+	.dt_stammdaten_all_2 {width:70%;} /* background-color:lime; - ab hier ists okay*/
+	.dt_stammdaten_all_4 {width:25%;}
+	.dt_stammdaten_all_2.vorschlaege {width:100%;}
+	.dt_stammdaten_all_4.vorschlaege {width:100%;}
+	div.typo3-dyntabmenu-divs {width: 100%;}
+}
+@media screen and (max-width: 1000px) {
+	.dt_stammdaten_all_2 {width:70%;} /* background-color:red; ist okay*/
+	.dt_stammdaten_all_4 {width:25%;}
+	div.typo3-dyntabmenu-divs.vorschlaege {width: 100%;}
+	div.typo3-dyntabmenu-divs {width: 100%;}
+	table.typo3-dyntabmenu td.tab A, table.typo3-dyntabmenu td.tabact A {padding-left:8px; padding-right:8px;}
+}
+@media screen and (max-width: 950px) {
+	.dt_stammdaten_all_2 {width:100%;} /*background-color:yellow; ist okay*/
+	.dt_stammdaten_all_4 {width:100%;}
+	div.typo3-dyntabmenu-divs.vorschlaege {width: 100%;}
+	table.typo3-dyntabmenu td.tab A, table.typo3-dyntabmenu td.tabact A {padding-left:8px; padding-right:8px;}
+}
+
+
+@media screen and (max-width: 800px) {
+	div.typo3-dyntabmenu-divs.vorschlaege {width: 120%;}
+	table.typo3-dyntabmenu td.tab A, table.typo3-dyntabmenu td.tabact A {padding-left:8px; padding-right:8px;}
+}
+@media screen and (max-width: 600px) {
+	.dt_stammdaten_all_2 {width:100%;} /* background-color:lightblue; ist okay*/
+	.dt_stammdaten_all_4 {width:100%;}
+	div.typo3-dyntabmenu-divs.vorschlaege {width: 140%;}
+	table.typo3-dyntabmenu td.tab A, table.typo3-dyntabmenu td.tabact A {padding-left:8px; padding-right:8px;}
+}
+
+.filter_state {margin-right:15px;}
+.anz_ergebnisse {width:100%;margin-top:10px; margin-bottom:10px; display:block;}
+.docdownload {width:100%; text-align:right;}
+
+H3.uppercase A {margin-left:15px;font-size:11px; font-weight:normal;}
+TABLE.typo3-dblist .schooloverview A {text-decoration: none; }
+
+.switchbutton {margin-top:10px;margin-bottom:10px;margin-left:5px;}
+.switchbutton INPUT {padding:3px;}
+.checklist_status {    line-height: 20px;     margin-bottom: 10px;     margin-left: 10px;    margin-top: 10px;}
+
+ .switchback {font-weight:bold;font-size:11px; float:right;}
+ .switchback:HOVER  { color:black; font-weight:bold;	/* IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  /* IE 5-7 */
+  filter: alpha(opacity=100);
+  /* Netscape */
+  -moz-opacity: 1;
+  /* Safari 1.x */
+  -khtml-opacity: 1;
+  /* Good browsers */
+  opacity: 1;	
+  filter: alpha(opacity=100);}
+  
+  
+.edit_anzresults {padding-left:10px;}  
+
+.buttons_editstimmen {width:100%; text-align:right;}
+.childoffers_li {list-style:circle; margin-left: 15px;line-height: 2em;}
+.unchain_offer {padding-left:35px;}
+/*.o_abst {padding-left:35px; white-space: nowrap;}*/
+.o_abst {padding-right:35px; /*white-space: nowrap;*/}
+.unlinkOrder_single {width: 250px; float:left;}
+.stimmeneingabe .links {width:50%; float:left;}
+
+.schooldetails.hauptseite TR TD {padding-bottom:10px;}

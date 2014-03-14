@@ -1,0 +1,31 @@
+.download-list {
+	ul {
+		list-style-type: none;
+		padding:  0 10px;
+		& li {
+			.clearfix;
+			padding-left: 30px;
+			padding-bottom: 10px;
+			min-height: 35px;
+			border-bottom: 1px solid @darkGreen;
+			&.zip {
+				background: url(../img/zip_icon.png) no-repeat left top transparent;
+			}
+			&.pdf {
+				background: url(../img/pdf_icon.png) no-repeat left top transparent;
+			}
+			&.doc, &.docx {
+				background: url(../img/word_icon.png) no-repeat left top transparent;
+			}
+			&.xls, &.xlsx {
+				background: url(../img/xls_icon.png) no-repeat left top transparent;
+			}
+			& a {
+				line-height: 40px;
+			}
+			& span.shortDescription {
+				display: block;
+			}
+		}
+	}
+}

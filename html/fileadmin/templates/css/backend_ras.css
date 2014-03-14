@@ -1,0 +1,26 @@
+
+/* Nicht verwendete Elemente etc. wegmachen*/ 
+/* nicht verwendete Icons oben wegmachen*/  
+ 
+#typo3-docheader-row2  {display:none;} 
+#typo3-docheader-row1 .buttonsleft .buttongroup .t3-help-link,
+#typo3-docheader-row1 .buttonsleft .buttongroup .t3-icon-page-new, 
+#typo3-docheader-row1 .buttonsleft .buttongroup .t3-icon-document-view,
+#typo3-docheader-row1 .buttonsleft .buttongroup .t3-icon-page-move,
+#typo3-docheader-row1 .buttonsleft .buttongroup .t3-icon-document-history-open
+{display:none; width:0px;}
+div#typo3-docheader div.buttonsleft div.buttongroup { float: right;}
+
+#typo3-docheader-row1 .buttonsright .buttongroup {display:none;}	
+
+
+.tpm-bottom-controls {display:none;}
+.tpm-copy, .tpm-ref, .tpm-cut, .tpm-unlink, .tpm-hide {display:none;}
+.tpm-container-element.tpm-container-element-depth-0.tpm-container-element-depth-even.pagecontainer  A  .tpm-titlebar.t3-page-ce-header.tpm-titlebar-page {display:none;}
+
+/* Seiteneigenschaften ausblenden für Red.Admin.Schule; über normale "Zugriff"-Rechte nicht zu steuern */
+div#typo3-docheader div.buttonsleft div.buttongroup {display:none;}
+/* Toggle All / Alle Aufklappen für FCEs ausblenden */
+div.t3-form-field-toggle-flexsection {
+    display: none;
+}

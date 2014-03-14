@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2012-10-08T09:04:08Z" product-name="itao_shh_offers">
+		<header/>
+		<body>
+
+			<trans-unit id="tx_itaoshhoffers_domain_model_offer">
+				<source>Offer</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_offer.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_offer.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_offer.costs_student">
+				<source>Kostenschätzung Schüler</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_offer.costs">
+				<source>Kosten</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_offer.images">
+				<source>Images</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_offer.promoted_from">
+				<source>Promoted From</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_offer.idea_from">
+				<source>Idea From</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_offer.status">
+				<source>Status</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_offer.likes">
+				<source>Likes</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_offer.dislikes">
+				<source>Dislikes</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_offer.comments">
+				<source>Comments</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_offer.fe_user">
+				<source>Fe User</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_offer.log">
+				<source>Log</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_promoter.internal_id">
+				<source>Interne Id</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_offer.child_offers">
+				<source>Untergeordnete Vorschläge</source>
+			</trans-unit>
+
+			<trans-unit id="tx_itaoshhoffers_domain_model_promoter">
+				<source>Promoter</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_promoter.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_promoter.class">
+				<source>Class</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_promoter.fe_user">
+				<source>Fe User</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_offer.school">
+				<source>Schule</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_offer.commune">
+				<source>Kommune</source>
+			</trans-unit>
+
+			<trans-unit id="tx_itaoshhoffers_domain_model_idea">
+				<source>Idea</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_idea.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_idea.class">
+				<source>Class</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_idea.fe_user">
+				<source>Fe User</source>
+			</trans-unit>
+
+			<trans-unit id="tx_itaoshhoffers_domain_model_status">
+				<source>Status</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_status.title">
+				<source>Title</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_itaoshhoffers_domain_model_action">
+				<source>Action</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_action.title">
+				<source>Title</source>
+			</trans-unit>
+
+			<trans-unit id="tx_itaoshhoffers_domain_model_dislike">
+				<source>Dislike</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_like">
+				<source>Like</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_itaoshhoffers_domain_model_likedislike.fe_user">
+				<source>Fe User</source>
+			</trans-unit>
+
+			<trans-unit id="tx_itaoshhoffers_domain_model_comment">
+				<source>Comment</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_comment.text">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_comment.date">
+				<source>Date</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_comment.log">
+				<source>Log</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_comment.parent">
+				<source>Parent</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_comment.fe_user">
+				<source>Fe User</source>
+			</trans-unit>
+
+			<trans-unit id="tx_itaoshhoffers_domain_model_commentlog">
+				<source>Comment Log</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_commentlog.date">
+				<source>Date</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_commentlog.fe_user">
+				<source>Fe User</source>
+			</trans-unit>
+
+			<trans-unit id="tx_itaoshhoffers_domain_model_feuser">
+				<source>Fe User</source>
+			</trans-unit>
+			
+			<trans-unit id="fe_users.tx_extbase_type.Tx_ItaoShhOffers_FeUser">
+				<source>Vorschläge FeUser</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_itaoshhoffers_domain_model_offerlog">
+				<source>Offer Log</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_offerlog.date">
+				<source>Date</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_offerlog.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_offerlog.fe_user">
+				<source>Fe User</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_offerlog.be_user">
+				<target>BE-User Relation</target>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_offerlog.action">
+				<source>Action</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_offer.votes">
+				<source>Anzahl der Stimmen</source>
+			</trans-unit>
+
+
+
+			<trans-unit id="tx_itaoshhoffers_domain_model_filter">
+				<source>Filter</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_filter.title">
+				<source>Titel</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_filter.filteroptions">
+				<source>Optionen (Repräsentiert die Felder im Dropdown)</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="tx_itaoshhoffers_domain_model_filteroption">
+				<source>Filter-Option</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_filteroption.title">
+				<source>Titel</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_filteroption.field">
+				<source>DB-Feld</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_filteroption.value">
+				<source>Wert</source>
+			</trans-unit>
+
+
+			<trans-unit id="tx_itaoshhoffers_domain_model_sort">
+				<source>Sortierung</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_sort.title">
+				<source>Titel</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_sort.sortoptions">
+				<source>Option (Repräsentiert die Felder im Dropdown)</source>
+			</trans-unit>
+
+			<trans-unit id="tx_itaoshhoffers_domain_model_sortoption">
+				<source>Sortier-Option</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_sortoption.title">
+				<source>Titel</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_sortoption.field">
+				<source>DB-Feld</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_sortoption.direction">
+				<source>Richtung</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_sortoption.direction.asc">
+				<source>Aufsteigend</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_sortoption.direction.desc">
+				<source>Absteigend</source>
+			</trans-unit>
+			<trans-unit id="tx_itaoshhoffers_domain_model_sortoption.direction.random">
+				<source>Mischen</source>
+			</trans-unit>
+
+			<trans-unit id="flexform.title">
+				<source>Offer-Mode</source>
+			</trans-unit>
+			<trans-unit id="flexform.newOffers">
+				<source>New Offers</source>
+			</trans-unit>
+			<trans-unit id="flexform.sortedOffers">
+				<source>Sorted Offers</source>
+			</trans-unit>
+			<trans-unit id="flexform.show">
+				<source>Offer-Detail</source>
+			</trans-unit>
+			<trans-unit id="flexform.new">
+				<source>New Offer (Form)</source>
+			</trans-unit>
+			<trans-unit id="flexform.myOffers">
+				<source>My Offers</source>
+			</trans-unit>
+			<trans-unit id="flexform.myOffersStatus">
+				<source>My Offers Status</source>
+			</trans-unit>
+			<trans-unit id="flexform.schoolData">
+				<source>Schul-Metainformationen</source>
+			</trans-unit>
+			<trans-unit id="flexform.schools">
+				<source>Schul-DropDown</source>
+			</trans-unit>
+			
+			<trans-unit id="flexform.schoolData.title">
+				<source>Ausgabe von:</source>
+			</trans-unit>
+			<trans-unit id="flexform.schoolData.numberOfOffers">
+				<source>Anzahl der eingegangenen Vorschläge</source>
+			</trans-unit>
+			<trans-unit id="flexform.schoolData.nameOfSchool">
+				<source>Name der Schule</source>
+			</trans-unit>
+			<trans-unit id="flexform.school.title">
+				<source>Vorschläge der Schule...</source>
+			</trans-unit>
+			<trans-unit id="flexform.school.auto">
+				<source>Schule automatisch erkennen (muss die Unterseite einer Schule sein!)</source>
+			</trans-unit>
+			<trans-unit id="flexform.school.fixed">
+				<source>Schule fest definieren</source>
+			</trans-unit>
+			<trans-unit id="flexform.school.choose">
+				<source>Schule wählen</source>
+			</trans-unit>
+			<trans-unit id="flexform.school.dropdown">
+				<source>Schule mittels Dropdown auswählen (DropDown-Plugin)</source>
+			</trans-unit>
+			<trans-unit id="flexform.school.all">
+				<source>Vorschläge aller Schulen anzeigen</source>
+			</trans-unit>
+			<trans-unit id="flexform.communeOffers">
+				<source>Kommunen Übersicht</source>
+			</trans-unit>
+
+			<trans-unit id="flexform.print.all">
+				<source>Druck Ausgabe</source>
+			</trans-unit>
+			<trans-unit id="flexform.print.button">
+				<source>Druck-Button</source>
+			</trans-unit>
+			<trans-unit id="flexform.print.sheet">
+				<source>Druck: Vorschlagsaushang</source>
+			</trans-unit>
+			<trans-unit id="flexform.print.list">
+				<source>Druck: Vorschlagsliste</source>
+			</trans-unit>
+			<trans-unit id="flexform.print.printmode">
+				<source>Druckvariante:</source>
+			</trans-unit>
+
+			<trans-unit id="flexform.print.buttonmode">
+				<source>Druckvariante:</source>
+			</trans-unit>
+			<trans-unit id="flexform.print.button.sheet">
+				<source>Button: Vorschlagsaushang</source>
+			</trans-unit>
+			<trans-unit id="flexform.print.button.list">
+				<source>Button: Vorschlagsliste</source>
+			</trans-unit>
+
+			<trans-unit id="flexform.phaseBox">
+				<source>Box: Aktuelle Phase</source>
+			</trans-unit>
+			
+			<trans-unit id="flexform.schoolsStatusBox">
+				<source>Status der Schulen (Kommune)</source>
+			</trans-unit>
+			<trans-unit id="flexform.linkedSchoolsStatusBox">
+				<source>Status der Schulen</source>
+			</trans-unit>
+			<trans-unit id="flexform.directEntry">
+				<source>Direkteinstieg</source>
+			</trans-unit>
+			<trans-unit id="flexform.preview">
+				<source>Vorschau</source>
+			</trans-unit>
+			<trans-unit id="flexform.topOffers">
+				<source>Ergebnisliste - Top Offers</source>
+			</trans-unit>
+			<trans-unit id="flexform.approveOffers">
+				<source>Vorschläge freigeben</source>
+			</trans-unit>
+			<trans-unit id="flexform.offerLinks">
+				<source>Vorschlag-Links (Ergebnisse und Vorschlagsliste)</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

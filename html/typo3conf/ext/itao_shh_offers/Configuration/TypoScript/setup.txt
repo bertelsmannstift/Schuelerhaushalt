@@ -1,0 +1,117 @@
+plugin.tx_itaoshhoffers {
+	view {
+		templateRootPath = {$plugin.tx_itaoshhoffers.view.templateRootPath}
+		partialRootPath = {$plugin.tx_itaoshhoffers.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_itaoshhoffers.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_itaoshhoffers.persistence.storagePid}
+	}
+	settings {
+		storagePid = {$plugin.tx_itaoshhoffers.persistence.storagePid}
+		detailPage = {$plugin.tx_itaoshhoffers.detailPage}
+		previewPage = {$plugin.tx_itaoshhoffers.previewPage}
+
+		printPage {
+			sheet = {$plugin.tx_itaoshhoffers.printPage.sheet}
+			list = {$plugin.tx_itaoshhoffers.printPage.list}
+		} 
+
+		groups {
+			guest = {$plugin.tx_itaoshhoffers.groups.guest}
+			studentRepresentation = {$plugin.tx_itaoshhoffers.groups.studentRepresentation}
+			localManagement = {$plugin.tx_itaoshhoffers.groups.localManagement}
+			student = {$plugin.tx_itaoshhoffers.groups.student}
+			teacher = {$plugin.tx_itaoshhoffers.groups.teacher}
+			studentManagement = {$plugin.tx_itaoshhoffers.groups.studentManagement}
+		}
+
+		actions { 
+			submitted {
+				uid = {$plugin.tx_itaoshhoffers.actions.submitted} 
+				groups = {$plugin.tx_itaoshhoffers.groups.studentRepresentation},{$plugin.tx_itaoshhoffers.groups.studentManagement}
+			}
+			approved{
+				uid = {$plugin.tx_itaoshhoffers.actions.approved} 
+				groups = 
+			}
+			rejected {
+				uid = {$plugin.tx_itaoshhoffers.actions.rejected}
+				groups = 
+			}
+			commented  {
+				uid = {$plugin.tx_itaoshhoffers.actions.commented}
+				groups = 
+			}
+		}
+		
+		phases {
+			preparation = {$plugin.tx_itaoshhoffers.phases.preparation}
+			submit = {$plugin.tx_itaoshhoffers.phases.submit}
+			vote = {$plugin.tx_itaoshhoffers.phases.vote}
+			result = {$plugin.tx_itaoshhoffers.phases.result}
+		}
+	}	
+}
+
+#page.includeJSFooter{
+#	formScript = EXT:itao_shh_offers/Resources/Public/Js/script.js
+#}
+
+config.tx_extbase.persistence.classes {
+	Tx_ItaoShhOffers_Domain_Model_Page {
+		mapping {
+			tableName = pages
+		}
+	}
+
+	Tx_ItaoShhOffers_Domain_Model_FeUser {
+		mapping {
+			tableName = fe_users
+		}
+	}
+
+	Tx_ItaoShhOffers_Domain_Model_BeUser {
+		mapping {
+			tableName = be_users
+		}
+	}
+
+	Tx_ItaoShhOffers_Domain_Model_School {
+		mapping {
+			tableName = tx_itaoshhmanager_schools
+		}
+	}
+	
+	Tx_ItaoShhOffers_Domain_Model_Commune {
+		mapping {
+			tableName = tx_itaoshhmanager_communes
+		}
+	}
+
+	Tx_ItaoShhOffers_Domain_Model_Phase {
+		mapping {
+			tableName = tx_itaoshhmanager_status_school
+		}
+	}
+}
+
+plugin.tx_itaoshhoffers._CSS_DEFAULT_STYLE (
+	input.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	.tx-itao-shh-offers table {
+		border-collapse:separate;
+		border-spacing:10px;
+	}
+
+	.tx-itao-shh-offers table th {
+		font-weight:bold;
+	}
+
+	.tx-itao-shh-offers table td {
+		vertical-align:top;
+	}
+)

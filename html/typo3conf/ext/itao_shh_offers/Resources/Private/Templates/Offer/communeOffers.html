@@ -1,0 +1,105 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+	<f:render partial="FilterHiddenFields" arguments="{filter : filter, orderings : orderings, markAsEdited : 'TRUE', actTab : actTab}"/>
+	
+	<f:if condition="{schools}">
+		<f:render partial="SchoolSelect" arguments="{schools : schools, actSchool : actSchool}"/>
+	</f:if>
+	<f:if condition="{showTabs}">
+		<f:then>
+			<ul class="tabNavigation sortedOffersAction">
+				<li id="tab_0_nav">
+					<f:translate key="offers.tab.edited"/> (<f:count subject="{unEditedOffers}"/>)
+				</li>
+				<li id="tab_1_nav">
+					<f:translate key="offers.tab.unedited"/> (<f:count subject="{editedOffers}"/>)
+				</li>
+			</ul>
+			<f:if condition="{allOffers}">
+				<f:then>
+					<h3>
+						<f:translate key="offer.allOffers.heading"/>
+					</h3>
+					<div class="tabs">
+						<div id="tab_0_tab" class="unEditedOffers tabContent">
+							<f:groupedFor each="{unEditedOffers}" as="schoolOffers" groupBy="school" groupKey="school">
+								<h4 class="schoolHeader">{school.title}</h4>
+								<f:if condition="{schoolOffers}">
+									<f:then>
+										<f:for each="{schoolOffers}" as="offer">
+											<f:render partial="OfferEntry" arguments="{offer : offer, returnAction : 'newOffers', actSorting : 1, rights : rights, school : actSchool }"/>	
+										</f:for>
+									</f:then>
+									<f:else>
+										<div class="noOffers">
+											<f:translate key="offer.noOffers" />
+										</div>
+									</f:else>
+								</f:if>
+							</f:groupedFor>
+						</div>
+						<div id="tab_1_tab" class="editedOffers tabContent">
+							<f:groupedFor each="{editedOffers}" as="schoolOffers" groupBy="school" groupKey="school">
+								<h4 class="schoolHeader">{school.title}</h4>
+								<f:if condition="{schoolOffers}">
+									<f:then>
+										<f:for each="{schoolOffers}" as="offer">
+											<f:render partial="OfferEntry" arguments="{offer : offer, returnAction : 'newOffers', actSorting : 1, rights : rights, school : actSchool }"/>	
+										</f:for>
+									</f:then>
+									<f:else>
+										<div class="noOffers">
+											<f:translate key="offer.noOffers" />
+										</div>
+									</f:else>
+								</f:if>
+							</f:groupedFor>
+						</div>
+					</div>	
+				</f:then>
+				<f:else>
+					<f:then>	
+						<div class="tabs">
+							<div id="tab_0_tab" class="unEditedOffers tabContent">
+								<f:if condition="{unEditedOffers}">
+									<f:then>
+										<f:for each="{unEditedOffers}" as="offer">
+											<f:render partial="OfferEntry" arguments="{offer : offer, returnAction : 'communeOffers', actSorting : 2, rights : rights, school : actSchool }"/>	
+										</f:for>
+									</f:then>
+									<f:else>
+										<div class="noOffers">
+											<f:translate key="offer.noOffers" />
+										</div>
+									</f:else>
+								</f:if>
+							</div>
+							<div id="tab_1_tab" class="editedOffers tabContent">
+								<f:if condition="{editedOffers}">
+									<f:then>
+										<f:for each="{editedOffers}" as="offer">
+											<f:render partial="OfferEntry" arguments="{offer : offer, returnAction : 'communeOffers', actSorting : 2, rights : rights, school : actSchool }"/>	
+										</f:for>
+									</f:then>
+									<f:else>
+										<div class="noOffers">
+											<f:translate key="offer.noOffers" />
+										</div>
+									</f:else>
+								</f:if>
+							</div>
+						</div>	
+					</f:then>
+				</f:else>
+			</f:if>
+		</f:then>
+		<f:else>
+			<f:if condition="{filter.school}">
+				<div class="noOffers">
+					<f:translate key="offer.noOffers" />
+				</div>
+			</f:if>	
+		</f:else>
+	</f:if>	
+</f:section>

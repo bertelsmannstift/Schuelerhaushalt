@@ -1,0 +1,28 @@
+plugin.tx_datamintsfeuser_pi1 {
+	useEmailAsUsername = {$plugin.tx_datamintsfeuser_pi1.useEmailAsUsername}
+	useFieldsAsUsername = {$plugin.tx_datamintsfeuser_pi1.useFieldsAsUsername}
+	useFieldAsUsernameSeperator = {$plugin.tx_datamintsfeuser_pi1.useFieldAsUsernameSeperator}
+	
+ 	_LOCAL_LANG.de {
+		### This error appears if the entered value does not match the regular expression defined for.
+		tx_itaozfaregister_companyname_error_required = Bitte geben Sie eine gültige Unternehmensbezeichnung und Rechtsform an.
+		first_name_error_required = Bitte geben Sie den Vornamen an.
+		last_name_error_required = Bitte geben Sie den Nachnamen an.
+		address_error_required = Bitte geben Sie die Adresse ein.
+		zip_error_required = Bitte geben Sie die Postleitzahl an.
+		city_error_required = Bitte geben Sie den Ort an.
+		tx_itaozfaregister_numberofemployees_error_required = Bitte geben Sie die Anzahl der Mitarbeiter an.
+		tx_itaozfaregister_accepted_error_required = Bitte bestätigen Sie dieses Feld.
+		tx_itaozfaregister_ceofirstname_error_required = Bitte geben Sie den Vornamen des Geschäftsführers an.
+		tx_itaozfaregister_ceolastname_error_required = Bitte geben Sie den Nachnamen des Geschäftsführers an.
+		company_error_required = Bitte geben Sie das Unternehmen und die Rechtsform an.
+		tx_itaozfaregister_numberofemployees_error_valid = Es dürfen nur ganzzahlige Werte angegeben werden.
+	}
+	
+	validate {
+		tx_itaozfaregister_numberofemployees.type = custom
+		tx_itaozfaregister_numberofemployees.regexp = /^[+]?\d*$/
+	}
+	#password change does not work otherwise!
+	fieldconfig.password.config.eval = password 
+}

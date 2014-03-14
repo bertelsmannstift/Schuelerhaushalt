@@ -1,0 +1,24 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+	
+	<f:if condition="{numberOfOffers}">
+		<p class="bodytext">
+			<f:if condition="{0:numberOfOffers} != {0:'1'}">
+				<f:then>
+					<f:format.printf arguments="{0: numberOfOffers}"><f:translate key="numberOfOffers.text"/></f:format.printf>	
+				</f:then>
+				<f:else>
+					<f:translate key="numberOfOffers.oneOffer"/>
+				</f:else>
+			</f:if>	
+		</p>
+	</f:if>
+	<f:if condition="{nameOfSchool}">
+		<div class="schoolName">
+			{nameOfSchool}
+		</div>
+	</f:if>
+		
+		
+</f:section>

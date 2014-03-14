@@ -1,0 +1,44 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+	<input value="{actTab}" id="actTab" type="hidden"/>
+	<ul class="tabNavigation sortedOffersAction">
+		<li id="tab_0_nav">
+			<f:translate key="offer.approveOffers.newHeader"/> (<f:count subject="{newOffers}"/>)
+		</li>
+		<li id="tab_1_nav">
+			<f:translate key="offer.approveOffers.deniedHeader"/> (<f:count subject="{deniedOffers}"/>)
+		</li>
+	</ul>
+	
+	<div id="tab_0_tab" class="newOffers tabContent">
+		<f:if condition="{newOffers}">
+			<f:then>
+				<f:for each="{newOffers}" as="offer">
+					<f:render partial="OfferEntry"  arguments="{offer : offer, returnAction : 'approveOffers', actSorting : offer.likesDislikes.status, rights : rights }"/>
+				</f:for>
+			</f:then>
+			<f:else>
+				<span class="noOffers meta">
+					<f:translate key="offer.sorted.noOffers" />
+				</span>
+			</f:else>
+		</f:if>	
+	</div>
+	<div id="tab_1_tab" class="deniedOffers tabContent">
+		<f:if condition="{deniedOffers}">
+			<f:then>
+				<f:for each="{deniedOffers}" as="offer">
+					<f:render partial="OfferEntry"  arguments="{offer : offer, returnAction : 'approveOffers', actSorting : offer.likesDislikes.status, rights : rights }"/>
+				</f:for>
+			</f:then>
+			<f:else>
+				<span class="noOffers meta">
+					<f:translate key="offer.sorted.noOffers" />
+				</span>
+			</f:else>
+		</f:if>	
+	</div>
+	
+		
+</f:section>

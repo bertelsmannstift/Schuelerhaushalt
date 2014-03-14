@@ -1,0 +1,131 @@
+<T3DataStructure>
+	<meta>
+		<langDisable>1</langDisable>
+	</meta>
+	<!--<sheets>
+		<main>-->
+			<ROOT>
+				<!--<TCEforms>
+					<sheetTitle>LLL:EXT:itao_machineoffers/Resources/Private/Language/locallang_flexform_pi1.xml:sheet_main</sheetTitle>
+				</TCEforms>-->
+				<type>array</type>
+				<el>
+					<settings.displayType>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:itao_download/Resources/Private/Language/locallang_flexform_pi1.xml:displayType</label>
+							<config>
+								<type>select</type>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">LLL:EXT:itao_download/Resources/Private/Language/locallang_flexform_pi1.xml:type.I.0</numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									
+									<numIndex index="1">
+										<numIndex index="0">LLL:EXT:itao_download/Resources/Private/Language/locallang_flexform_pi1.xml:type.I.1</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+								</items>
+							</config>
+							<onChange>reload</onChange>
+						</TCEforms>
+					</settings.displayType>
+					<settings.displayMode>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:itao_download/Resources/Private/Language/locallang_flexform_pi1.xml:displayMode</label>
+							<config>
+								<type>select</type>
+								<items>
+									<!--<numIndex index="0">
+										<numIndex index="0">LLL:EXT:itao_download/Resources/Private/Language/locallang_flexform_pi1.xml:mode.I.0</numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									-->
+									<numIndex index="1">
+										<numIndex index="0">LLL:EXT:itao_download/Resources/Private/Language/locallang_flexform_pi1.xml:mode.I.1</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+								</items>
+							</config>
+							<displayCond>FIELD:settings.displayType:=:1</displayCond>
+						</TCEforms>
+					</settings.displayMode>
+					<settings.showCategory>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:itao_download/Resources/Private/Language/locallang_flexform_pi1.xml:categoryLabel</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>tx_itaodownload_domain_model_category</allowed>
+								<size>5</size>
+								<maxitems>22</maxitems>
+								<minitems>0</minitems>
+								<show_thumbs>1</show_thumbs>
+							</config>
+							<displayCond><![CDATA[FIELD:settings.displayType:<=:0]]></displayCond>
+					  	</TCEforms>
+					</settings.showCategory>
+					<settings.titleBoxDownload>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:itao_download/Resources/Private/Language/locallang_flexform_pi1.xml:downloadBoxTitleLabel</label>
+							<config>
+								<type>input</type>
+								<size>25</size>
+								<max>40</max>
+								<eval>trim</eval>
+							</config>
+							<displayCond>FIELD:settings.displayType:=:1</displayCond>
+					  	</TCEforms>
+					</settings.titleBoxDownload>
+					<!--
+					<settings.textBoxDownload>
+						<TCEforms>
+							<label>LLL:EXT:itao_download/Resources/Private/Language/locallang_flexform_pi1.xml:downloadBoxTextLabel</label>
+							<defaultExtras>richtext</defaultExtras>
+							<config>
+								<type>text</type>
+								<cols>24</cols>
+								<rows>3</rows>
+							</config>
+							<displayCond>FIELD:settings.displayType:=:1</displayCond>
+						</TCEforms>
+					</settings.textBoxDownload>
+					-->
+					<settings.showDownload>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:itao_download/Resources/Private/Language/locallang_flexform_pi1.xml:downloadLabel</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>tx_itaodownload_domain_model_download</allowed>
+								<size>5</size>
+								<maxitems>22</maxitems>
+								<minitems>0</minitems>
+								<show_thumbs>1</show_thumbs>
+							</config>
+							<displayCond>FIELD:settings.displayType:=:1</displayCond>
+					  	</TCEforms>
+					</settings.showDownload>
+					<settings.linkTextDownload>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:itao_download/Resources/Private/Language/locallang_flexform_pi1.xml:linkTextLabel</label>
+							<config>
+								<type>input</type>
+								<size>25</size>
+								<max>40</max>
+								<eval>trim</eval>
+							</config>
+							<displayCond>FIELD:settings.displayType:=:1</displayCond>
+					  	</TCEforms>
+					</settings.linkTextDownload>
+				</el>
+			</ROOT>
+		<!--</main>
+	</sheets>-->
+</T3DataStructure>

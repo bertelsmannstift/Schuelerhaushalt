@@ -1,0 +1,5 @@
+###########################################################################
+TemplaVoila Fix for TYPO3 Version > 4.7.1
+see for Details: http://bugs.typo3.org/view.php?id=18583
+
+Fix found in ext_tables.sql

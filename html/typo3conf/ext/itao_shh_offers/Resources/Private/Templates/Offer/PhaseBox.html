@@ -1,0 +1,27 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+	<div class="sideBox">
+		<header>
+			<div class="headerLeft">&nbsp;</div>
+			<div class="headerContent phaseHeader"><div class="sideBoxIcon">&nbsp;</div><h4><f:translate key="phase.heading" /></h4></div>
+			<div class="headerRight">&nbsp;</div>
+		</header>
+		<div class="sideBoxContent">
+			<div class="innerContent">
+				<f:for each="{phases}" as="phase">
+					<f:if condition="{0: school.refStatus.uid} == {0: phase.uid}">
+						<f:then>
+							<div class="phase active">		
+						</f:then>
+						<f:else>
+							<div class="phase">		
+						</f:else>
+					</f:if>
+						<span class="number"><f:translate key="phase.number.{phase.ordernr}" /></span> <span class="title">{phase.title}</span>
+					</div>
+				</f:for>
+			</div>	
+		</div>					
+	</div>		
+</f:section>

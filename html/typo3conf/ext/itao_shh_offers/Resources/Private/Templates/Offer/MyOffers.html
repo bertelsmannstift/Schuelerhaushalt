@@ -1,0 +1,81 @@
+<f:layout name="MyOffers" />
+
+<f:section name="main">
+	<f:if condition="{feedback}">
+		<span id="showFeedback"><f:link.action id="showFeedbackLink" pageUid="{settings.previewPage}" class="fancyBoxIframe" action="preview" arguments="{feedback: 1}"></f:link.action></span>
+	</f:if>
+	<f:render partial="FilterHiddenFields" arguments="{filter : filter, orderings : orderings, actTab : actTab}"/>
+	<f:if condition="{showAllStatusOffers}">
+		<ul class="tabNavigation sortedOffersAction">
+			<li id="tab_0_nav">
+				<f:translate key="myOffers.heading.status.1"/> (<f:count subject="{submittedOffers}"/>)
+			</li>
+			<li id="tab_1_nav">
+				<f:translate key="myOffers.heading.status.2"/> (<f:count subject="{offers}"/>)
+			</li>
+			<li id="tab_2_nav">
+				<f:translate key="myOffers.heading.status.3"/> (<f:count subject="{rejectedOffers}"/>)
+			</li>
+		</ul>
+	</f:if>	
+	<f:if condition="{showAllStatusOffers}">
+		<f:then>
+			<div id="tab_0_tab" class="tabContent">
+				<f:if condition="{submittedOffers}">
+					<f:then>
+						<f:for each="{submittedOffers}" as="offer">
+							<f:render partial="OfferEntry"  arguments="{offer : offer, returnAction : 'myOffers', actSorting : offer.likesDislikes.status, rights : rights }"/>
+						</f:for>
+					</f:then>
+					<f:else>
+						<div class="noOffers">
+							<f:translate key="offer.sorted.noOffers"/>
+						</div>
+					</f:else>
+				</f:if>
+			</div>
+			<div id="tab_1_tab" class="tabContent">
+				<f:if condition="{offers}">
+					<f:then>
+						<f:for each="{offers}" as="offer">
+							<f:render partial="OfferEntry"  arguments="{offer : offer, returnAction : 'myOffers', actSorting : offer.likesDislikes.status, rights : rights }"/>
+						</f:for>
+					</f:then>
+					<f:else>
+						<div class="noOffers">
+							<f:translate key="offer.sorted.noOffers"/>
+						</div>
+					</f:else>
+				</f:if>
+			</div>
+			<div id="tab_2_tab" class="tabContent">
+				<f:if condition="{rejectedOffers}">
+					<f:then>
+						<f:for each="{rejectedOffers}" as="offer">
+							<f:render partial="OfferEntry"  arguments="{offer : offer, returnAction : 'myOffers', actSorting : offer.likesDislikes.status, rights : rights }"/>
+						</f:for>
+					</f:then>
+					<f:else>
+						<div class="noOffers">
+							<f:translate key="offer.sorted.noOffers"/>
+						</div>
+					</f:else>
+				</f:if>
+			</div>
+		</f:then>
+		<f:else>
+			<f:if condition="{offers}">
+				<f:then>
+					<f:for each="{offers}" as="offer">
+						<f:render partial="OfferEntry"  arguments="{offer : offer, returnAction : 'myOffers', actSorting : offer.likesDislikes.status, rights : rights }"/>
+					</f:for>
+				</f:then>
+				<f:else>
+					<div class="noOffers">
+						<f:translate key="offer.sorted.noOffers"/>
+					</div>
+				</f:else>
+			</f:if>
+		</f:else>
+	</f:if>
+</f:section>

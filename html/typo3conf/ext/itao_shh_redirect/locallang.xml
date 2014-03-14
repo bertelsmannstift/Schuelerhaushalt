@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for extension 'itao_shh_redirect'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="pi1_title">Weiterleitung zu Schulen</label>
+			<label index="pi1_plus_wiz_description">Regelt die Weiterleitung von eingeloggten Usern auf der Startseite</label>
+			<label index="pi2_title">Weiterleitung zu Schulen - Google-Case</label>
+			<label index="pi2_plus_wiz_description">Regelt die Weiterleitung von eingeloggten Usern auf die richtige Schul-Startseite</label>
+		</languageKey>
+	</data>
+</T3locallang>

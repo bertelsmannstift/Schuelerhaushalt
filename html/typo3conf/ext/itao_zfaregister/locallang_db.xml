@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'itao_zfaregister'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="fe_users.tx_itaozfaregister_companyname">Company name</label>
+			<label index="fe_users.tx_itaozfaregister_numberofemployees">Number of employees</label>
+			<label index="fe_users.tx_itaozfaregister_note">Notizen zum Unternehmen (für Prüfer):</label>
+			<label index="fe_users.tx_itaozfaregister_accepted">Accepted</label>
+			<label index="fe_users.tx_itaozfaregister_ceofirstname">CEO firstname</label>
+			<label index="fe_users.tx_itaozfaregister_ceolastname">CEO lastname</label>
+			<label index="fe_users.tx_itaozfaregister_flexformlabel">Company</label>	
+			
+			
+			<!-- neu Traude -->
+			<label index="fe_users.tx_itaozfaregister_is_parent">Is this a main-client?</label>
+			<label index="fe_users.tx_itaozfaregister_parentuser">Company:</label>
+			<label index="fe_users.tx_itaozfaregister_status">State</label>
+			
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="fe_users.tx_itaozfaregister_companyname">Firmenname:</label>
+			<label index="fe_users.tx_itaozfaregister_numberofemployees">Anzahl der Mitarbeiter:</label>
+			<label index="fe_users.tx_itaozfaregister_numberofemployees_offline">Anzahl der Fragebögen, die OFFLINE ausgefüllt werden:</label>
+			<label index="fe_users.tx_itaozfaregister_ceofirstname">Vorname:</label>
+			<label index="fe_users.tx_itaozfaregister_ceolastname">Nachname:</label>
+			<label index="fe_users.tx_itaozfaregister_flexformlabel">Unternehmen</label>
+			<label index="fe_users.tx_itaozfaregister_flexformlabel_contact">Ansprechpartner</label>
+			<label index="fe_users.tx_itaozfaregister_flexformlabel_allgemeines">Allgemeines</label>
+			<label index="fe_users.tx_itaozfaregister_flexformlabel_sonst">Evaluation</label>
+			<label index="fe_users.tx_itaozfaregister_flexformlabel_sonstPerData">Sonstige persönliche Daten</label>
+			<label index="fe_users.tx_itaozfaregister_accepted">Zustimmung zu den AGB</label>
+			<label index="fe_users.tx_itaozfaregister_accepted_checkb">AGB akzeptiert</label>
+			<label index="fe_users.tx_itaozfaregister_erhebung">Status Datenerhebung</label>
+						
+			<label index="fe_users.tx_itaozfaregister_vertragstatus">Status Vertrag</label>
+			<label index="fe_users.tx_itaozfaregister_vertragstatus.I">erforderlich</label>
+			<label index="fe_users.tx_itaozfaregister_vertragstatus.II">verschickt</label>
+			<label index="fe_users.tx_itaozfaregister_vertragstatus.III">unterschrieben</label>
+			
+			<label index="fe_users.tx_itaozfaregister_rechnungstatus">Status Rechnung</label>
+			<label index="fe_users.tx_itaozfaregister_rechnungstatus.I">erforderlich</label>
+			<label index="fe_users.tx_itaozfaregister_rechnungstatus.II">verschickt</label>
+			<label index="fe_users.tx_itaozfaregister_rechnungstatus.III">bezahlt</label>
+			
+			<label index="fe_users.tx_itaozfaregister_zertstatus">Status Zertifikat</label>
+			<label index="fe_users.tx_itaozfaregister_zertstatus.I">es ist noch keine Prüfung erfolgt</label>
+			<label index="fe_users.tx_itaozfaregister_zertstatus.II">Zertifikat erhalten</label>
+			<label index="fe_users.tx_itaozfaregister_zertstatus.III">Zertifikat NICHT erhalten</label>
+			
+			
+			
+			
+			
+			
+			<!-- neu Traude -->
+			<label index="fe_users.tx_itaozfaregister_is_parent">Benutzer ist ein Unternehmen (Hauptdatensatz)</label>
+			<label index="fe_users.tx_itaozfaregister_parentuser">Zugehöriges Unternehmen:</label>
+			
+			
+			
+			<label index="fe_users.palette_account.title">Zugangsdaten</label>
+			<label index="fe_users.tx_itaozfalogin_changepassword_label">Passwort-Änderung beim nächsten Login erzwingen</label>
+			<label index="fe_users.palette_isparent.title">Datensatzverbindung</label>
+			
+			<label index="fe_users.palette_company.title">Unternehmen</label>
+			<label index="fe_users.www">Homepage/Internetseite:</label>
+			
+			<label index="fe_users.palette_ceodata.title">Geschäftsführer</label>
+			<label index="fe_users.palette_address.title">Anschrift</label>
+			<label index="fe_users.addressnew">Adresse/Straße:</label>
+			<label index="fe_users.citynew">Ort:</label>
+			
+			<label index="fe_users.palette_contact.title">Kontaktperson für Zertifizierung</label>
+			<label index="fe_users.commentsnew">Bemerkung (vom Registrierungsformular):</label>
+			
+			<label index="fe_users.palette_newsletter.title">Newsletter</label>
+			<label index="fe_users.module_sys_dmail_newsletternew">Newsletter ist abonniert</label>
+			<label index="fe_users.module_sys_dmail_htmlnew">HTML-Format verwenden</label>
+			
+			<label index="fe_users.module_sys_dmail_newsletter_empty"></label>
+			<label index="fe_users.module_sys_dmail_html_empty"></label>
+			
+			<label index="fe_users.palette_status.title">Status</label>			
+			<label index="fe_users.tx_itaozfaregister_status">Schritt/Phase:</label>
+			
+			<label index="fe_users.palette_access.title">Sichtbarkeit</label>	
+			<label index="fe_users.disablenew">Datensatz verstecken</label>	
+			
+			<label index="fe_users.palette_time.title">Gültigkeitszeitraum</label>	
+			<label index="fe_users.starttimenew">Erster Tag (Datum):</label>	
+			<label index="fe_users.endtimenew">Letzter Tag (Datum):</label>	
+			
+				
+			
+			
+			
+			<label index="fe_users.tx_itaozfaregister_note">Notizen zum Unternehmen (für Prüfer):</label>
+			
+			
+			
+			
+			
+			
+			
+			
+		</languageKey>
+	</data>
+</T3locallang>

@@ -1,0 +1,150 @@
+2012-03-18  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Fixed bug #32848: Captcha image expiry headers
+	* Fixed bug #34729: Problems with encrypt function (Thanks to Carlos Meyer)
+	* Updated version to 1.5.3
+
+2011-12-15  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Follow-up to bug #7066: IE embeded media player display
+	* Updated version to 1.5.0
+	* Fixed bug #32604: BE module broken with TYPO3 4.6
+	* Added feature #32610: Russian documentation (Thanks to Андрей Аксенов)
+	* Updated version to 1.5.1
+	* Follow-up to bug #32604: BE module broken with TYPO3 4.6
+	* Updated version to 1.5.2
+
+2011-12-14  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Fixed bug #7066: IE embeded media player display
+	* Added feature #32567: Use HTML5 audio tag when available
+	* Follow-up to feature #32567: Use HTML5 audio tag when available
+	* Fixed bug #32579: Incorrect length in header of merged wave file
+
+2011-12-13  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Follow-up to bug #13428: pi1/captcha.php: PHP Fatal Error when called directly
+	* Added feature #32488: Require TYPO3 4.5 and PHP 5.3
+	* Added feature #32524: Remove random number generator seeding
+	* Added feature #32525: Use TYPO3 encryption key
+	* Follow-up to bug #26113: On enter, always the same image is loaded
+
+2011-12-12  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Fixed bug #32477: Reference to tslib_pibase constructor in tx_srfreecap_pi2
+	* Fixed bug #13428: pi1/captcha.php: PHP Fatal Error when called directly
+	* Fixed bug #13669: ereg/ereg_replace deprecated since PHP 5.3
+	* Fixed bug #27000: error_reporting in pi1/class.tx_srfreecap_pi1.php
+	* Fixed bug #29276: function.mt-rand: max(1) is smaller than min(5)
+	* Fixed bug #26113: On enter, always the same image is loaded
+	* Fixed bug #32487: Remove reference to mediunDoc
+
+2011-02-15  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Fixed bug #13072: Captcha not showing up when using MP from other domain (Thanks to Ernesto Baschny)
+	* Updated version to 1.4.1
+
+2011-02-10  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Fixed bug #12921: Audio captcha should be accessible by TAB key (Thanks to Elliot Sawyer)
+	* Require PHP 5.1
+	* Updated manual
+	* Fixed bug #12938: "www.mydomain.org" is not RFC 2606 compilant
+	* Partially fixed bug #5628: Political (In-)Correctness of the german word list
+	* Updated version to 1.4.0
+
+2011-02-01  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Added feature #12714: Add TS constants to control darkness of the captcha text. Thanks to Julia Pardanaud.
+	* Added feature #12716: New default values of TS constants to increase CAPTCHA readability. Thanks to Julia Pardanaud.
+
+2010-12-21  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Fixed bug #10223: BE module not shown anymore with TYPO3 4.4
+	* Fixed bug #8528: Typo in Dutch localization of label in pi2/locallang.xml
+	* Fixed bug #7987: maxWordLength problem
+
+2010-04-16  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Require TYPO3 4.3
+	* Manual updated.
+	* Updated ext_emconf from TER version 1.2.3
+
+2010-04-14  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Fixed bug #7259: Use of deprecated function t3lib_div::makeInstanceClassName()
+
+2009-10-20  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Fixed bug: Mishandling of session data. Thanks to Wolo Wolski.
+	* Updated ext_emconf from TER version 1.2.2
+	* Updated manual.
+
+2009-08-31  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Added feature: new TS constant accessibleOutputImage and textual version.
+	* Manual updated.
+	* Updated ext_emconf from TER version 1.2.0
+
+2009-08-29  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Follow-up to #3056: Audio Captcha is not rendered in IE8
+	* Added feature: Two new TS constants: textHorizontalPosition and textVerticalPosition. Thanks to Julia Pardanaud.
+	* Added Turkish word list. Thanks to Zeynep Nurten Cinarcik.
+
+2009-06-03  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Fixed bug #3056: Audio Captcha is not rendered in IE8
+
+2009-06-01  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Added feature #3526: Use eID API for graphical and audio captcha generation.
+	* Follow-up to #3526 for TYPO3 < 4.3: Use eID API for graphical and audio captcha generation.
+	* Fixed bug #3530: Morphed image blocks background type not working.
+	* Follow-up to feature #3526: Cleanup parameters of new captcha image
+
+2009-05-29  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Fixed bug #3472: No image rendering in T3 V4.3 alpha3.
+
+2009-05-07  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Added feature #3244: User can set the width of the generated captcha-image. Thanks to Simon Schick.
+
+2009-04-15  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Added Russian translation. Thanks to Андрей Аксенов.
+
+2009-04-07  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Fixed bug #3052: "onclick" should be used instead of "onClick". Thanks to Gerald Schwarz.
+	* Fixed bug: Random number generator should be seeded.
+
+2009-04-01  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Removed some words from the default word list.
+	* Added partial Russian translation. Thanks to Esben Fest.
+	* Updated manual.
+	* Updated ext_emconf from TER version 1.1.2
+
+2009-01-24  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Updated manual.
+	* Updated ext_emconf from TER version 1.1.1
+
+2009-01-23  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Initial upload to TYPO3 Forge
+	* Cleanup: Use UNIX line separators in all files
+	* Fix for current TYPO3 trunk (4.3-dev) caching
+	* Update version number to 1.1.1
+	* Default to local installation
+	* Fixed bug #10132: sr_freecap seems to work only with default language. Thanks to Dan GrÃ¼nzig.
+	* Follow-up to issue #10132: Adding comments
+	* Added Polish translation. Thanks to Daniel Ciunkiewicz.
+	* Correction to the manual. Thanks to Niklas Kanthak.
+	* Remove superfluous spaces in rendered html. Thanks to Niklas Kanthak.
+	* ###SR_FREECAP_ACCESSIBLE### marker should produce inline html. Audio object wrapper changed from div to span. Thanks to Niklas Kanthak.
+	* Updated manual: random background type does not exist anymore with freecap 1.4.
+	* Added missing images for Morphed image blocks option of backgroundType.
+	* Updated damaged images.

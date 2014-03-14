@@ -1,0 +1,39 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+	<div class="sideBox">
+		<header>
+			<div class="headerLeft">&nbsp;</div>
+			<div class="headerContent sortOfferHeader"><div class="sideBoxIcon">&nbsp;</div><h4><f:translate key="myOffers.statusBox.heading"/></h4></div>
+			<div class="headerRight">&nbsp;</div>
+		</header>
+		<div class="sideBoxContent">
+			<div class="innerContent">
+				<f:if condition="{logs}">
+					<f:then>
+						<f:for each="{logs}" as="log">
+							<div class="messageEntry action_{log.action}">
+								<small class="date"><f:format.date format="d.m.y">{log.date}</f:format.date></small> | <small class="name"><f:if condition="{log.feUser}"><f:then>{log.feUser.firstName} {log.feUser.lastName}</f:then><f:else>{log.cruserId.username}</f:else></f:if></small>
+								<f:if condition="{0: feUser} == {0: log.offer.feuser}">
+									<f:then>
+										<div class="message">
+											<f:format.printf arguments="{0: '<span>', 1: log.offer.title, 2: '</span>'}"><f:translate key="offer.actionMessage.personal.{log.action}" /></f:format.printf>
+										</div>
+									</f:then>
+									<f:else>
+										<div class="message">
+											<f:format.printf arguments="{0: '<span>', 1: log.offer.title, 2: '</span>'}"><f:translate key="offer.actionMessage.{log.action}" /></f:format.printf>
+										</div>
+									</f:else>
+								</f:if>
+							</div>
+						</f:for>		
+					</f:then>
+					<f:else>
+						<em><f:translate key="myOffers.statusBox.noMessages"/></em>
+					</f:else>
+				</f:if>
+			</div>
+		</div>
+	</div>	
+</f:section>

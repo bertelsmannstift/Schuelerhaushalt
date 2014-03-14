@@ -1,0 +1,53 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+	<f:if condition="{0: settings.printmode} == {0: 'SHEET'}">
+		<f:then>
+			<f:for each="{offers}" as="offer">
+				<div class="onePrintOffer">
+					<f:render partial="OfferDetails" arguments="{offer : offer, rights : rights}"/>
+				</div>
+			</f:for>
+		</f:then>
+		<f:else>
+			<h1><f:translate key="offer.print.list.heading"/></h1>
+			<table class="offerPrintList">
+				<tr>
+					<th style="width: 10%">
+						<f:translate key="print.list.th.internalId"/>
+					</th>
+					<th style="width: 65%">
+						<f:translate key="print.list.th.title"/>
+					</th>
+					<th style="width: 25%">
+						<f:translate key="print.list.th.costs"/>
+					</th>
+				</tr>
+				<f:for each="{offers}" as="offer">
+					<tr>
+						<td class="title">{offer.internalId}</td><td class="title">{offer.title}</td>
+						<f:if condition="{offer.costsFixed}">
+							<f:then>
+								<td>{offer.costsFixed}&euro;</td>
+							</f:then>
+							<f:else>
+								<f:if condition="{offer.costs}">
+									<f:then>
+										<td>{offer.costs}&euro;</td>
+									</f:then>
+									<f:else>
+										<td><em><f:translate key="offer.show.edit.noCosts"/></em></td>
+									</f:else>
+								</f:if>
+							</f:else>
+						</f:if>
+					</tr>
+				</f:for>
+			</table>	
+		</f:else>
+	</f:if>
+	<script type="text/javascript">
+		window.print();
+	</script>
+	
+</f:section>

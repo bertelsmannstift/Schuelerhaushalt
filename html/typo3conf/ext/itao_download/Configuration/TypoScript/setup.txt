@@ -1,0 +1,51 @@
+plugin.tx_itaodownload {
+	view {
+		templateRootPath = {$plugin.tx_itaodownload.view.templateRootPath}
+		partialRootPath = {$plugin.tx_itaodownload.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_itaodownload.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_itaodownload.persistence.storagePid}
+	}
+	
+}
+
+plugin.tx_itaodownload_pi1 {
+	settings {
+		baseUrl =  {$plugin.tx_itaodownload_pi1.settings.baseUrl}
+	}
+}
+
+plugin.tx_itaodownload._CSS_DEFAULT_STYLE (
+	input.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	.tx-itaodownload-pi1 table {
+		border-collapse:separate;
+		border-spacing:10px;
+	}
+
+	.tx-itaodownload-pi1 table th {
+		font-weight:bold;
+	}
+
+	.tx-itaodownload-pi1 table td {
+		vertical-align:top;
+	}
+)
+
+
+
+ # Module configuration
+module.tx_itaodownload {
+	persistence {
+		storagePid = {$plugin.tx_itaodownload.persistence.storagePid}
+	}
+	view {
+		templateRootPath = {$module.tx_itaodownload.view.templateRootPath}
+		partialRootPath = {$module.tx_itaodownload.view.partialRootPath}
+		layoutRootPath = {$module.tx_itaodownload.view.layoutRootPath}
+	}
+}

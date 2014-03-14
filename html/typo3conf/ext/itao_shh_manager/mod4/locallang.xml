@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for module &quot;web_txitaoshhmanagerM4&quot;</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="title">SHH Verwaltung4</label>
+			<label index="function1">Kommunenübersicht</label>
+			<label index="function2">Function #2</label>
+			<label index="function3">Function #3</label>
+			
+			
+			<label index="submodule_commune">Stammdaten Kommune</label>
+			<label index="submodule_school">Aktueller Status/Phase</label>
+			<label index="submodule_school_user">Website-Benutzer anlegen</label>
+			<label index="submodule_school_article">Vorschläge</label>
+			<label index="submodule_offer_detail">Vorschlag im Detail</label>
+			<label index="submodule_school_beuser">Backend-Redakteure</label>
+			<label index="submodule_school_editfeuser">Website-Benutzer bearbeiten</label>
+			
+			
+			
+			<label index="l_status_running">läuft</label>
+			<label index="l_status_finished">abgeschlossen</label>
+			<label index="l_status_notstarted">nicht gestartet</label>
+			<label index="l_vorbereitung">Start</label>
+			<label index="l_online">Vorschläge einreichen</label>
+			<label index="l_abstimmung">Abstimmung</label>
+			
+			<label index="l_ergebnis">Ergebnis</label>
+			
+			
+			
+			<label index="l_newKunde">Neue Kommune anlegen</label>
+			<label index="l_editCommune">Kommune bearbeiten</label>
+			
+			<label index="l_newSchool">Neue Schule anlegen</label>
+			<label index="l_editSchool">Schule bearbeiten</label>
+			
+			
+			<label index="l_edit">bearbeiten</label>
+			
+			
+			<label index="l_rolle">Rolle</label>
+			
+			
+			<label index="account_header_0">Generierung Accounts fehlgeschlagen</label>
+			<label index="account_text_0">Die Accounts konnten nicht generiert werden.</label>
+			<label index="account_header_1">Generierung Accounts erfolgreich</label>
+			<label index="account_text_1a">Es wurden </label>
+			<label index="account_text_1b"> neue Accounts erstellt</label>
+			
+			
+			<label index="account_upd_header_1">Aktualisierung erfolgreich</label>
+			<label index="account_upd_text_1">Das PDF wurde aktualisiert (neu geschrieben)</label>
+			
+			<label index="l_editOffer">Vorschlag bearbeiten</label>
+			
+			<label index="offer_func_2">Vorschlag freigegeben</label>
+			<label index="offer_func_3">Vorschlag abgewiesen</label>
+			
+			<label index="offact_header_1">Aktion erfolgreich</label>
+			<label index="offact_header_0">Aktion nicht erfolgreich</label>
+			
+			<label index="offact_text_1">Der Vorschlag wurde </label>
+			<label index="offact_text_0a">Der Vorschlag konnte nicht </label>
+			<label index="offact_text_0b"> werden</label>
+			
+			<label index="offact_freigegeben">freigegeben</label>
+			<label index="offact_abgewiesen">abgewiesen</label>
+			
+			
+			<label index="std_searchinput">Titel, Beschreibung, einstellender Benutzer, Kosten suchen...</label>
+			<label index="std_searchinput_edituser">Benutzerkennung, Nachname, Klasse eines Website-Users suchen...</label>
+			
+			
+			<label index="l_editComment">Kommentar bearbeiten</label>
+			
+			<label index="pw_erfolgreich_h">Aktion erfolgreich</label>
+			<label index="pw_noterfolgreich_h">Aktion nicht erfolgreich</label>
+			<label index="pw_erfolgreich_tx">Das Passwort des Benutzers wurde auf sein Original-Passwort zurückgesetzt.</label>
+			<label index="pw_noterfolgreich_tx">Das Passwort des Benutzers konnte nicht zurückgesetzt werden.</label>
+			
+			
+			<label index="l_editanzresults">Anzahl ändern</label>
+			
+			
+			
+			
+			
+		</languageKey>
+	</data>
+</T3locallang>

@@ -1,0 +1,18 @@
+<f:if condition="{0: settings.buttonmode} == {0: '1'}">
+	<f:link.action class="printLink sheet" action="printSheet" arguments="{school : school}" pageUid="{settings.printPage.sheet}" target="_blank" onclick="return popup(this.href);">
+		<span><f:translate key="print.all.button.sheet"/></span>
+	</f:link.action>	
+</f:if>
+<f:if condition="{0: settings.buttonmode} == {0: '2'}">
+	<f:link.action class="printLink list" action="printSheet" arguments="{school : school}" pageUid="{settings.printPage.list}" target="_blank" onclick="return popup(this.href);">
+		<span><f:translate key="print.all.button.list"/></span>
+	</f:link.action>
+</f:if>
+<f:if condition="{0: settings.buttonmode} == {0: '3'}">
+	<f:link.action class="printLink sheet" action="printSheet" arguments="{school : school}" pageUid="{settings.printPage.sheet}" target="_blank" onclick="return popup(this.href);">
+		<span><f:translate key="print.all.button.sheet"/></span>
+	</f:link.action>	
+	<f:link.action class="printLink list" action="printSheet" arguments="{school : school}" pageUid="{settings.printPage.list}" target="_blank" onclick="return popup(this.href);">
+		<span><f:translate key="print.all.button.list"/></span>
+	</f:link.action>
+</f:if>

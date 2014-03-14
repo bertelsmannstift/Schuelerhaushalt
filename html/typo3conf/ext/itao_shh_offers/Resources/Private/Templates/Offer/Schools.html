@@ -1,0 +1,7 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+	<f:if condition="{schools}">
+		<f:render partial="SchoolSelect" arguments="{schools : schools, actSchool : actSchool}"/>
+	</f:if>
+</f:section>

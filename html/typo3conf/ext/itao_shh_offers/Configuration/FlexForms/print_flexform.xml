@@ -1,0 +1,77 @@
+<T3DataStructure>
+	<meta>
+		<langDisable>1</langDisable>
+	</meta>
+	<ROOT>
+		<TCEforms>
+			<sheetTitle>Code</sheetTitle>
+		</TCEforms>
+		<type>array</type>
+		<el>
+			<switchableControllerActions>
+				<TCEforms>
+					<label>LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.print</label>
+					<config>
+						<type>select</type>
+						<size>1</size>
+						<items type="array">
+							<numIndex index="1" type="array">
+								<numIndex index="0">LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.print.button</numIndex>
+								<numIndex index="1">Offer->printButton;</numIndex>
+							</numIndex>
+							<numIndex index="2" type="array">
+								<numIndex index="0">LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.print.all</numIndex>
+								<numIndex index="1">Offer->printSheet;</numIndex>
+							</numIndex>
+						</items>
+						<maxitems>1</maxitems>
+						<minitems>1</minitems>
+					</config>
+					<onChange>reload</onChange>
+				</TCEforms>
+			</switchableControllerActions>
+			<settings.buttonmode>
+				<TCEforms>
+					<label>LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.print.buttonmode</label>
+					<config>
+						<type>check</type>
+						<size>1</size>
+						<items type="array">
+							<numIndex index="0" type="array">
+								<numIndex index="0">LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.print.button.sheet</numIndex>
+								<numIndex index="1">SHEET</numIndex>
+							</numIndex>
+							<numIndex index="1" type="array">
+								<numIndex index="0">LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.print.button.list</numIndex>
+								<numIndex index="1">LIST</numIndex>
+							</numIndex>
+						</items>
+					</config>
+					<minitems>1</minitems>
+					<displayCond>FIELD:switchableControllerActions:=:Offer->printButton;</displayCond>
+				</TCEforms>
+			</settings.buttonmode>
+			<settings.printmode>
+				<TCEforms>
+					<label>LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.print.printmode</label>
+					<config>
+						<type>radio</type>
+						<size>1</size>
+						<items type="array">
+							<numIndex index="0" type="array">
+								<numIndex index="0">LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.print.sheet</numIndex>
+								<numIndex index="1">SHEET</numIndex>
+							</numIndex>
+							<numIndex index="1" type="array">
+								<numIndex index="0">LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.print.list</numIndex>
+								<numIndex index="1">LIST</numIndex>
+							</numIndex>
+						</items>
+					</config>
+					<minitems>1</minitems>
+					<displayCond>FIELD:switchableControllerActions:=:Offer->printSheet;</displayCond>
+				</TCEforms>
+			</settings.printmode>
+		</el>
+	</ROOT>
+</T3DataStructure>

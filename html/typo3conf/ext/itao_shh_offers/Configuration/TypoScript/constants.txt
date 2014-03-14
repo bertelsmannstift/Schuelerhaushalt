@@ -1,0 +1,49 @@
+plugin.tx_itaoshhoffers {
+	view {
+		# cat=plugin.tx_itaoshhoffers/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:itao_shh_offers/Resources/Private/Templates/
+		# cat=plugin.tx_itaoshhoffers/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:itao_shh_offers/Resources/Private/Partials/
+		# cat=plugin.tx_itaoshhoffers/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:itao_shh_offers/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_itaoshhoffers//a; type=string; label=Default storage PID
+		storagePid = 11,730
+	}
+
+	groups {
+		# cat=plugin.tx_itaoshhoffers//a; type=string; label=Gast
+		guest = 1
+		# cat=plugin.tx_itaoshhoffers//a; type=string; label= Sch&uuml;ler Koordinator
+		studentRepresentation = 2
+		# cat=plugin.tx_itaoshhoffers//a; type=string; label=Verwaltung Kommune
+		localManagement = 3
+		# cat=plugin.tx_itaoshhoffers//a; type=string; label=Sch&uuml;ler 
+		student = 4
+		# cat=plugin.tx_itaoshhoffers//a; type=string; label=Sch&uuml;ler Moderator
+		teacher = 6
+		# cat=plugin.tx_itaoshhoffers//a; type=string; label=Koordiator Lehrer
+		studentManagement = 2
+	}
+	
+	detailPage = 97
+	previewPage = 611
+
+	printPage.sheet = 374
+	printPage.list = 375
+	
+	actions {
+		submitted = 1
+		approved = 2
+		rejected = 3
+		commented = 4
+	}
+	
+	phases {
+		preparation = 1
+		submit = 2
+		vote = 3
+		result = 5
+	}
+}

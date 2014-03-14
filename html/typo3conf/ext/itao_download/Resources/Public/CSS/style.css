@@ -1,0 +1,23 @@
+
+table.tx_itaodownload {
+	background-color: #ffffff;
+	border-collapse: collapse;
+}
+table.tx_itaodownload tr {
+	height: 20px;
+}
+table.tx_itaodownload .headline {
+	background-color: #DEDD39;
+}
+table.tx_itaodownload th, table.tx_itaodownload td {
+	padding: 5px;
+}
+table.tx_itaodownload tr.even {
+	background-color: #DDDDDD;;
+}
+ul.f3-widget-paginator {
+	display: none;
+}
+input.tx_itaodownload_edit_textfield {
+	width: 300px;
+}

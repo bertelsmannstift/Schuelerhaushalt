@@ -1,0 +1,37 @@
+<div class="offerFunctions">
+	<f:if condition="{like}">
+		<div class="offerFunctionLink like">
+			<f:link.action class="jsChangesLink" action="sort" arguments="{offer : offer, status : 1, returnAction : returnAction, oldStatus : oldStatus}">
+				<f:translate key="offer.like"/>
+			</f:link.action>
+		</div>
+	</f:if>
+	<f:if condition="{reLike}">
+		<div class="offerFunctionLink like">
+			<f:link.action class="jsChangesLink" action="sort" arguments="{offer : offer, status : 1, returnAction : returnAction, oldStatus : oldStatus}">
+				<f:translate key="offer.reLike"/>
+			</f:link.action>
+		</div>
+	</f:if>
+	<f:if condition="{dislike}">
+		<div class="offerFunctionLink dislike">
+			<f:link.action class="jsChangesLink" action="sort" arguments="{offer : offer, status : 2, returnAction : returnAction, oldStatus : oldStatus}">
+				<f:translate key="offer.dislike"/>
+			</f:link.action>
+		</div>
+	</f:if>
+	<f:if condition="{reDislike}">
+		<div class="offerFunctionLink dislike">
+			<f:link.action class="jsChangesLink" action="sort" arguments="{offer : offer, status : 2, returnAction : returnAction, oldStatus : oldStatus}">
+				<f:translate key="offer.reDislike"/>
+			</f:link.action>
+		</div>
+	</f:if>
+	<f:if condition="{unsort}">
+		<div class="offerFunctionLink unsort">
+			<f:link.action class="jsChangesLink" action="sort" arguments="{offer : offer, status : 0, returnAction : returnAction, oldStatus : oldStatus}">
+				<f:translate key="offer.unsort"/>
+			</f:link.action>
+		</div>
+	</f:if>
+</div>

@@ -1,0 +1,14 @@
+
+plugin.etracker >
+plugin.etracker = PHP_SCRIPT
+plugin.etracker {
+  file = EXT:sk_etracker/etracker.php
+  global {
+    securitycode = {$plugin.etracker.securitycode}
+    prefix = {$plugin.etracker.prefix}
+    ssl = {$plugin.etracker.ssl}
+    area = {$plugin.etracker.area}
+    rootpage = {$plugin.etracker.rootpage}
+  }
+}
+	

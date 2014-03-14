@@ -1,0 +1,1 @@
+Sichert die utf8 codierung in der forgotpassword-Mail (über den Hook "forgotPasswordMail")

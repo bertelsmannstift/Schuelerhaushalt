@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'itao_shh_manager'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="fe_users.tx_itaoshhmanager_shh_firstname">Vorname</label>
+			<label index="fe_users.tx_itaoshhmanager_shh_lastname">Nachname</label>
+			<label index="fe_users.tx_itaoshhmanager_ssh_ref_school">Schule</label>
+			<label index="fe_users.tx_itaoshhmanager_ssh_ref_commune">Kommune</label>
+			<label index="fe_users.tx_itaoshhmanager_shh_terms">&lt;a href="/service/nutzungsbedingungen/" target="_blank"&gt;Nutzungsbedingungen&lt;/a&gt; akzeptiert?</label>
+			
+			
+			<label index="fe_users.tx_itaoshhmanager_shh_classname">Klasse</label>
+			<label index="fe_users.password_orig">Original-Passwort</label>
+			
+			<label index="be_users.ref_commune">Diese Kommune darf der Redakteur bearbeiten:</label>
+			<label index="be_users.ref_school">Diese Schule darf der Redakteur bearbeiten:</label>
+			
+			
+			<label index="tx_itaoshhmanager_resultanz">Anzahl der Ergebnisse</label>
+			
+			<label index="tx_itaoshhmanager_communes">Kommune</label>
+			<label index="tx_itaoshhmanager_communes.titel">Name der Kommune</label>
+			<label index="tx_itaoshhmanager_communes.c_short">Kürzel der Kommune (wird für die Erstellung von Nutzernamen verwendet) - max 11 Zeichen</label>
+			
+			<label index="tx_itaoshhmanager_communes.ref_state">Bundesland</label>
+			<label index="tx_itaoshhmanager_communes.ref_communepage">Hauptseite der Kommune (wird automatisch beim Erstellen der Kommune erstellt und hier eingetragen)</label>
+			<label index="tx_itaoshhmanager_communes.imprint">Impressum</label>
+			<label index="tx_itaoshhmanager_communes.ref_contactperson">Ansprechperson/en</label>
+			<label index="tx_itaoshhmanager_communes.infotext">Infotext</label>
+			<label index="tx_itaoshhmanager_communes.headerimage">Header oben (Maße: 980x194px)</label>
+			<label index="tx_itaoshhmanager_communes.welcometext">Willkommenstext</label>
+			<label index="tx_itaoshhmanager_communes.ref_download">Download</label>
+			<label index="tx_itaoshhmanager_communes.downloadurl">Download-URL</label>
+			
+			<label index="tx_itaoshhmanager_communes.youtubelink">URL zu YouTube-Video</label>
+			<label index="tx_itaoshhmanager_bls">Bundesländer</label>
+			<label index="tx_itaoshhmanager_bls.title">Name des Bundeslands</label>
+			<label index="tx_itaoshhmanager_bls.bl_short">Kürzel</label>
+			<label index="tx_itaoshhmanager_schools">Schule</label>
+			<label index="tx_itaoshhmanager_schools.title">Name der Schule</label>
+			<label index="tx_itaoshhmanager_schools.s_short">Kürzel der Schule (wird für die Erstellung von Nutzernamen verwendet) - max 11 Zeichen</label>
+			<label index="tx_itaoshhmanager_schools.zip">PLZ</label>
+			<label index="tx_itaoshhmanager_schools.city">Ort</label>
+			<label index="tx_itaoshhmanager_schools.headerimage">Header oben (Maße: 980x194px)</label>
+			<label index="tx_itaoshhmanager_schools.ref_status">Phase</label>
+			<label index="tx_itaoshhmanager_schools.ref_fegroup">Dieser FE-Benutzergruppe zugeordnet:</label>		
+			<label index="tx_itaoshhmanager_schools.welcometext">Willkommenstext</label>
+			<label index="tx_itaoshhmanager_schools.ref_contactperson">Ansprechperson/en</label>
+			<label index="tx_itaoshhmanager_schools.resultpage">Ergebnis-Seite (wird erst nach Abschluss der Vorschlag-Einreichen-Phase benötigt)</label>
+			<label index="tx_itaoshhmanager_schools.ref_schoolpage">Hauptseite der Schule (wird automatisch beim Erstellen der Schule erstellt und hier eingetragen)</label>
+			<label index="tx_itaoshhmanager_schools.ref_sortedoffers">Seite für "Von mir sortierte Vorschläge"</label>
+			<label index="tx_itaoshhmanager_schools.ref_myoffers">Seite für "Meine Vorschläge"</label>
+			<label index="tx_itaoshhmanager_schools.ref_createoffer">Seite für "Vorschlag erstellen"</label>
+			<label index="tx_itaoshhmanager_schools.ref_mp_schoolstartpage">Startseite der Schule (MOUNTPOINT!!)</label>
+			<label index="tx_itaoshhmanager_schools.number_of_result_offers">Anzahl der Vorschläge in der Ergebnis-Liste</label>
+			<label index="tx_itaoshhmanager_schools.offer_automatically_approved">Vorschläge nach Einstellung direkt anzeigen? (Standardeinstellung)</label>
+			
+			<label index="tx_itaoshhmanager_schools.ref_commune">Zugeordnet zu Kommune</label>
+			
+			<label index="tx_itaoshhmanager_status_school">Phasen (für Schulen)</label>
+			<label index="tx_itaoshhmanager_status_school.title">Phasenbezeichnung</label>
+			<label index="tx_itaoshhmanager_status_school.st_image">Icon der Phase</label>
+			<label index="tx_itaoshhmanager_status_school.ordernr">Reihenfolge Nr.</label>
+			
+			
+			
+		</languageKey>
+	</data>
+</T3locallang>

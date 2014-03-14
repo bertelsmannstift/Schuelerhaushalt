@@ -1,0 +1,4 @@
+Changelog:
+
+21.08.2012 - BugFix:
+If a download had no category an empty output was displayed (with a box header).

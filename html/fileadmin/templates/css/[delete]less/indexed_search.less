@@ -1,0 +1,69 @@
+.tx-indexedsearch {
+	margin: 15px 0;
+	// search box
+	& .tx-indexedsearch-searchbox {
+		& input[type="text"] {
+			border-right: none;
+			float: left;
+			width: 180px;
+			height: 30px;
+			vertical-align: middle;
+			padding: 0 !important;
+		}
+		
+		& input[type="submit"] {
+			background: #fff;
+			background: url(../img/indexed_search_search_icon.png) no-repeat center center #fff;
+			border-right: 1px solid @darkGreen;
+			border-top: 1px solid @darkGreen;
+			border-bottom: 1px solid @darkGreen;
+			border-left: none;
+			height: 32px;
+			outline: 0 none;
+			padding: 0 !important;
+			width: 32px;
+		}
+		
+	}
+	
+	// search for
+	& .tx-indexedsearch-whatis {
+		
+	}
+	
+	//paginator
+	& .tx-indexedsearch-browsebox {
+		& > p {
+			font-size: 0.857142857em;
+		}
+	}
+	
+	//results
+	.tx-indexedsearch-res.res {
+		border-bottom: 1px solid @darkGreen;
+		margin: 15px 0;
+		
+		& h3 {
+			font-size: 1em;
+		}
+		
+		& .item-path {
+			font-size: 0.857142857em;
+			margin: 15px 0;
+			color: @darkGreen;
+			& a {
+				border-right: 1px solid @breadcrumbGrey;
+				margin-right: 5px;
+				padding-right: 5px;
+			}
+		}
+	}
+	
+		& strong {
+			font-weight: normal;
+			color: @darkGreen;
+		}
+	.tx-indexedsearch-redMarkup {
+		color: @darkGreen;
+	}
+}

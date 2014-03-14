@@ -1,0 +1,114 @@
+<div class="offerEntry">
+	<f:if condition="{rights.showLikes}">
+		<div class="offerLikesDislikes">
+			<span class="likes">
+				<f:count subject="{offer.likes}"/>
+			</span>
+			<span class="dislikes">
+				<f:count subject="{offer.dislikes}"/>
+			</span>
+		</div>
+	</f:if>
+	
+	<f:link.action class="fancyBoxIframe" rel="offer_{actSorting}" pageUid="{settings.detailPage}" action="show" arguments="{ offer : offer }">
+		<div class="offerTitle">
+		<div class="offerNumber"><f:translate key="offer.number"/> {offer.internalId}:</div>
+		<div class="offerCaption">{offer.title}</div>
+		</div>
+	</f:link.action>
+	<div class="offerContainer">
+		<f:if condition="{offer.images.0}">
+			<f:then>
+				<div class="firstOfferImage">
+					<div class="OfferImage">
+						<f:image src="uploads/tx_itaoshhoffers/{offer.images.0}" maxWidth="140" alt="{offer.title}" title="{offer.title}"/>
+					</div>
+				</div>
+				<div class="offerDetails flexCols">
+			</f:then>
+			<f:else>
+				<div class="offerDetails">
+			</f:else>
+		</f:if>
+			<div class="offerBox">
+				<div class="offerTop">
+					<div class="offerTopLeft"></div>
+					<div class="offerTopRight"></div>
+				</div>
+				<div class="offerMiddle">
+					<p class="offerDescription">
+					<f:format.crop maxCharacters="200" append="...">{offer.description}</f:format.crop>
+					<f:link.action class="fancyBoxIframe" rel="offer_2_{actSorting}" pageUid="{settings.detailPage}" action="show" arguments="{ offer : offer }">
+						<span class="more"><f:translate key="offer.more"/></span>
+					</f:link.action>
+					</p>
+				</div>
+				<div class="offerBottom">
+					<div class="offerBottomLeft"></div>
+					<div class="offerBottomRight"></div>
+				</div>
+				<div class="offerMetaData">
+					<f:if condition="{rights.showCosts}">	
+						<f:if condition="{offer.costs}">
+							<f:then>
+								<f:if condition="{offer.costsEdited}">
+									<f:then>
+										<div class="info costsHelp">
+											<span>{offer.costs}</span>
+										</div>
+									</f:then>
+									<f:else>
+										<div class="info costsHelp">
+											<span>{offer.costsStudent}</span> <f:translate key="offer.list.costs.student"/>
+										</div>
+									</f:else>
+								</f:if>	
+							</f:then>
+							<f:else>					
+								<div class="info costsHelp">
+									<span><f:translate key="offer.show.costs.help"/></span>
+								</div>
+							</f:else>
+						</f:if>
+					</f:if>
+					<f:if condition="{offer.comments}">
+						<div class="info commented">
+							<span><f:translate key="offer.allOffers.commented"/></span>
+						</div>
+					</f:if>
+				</div>
+			</div>
+		</div>
+	</div>
+	<f:if condition="{rights.markAsEdited}">
+		<f:if condition="{offer.edited}">
+			<f:then>
+				<div class="markAsEdited unmark">
+					<f:link.action action="markAsEdited" onclick="markAsEdited(0, {offer.uid}); return false;" arguments="{offer : offer, mark : 0, school : school }">
+						<f:translate key="offer.unmarkAsEdited"/>
+					</f:link.action>			
+				</div>	
+			</f:then>
+			<f:else>
+				<div class="markAsEdited">
+					<f:link.action action="markAsEdited" onclick="markAsEdited(1, {offer.uid}); return false;" arguments="{offer : offer, mark : 1, school : school }">
+						<f:translate key="offer.markAsEdited"/>
+					</f:link.action>			
+				</div>	
+			</f:else>
+		</f:if>
+	</f:if>
+	<f:if condition="{rights.sort}">
+		<f:if condition="{0: offer.status.uid} == {0: '2'}">
+			<f:if condition="{0:actSorting} == {0:'1'}">
+				<f:render partial="Functions" arguments="{offer : offer, reDislike : 1, unsort : 1, returnAction : returnAction, oldStatus : actSorting}"/>
+			</f:if>
+			<f:if condition="{0:actSorting} == {0:'2'}">
+				<f:render partial="Functions" arguments="{offer : offer, reLike : 1, unsort : 1, returnAction : returnAction, oldStatus : actSorting}"/>
+			</f:if>
+			<f:if condition="{0:actSorting} == {0:FALSE}">
+				<f:render partial="Functions" arguments="{offer : offer, dislike : 1, like : 1, returnAction : returnAction, oldStatus : 0}"/>
+			</f:if>
+		</f:if>
+	</f:if>	
+</div>

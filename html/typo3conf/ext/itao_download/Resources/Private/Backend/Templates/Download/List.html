@@ -1,0 +1,53 @@
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+
+If you modify this template, do not forget to change the overwrite settings 
+in /Configuration/Kickstarter/settings.yaml:
+  Resources:
+    Private: 
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the kickstarter
+
+<f:section name="content">
+<h1>Listing for Download</h1>
+
+<f:flashMessages />
+<!--
+TODO: For deleting an element:
+http://lists.typo3.org/pipermail/typo3-german/2011-December/082466.html
+-->
+<f:widget.paginate objects="{downloads}" as="paginatedDownloads" configuration="{itemsPerPage:40, insertAbove: 0, insertBelow: 1}">
+	<table  class="tx_itaodownload" >
+		<tr class="headline">
+			<th><f:link.action action="list" arguments="{sortField:'title',order:'{order}'}"><f:translate key="tx_itaodownload_domain_model_download.title" /></f:link.action></th>
+			<th><f:link.action action="list" arguments="{sortField:'shortDescription',order:'{order}'}"><f:translate key="tx_itaodownload_domain_model_download.short_description" /></f:link.action></th>
+			<th><f:link.action action="list" arguments="{sortField:'category',order:'{order}'}"><f:translate key="tx_itaodownload_domain_model_download.category" /></f:link.action></th>
+			<th><f:link.action action="list" arguments="{sortField:'file',order:'{order}'}"><f:translate key="tx_itaodownload_domain_model_download.file" /></f:link.action></th>
+			<th> </th>
+			<th> </th>
+		</tr>
+		
+		<f:for each="{paginatedDownloads}" as="download">
+			<f:cycle values="{0:'odd',1:'even'}" as="zebra" >
+				<tr class="{zebra}">
+					<td>{download.title}</td>
+					<td>{download.shortDescription}</td>
+					<td>{download.categoryTitle}</td>
+					<td>{download.file}</td>
+					<td><f:link.action action="edit" arguments="{download : download}"><span class="t3-icon t3-icon-actions t3-icon-actions-document t3-icon-document-open">&nbsp;</span></f:link.action></td>
+					<td><a href='javascript:checkDelete("<f:uri.action action="delete" arguments="{download : download}" />","<f:translate key="LLL:EXT:itao_download/Resources/Private/Language/locallang_be.xml:delete_download_question" />")'>
+							<span class="t3-icon t3-icon-actions t3-icon-actions-edit t3-icon-edit-delete">&nbsp;</span>
+						</a>
+					</td>
+				</tr>
+			</f:cycle>
+		</f:for>
+	</table>
+</f:widget.paginate>
+<f:link.action action="new">New Download</f:link.action>
+</f:section>
+

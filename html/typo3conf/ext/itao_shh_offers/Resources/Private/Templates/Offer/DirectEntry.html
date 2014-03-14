@@ -1,0 +1,35 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+	
+	<div class="sideBox" id="directEntry">
+		<header>
+			<div class="headerLeft">&nbsp;</div>
+			<div class="headerContent directEntryHeader"><div class="sideBoxIcon">&nbsp;</div><h4><f:translate key="offer.directEntry.heading" /></h4></div>
+			<div class="headerRight">&nbsp;</div>
+		</header>
+		<div class="sideBoxContent">
+			<div class="innerContent">
+				<f:form id="directEntryForm" enctype="multipart/form-data" name="directEntry" method="post">
+					<f:if condition="{schools}">
+						<select onchange="jQuery('#directEntryForm').submit();"  name="tx_itaoshhoffers_schooldata[schoolPage]">
+							<option value="0"><f:translate key="offer.directEntry.select.default.school" /></option>
+							<f:for each="{schools}" as="school">
+								<f:if condition="{ 0: school.uid } == { 0: actSchool}">
+									<f:then>
+										<option value="{school.refSchoolpage}" selected>
+									</f:then>
+									<f:else>
+										<option value="{school.refSchoolpage}">
+									</f:else>
+								</f:if>
+									{school.title} 
+								</option>
+							</f:for>	
+						</select>
+					</f:if>
+				</f:form>	
+			</div>
+		</div>
+	</div>
+</f:section>

@@ -1,0 +1,114 @@
+<T3DataStructure>
+	<meta>
+		<langDisable>1</langDisable>
+	</meta>
+	<ROOT>
+		<TCEforms>
+			<sheetTitle>Code</sheetTitle>
+		</TCEforms>
+		<type>array</type>
+		<el>
+			<switchableControllerActions>
+				<TCEforms>
+					<label>LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.title</label>
+					<config>
+						<type>select</type>
+						<size>1</size>
+						<items type="array">
+							<numIndex index="1" type="array">
+								<numIndex index="0">LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.newOffers</numIndex>
+								<numIndex index="1">Offer->newOffers; Offer->schoolData; Offer->show; Offer->new; Offer->create; Offer->myOffersStatus; Offer->sort; Offer->update</numIndex>
+							</numIndex>
+							<numIndex index="2" type="array">
+								<numIndex index="0">LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.sortedOffers</numIndex>
+								<numIndex index="1">Offer->sortedOffers; Offer->schoolData; Offer->show; Offer->new; Offer->create; Offer->myOffersStatus; Offer->sort; Offer->update</numIndex>
+							</numIndex>
+							<numIndex index="3" type="array">
+								<numIndex index="0">LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.show</numIndex>
+								<numIndex index="1">Offer->show; Offer->updateComment; Offer->markAsEdited; Offer->schoolData; Offer->newOffers; Offer->new; Offer->create; Offer->myOffersStatus; Offer->sort; Offer->addOfferData; Offer->update;Offer->setOfferStatus; Offer->becomeChildOf;</numIndex>
+							</numIndex>
+							<numIndex index="4" type="array">
+								<numIndex index="0">LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.new</numIndex>
+								<numIndex index="1">Offer->new; Offer->schoolData; Offer->show; Offer->newOffers; Offer->sortedOffers; Offer->show; Offer->create; Offer->myOffersStatus; Offer->sort; Offer->addOfferData; Offer->update; Offer->preview;</numIndex>
+							</numIndex>
+							<numIndex index="5" type="array">
+								<numIndex index="0">LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.myOffers</numIndex>
+								<numIndex index="1">Offer->myOffers; Offer->schoolData; Offer->show; Offer->new; Offer->create; Offer->myOffersStatus; Offer->sort; Offer->update</numIndex>
+							</numIndex>
+							<numIndex index="6" type="array">
+								<numIndex index="0">LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.myOffersStatus</numIndex>
+								<numIndex index="1">Offer->myOffersStatus; Offer->schoolData; Offer->myOffers; Offer->show; Offer->new; Offer->create; Offer->myOffersStatus; Offer->sort; Offer->update</numIndex>
+							</numIndex>
+							<numIndex index="7" type="array">
+								<numIndex index="0">LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.communeOffers</numIndex>
+								<numIndex index="1">Offer->communeOffers; Offer->markAsEdited; Offer->myOffersStatus; Offer->show; Offer->show; Offer->sort; Offer->update;</numIndex>
+							</numIndex>
+							<numIndex index="8" type="array">
+								<numIndex index="0">LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.preview</numIndex>
+								<numIndex index="1">Offer->preview; Offer->create; Offer->show;</numIndex>
+							</numIndex>
+							<numIndex index="9" type="array">
+								<numIndex index="0">LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.topOffers</numIndex>
+								<numIndex index="1">Offer->topOffers; Offer->show;</numIndex>
+							</numIndex>
+							<numIndex index="10" type="array">
+								<numIndex index="0">LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.approveOffers</numIndex>
+								<numIndex index="1">Offer->approveOffers; Offer->show;</numIndex>
+							</numIndex>
+						</items>
+						<maxitems>1</maxitems>
+						<minitems>1</minitems>
+					</config>
+					<onChange>reload</onChange>
+				</TCEforms>
+			</switchableControllerActions>
+			<settings.mode>
+				<TCEforms>
+					<label>LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.school.title</label>
+					<config>
+						<type>radio</type>
+						<items type="array">
+							<numIndex index="1" type="array">
+								<numIndex index="0">LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.school.auto</numIndex>
+								<numIndex index="1">AUTO</numIndex>
+							</numIndex>
+							<numIndex index="2" type="array">
+								<numIndex index="0">LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.school.fixed</numIndex>
+								<numIndex index="1">FIXED</numIndex>
+							</numIndex>
+							<numIndex index="3" type="array">
+								<numIndex index="0">LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.school.dropdown</numIndex>
+								<numIndex index="1">DROPDOWN</numIndex>
+							</numIndex>
+						</items>
+						<maxitems>1</maxitems>
+						<minitems>1</minitems>
+					</config>
+					<onChange>reload</onChange>
+					<displayCond>FIELD:switchableControllerActions:=:Offer->newOffers; Offer->schoolData; Offer->show; Offer->new; Offer->create; Offer->myOffersStatus; Offer->sort; Offer->update</displayCond>
+				</TCEforms>
+			</settings.mode>
+			<settings.school>
+				<TCEforms>
+					<label>LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.school.title</label>
+					<config>
+						<type>select</type>
+						<size>1</size>
+						<items type="array">
+							<numIndex index="0" type="array">
+								<numIndex index="0">LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.school.choose</numIndex>
+								<numIndex index="1"></numIndex>
+							</numIndex>
+						</items>
+						<foreign_table>tx_itaoshhmanager_schools</foreign_table>
+						<foreign_table_where> ORDER BY title</foreign_table_where>
+						<maxitems>1</maxitems>
+						<minitems>1</minitems>
+					</config>
+					<!--<displayCond>FIELD:switchableControllerActions:=:Offer->newOffers; Offer->schoolData; Offer->show; Offer->new; Offer->create; Offer->myOffersStatus; Offer->sort</displayCond>-->
+					<displayCond>FIELD:settings.mode:=:FIXED</displayCond>
+				</TCEforms>
+			</settings.school>
+		</el>
+	</ROOT>
+</T3DataStructure>

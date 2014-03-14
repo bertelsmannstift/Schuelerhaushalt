@@ -1,0 +1,54 @@
+/*
+ * add all font face imports here. For Google Webfonts just select the desired font
+ * at google.com/webfonts click on quick use , get the import code and use the font family just as usual
+ */
+ 
+ 
+ // Declare variables for different font-families, so you can ajust them in this template and not have to go through
+ // every piece of css
+ 
+ @baseFontFamily : Helvetica, Arial;
+ @baseFontSize: 14px;
+ @baseLineheight: 20px; 
+ 
+ a {
+ 	color: @darkGreen;
+ 	text-decoration: underline;
+ 	&:hover {
+ 		text-decoration: none;
+ 	}
+ }
+  //17.10 TERMIN
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+ 	margin: 15px 0;
+ }
+ 
+ h1 {
+ 	color: @baseHighlight;
+ 	font-size: 2.142857143em;
+ 	font-weight: normal;
+ 	line-height:0.935em;
+ 	margin: 0 0 24px 0;
+ }
+ 
+ h2 {
+ 	color: @h2Color;
+ 	font-weight: normal;
+ 	font-size: 1.428571429em;	
+ 	line-height: 1.4em;
+ }
+ 
+ h3 {
+ 	font-weight: normal;
+  	font-size: 1.428571429em;	
+ 	line-height: 1.2em;
+ }
+ 
+ p.bodytext {
+ 	margin: 0 0 15px 0;
+ }

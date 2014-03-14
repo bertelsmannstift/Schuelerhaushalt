@@ -1,0 +1,13 @@
+plugin.etracker >
+plugin.etracker {
+  # cat=plugin.etracker; type=string; label= Area: Name of the Area
+  area = 
+    # cat=plugin.etracker; type=string; label= Securitycode: Your personal Securitycode for identification.
+  securitycode = 
+    # cat=plugin.etracker; type=string; label= Prefix: Prefix in front of the pagename
+  prefix = 
+    # cat=plugin.etracker; type=boolean; label= SSL: With or without ssl support
+  ssl = 0
+  	#cat=plugin.etracker; type=int; label= Uid of Rootpage
+  rootpage = 1
+}

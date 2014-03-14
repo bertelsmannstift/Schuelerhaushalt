@@ -1,0 +1,37 @@
+plugin.tx_itaodownload {
+	view {
+		# cat=plugin.tx_itaodownload/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:itao_download/Resources/Private/Templates/
+		# cat=plugin.tx_itaodownload/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:itao_download/Resources/Private/Partials/
+		# cat=plugin.tx_itaodownload/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:itao_download/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_itaodownload//a; type=int+; label=Default storage PID
+		storagePid = 
+	}
+}
+
+plugin.tx_itaodownload_pi1 {
+	settings {
+		cat=plugin.tx_itaodownload_pi1/; type=string; label=Base URL for this page
+		baseUrl = http://localhost/
+	}
+}
+
+
+module.tx_itaodownload {
+	view {
+		# cat=plugin.tx_itaodownload/file; type=string; label=Path to template root (BE)
+		templateRootPath = EXT:itao_download/Resources/Private/Backend/Templates/
+		# cat=plugin.tx_itaodownload/file; type=string; label=Path to template partials (BE)
+		partialRootPath = EXT:itao_download/Resources/Private/Backend/Partials/
+		# cat=plugin.tx_itaodownload/file; type=string; label=Path to template layouts (BE)
+		layoutRootPath = EXT:itao_download/Resources/Private/Backend/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_itaodownload//a; type=int+; label=Default storage PID
+		storagePid = 
+	}
+}

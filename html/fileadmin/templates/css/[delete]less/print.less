@@ -1,0 +1,109 @@
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow:none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    /*a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    } */
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+   
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+    
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+	display: none;
+}
+
+#header,
+#navigation,
+#footer,
+.tx-itao-shh-offers input, 
+.tx-itao-shh-offers textarea,
+#newComment,
+.offerFunctionLink {
+	display: none !important;
+}
+
+
+.promoter, 
+.promoterHeading {
+	display: block !important;	
+}
+
+body {
+	padding: 5%;
+}
+#content {
+	width: 100% !important;
+}
+
+#mainContent {
+	width: 80%;
+}
+  #sideContent {
+  	width: 20%;
+  	border-left: none !important;
+  	border-right: none !important;
+  }
+  
+ul.ideaFrom {
+		& li {
+			border-bottom: 1px solid;
+		}
+}
+}

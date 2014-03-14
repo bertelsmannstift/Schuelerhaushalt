@@ -1,0 +1,55 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+	<f:if condition="{communes}">
+		<h3><f:translate key="heading.communes.running"/></h3>
+		<table class="schoolsStatusBox">
+			<tr>
+				<th><f:translate key="commune.th.commune"/></th>
+				<th><f:translate key="commune.th.projectTime"/></th>
+			</tr>
+			<f:for each="{communes}" as="commune">
+				<f:if condition="{commune.isFinished}"><f:then></f:then>
+					<f:else>
+						<f:cycle values="{0: 'odd', 1: 'even'}" as="zebraClass">
+							<tr class="{zebraClass}">
+						</f:cycle>
+							<td>
+								<f:link.page pageUid="{commune.refCommunepage}">{commune.titel}</f:link.page>
+							</td>
+							<td>
+								<f:if condition="{commune.projectStart}">
+									<f:format.date format="m.Y">{commune.projectStart}</f:format.date> - <f:format.date format="m.Y">{commune.projectEnd}</f:format.date>
+								</f:if>
+							</td>
+						</tr>
+					</f:else>
+				</f:if>
+			</f:for>	
+		</table>
+		
+		<h3><f:translate key="heading.communes.closed"/></h3>
+		<table class="schoolsStatusBox">
+			<tr>
+				<th><f:translate key="commune.th.commune"/></th>
+				<th><f:translate key="commune.th.projectTime"/></th>
+			</tr>
+			<f:for each="{communes}" as="commune">
+				<f:if condition="{commune.isFinished}">
+					<f:cycle values="{0: 'odd', 1: 'even'}" as="zebraClass">
+						<tr class="{zebraClass}">
+					</f:cycle>
+						<td>
+							<f:link.page pageUid="{commune.refCommunepage}">{commune.titel}</f:link.page>
+						</td>
+						<td>
+							<f:if condition="{commune.projectStart}">
+								<f:format.date format="m.Y">{commune.projectStart}</f:format.date> - <f:format.date format="m.Y">{commune.projectEnd}</f:format.date>
+							</f:if>
+						</td>
+					</tr>
+				</f:if>
+			</f:for>
+		</table>
+	</f:if>
+</f:section>

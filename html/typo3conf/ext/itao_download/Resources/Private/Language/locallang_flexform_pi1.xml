@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for the itao Download extension in the FLEXFORM</description>
+	</meta>
+	<data>
+		<languageKey index="default" type="array">
+			<label index="displayMode">Display Mode</label>
+			<label index="mode.I.0">List</label>
+			<label index="mode.I.1">Box</label>
+			<label index="showCategory">Category</label>
+			<label index="displayType">Display Type</label>
+			<label index="type.I.0">Category</label>
+			<label index="type.I.1">Single download</label>
+			<label index="categoryLabel">Which categories?</label>
+			<label index="downloadLabel">Which downloads?</label>
+			<label index="linkTextLabel">Text for link</label>
+			<label index="downloadBoxTitleLabel">Title</label>
+			<label index="downloadBoxTextLabel">Box text (only in display mode "Box")</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="displayMode">Anzeigemodus</label>
+			<label index="mode.I.0">Liste</label>
+			<label index="mode.I.1">Box</label>
+			<label index="showCategory">Kategorie</label>
+			<label index="displayType">Anzeigetyp</label>
+			<label index="type.I.0">Kategorie</label>
+			<label index="type.I.1">Einzelne Downloads</label>
+			<label index="categoryLabel">Welche Kategorien?</label>
+			<label index="downloadLabel">Welche Downloads?</label>
+			<label index="linkTextLabel">Text für den Link</label>
+			<label index="downloadBoxTitleLabel">Titel</label>
+			<label index="downloadBoxTextLabel">Text der Box (nur im Anzeigemodud "Box")</label>
+		</languageKey>
+	</data>
+</T3locallang>

@@ -1,0 +1,8 @@
+plugin.tx_datamintsfeuser_pi1 {
+	# cat=plugin.tx_datamintsfeuser_pi1/file; type=string; label=Use seperator (only one char!)
+	useFieldAsUsernameSeperator = _
+	# cat=plugin.tx_datamintsfeuser_pi1/file; type=string; label=Use fields as username
+	useFieldsAsUsername = first_name,last_name
+	# cat=plugin.tx_datamintsfeuser_pi1/file; type=string; label=Use email as username
+	useEmailAsUsername = 1	
+}

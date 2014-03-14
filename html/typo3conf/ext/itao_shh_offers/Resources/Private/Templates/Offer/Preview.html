@@ -1,0 +1,95 @@
+{namespace sh=Tx_ItaoShhOffers_ViewHelpers}
+<f:layout name="Default" />
+
+<f:section name="main">
+	<div id="offerPreview">
+		<f:if condition="{feedback}">
+			<f:then>
+				<div class="feedback">
+					<h2><f:translate key="offer.create.feedback.heading.firstLine"/></h2>
+					<f:if condition="{redirectToMyOffers}">
+						<f:then>
+							<h3><f:translate key="offer.create.feedback.heading.secondLine.approved"/></h3>
+							<f:link.page class="fancyCloseAndRedirect" pageUid='{myOffersPageUid}'><f:translate key="offer.preview.button.closeWindow"/></f:link.page>
+						</f:then>
+						<f:else>
+							<h3><f:translate key="offer.create.feedback.heading.secondLine.saved"/></h3>
+							<a href="#" onclick="window.parent.jQuery.fancybox.close(); return false;" class="close" title=""><f:translate key="offer.preview.button.closeWindow"/></a>
+						</f:else>
+					</f:if>
+				</div>
+			</f:then>
+			<f:else>
+				<div class="tx-itao-shh-offers">
+					<div class="notice">
+						<f:translate key="offer.preview.notice"/>
+					</div>
+					<div class="offerDetailHeadLine">
+						<div class="meta offerNumber">
+							<f:translate key="offer.show.number"/>: <span class="number">xx</span>
+						</div>
+						<h1></h1>
+						<div class="offerLikesDislikes printHide">
+							<span class="likes">
+								0
+							</span>
+							<span class="dislikes">
+								0
+							</span>
+						</div>
+					</div>
+					<div class="offerImages">
+						<div class="OfferImage">
+							<div class="dummyImage">
+								Bild 1
+							</div>
+						</div>
+						<div class="OfferImage">
+							<div class="dummyImage">
+								Bild 2
+							</div>
+						</div>
+						<div class="OfferImage">
+							<div class="dummyImage">
+								Bild 3
+							</div>
+						</div>
+						<em class="meta">
+							<f:translate key="offer.preview.images" />
+						</em>
+					</div>	
+					
+					<p class="offerDescription clearfix">
+
+					</p>
+					<div class="costs">
+						<span class="printHide"><f:translate key="offer.show.costs"/></span>
+						<em class="theCosts hidden"></em>
+						<em class="no_costs hidden"><f:translate key="offer.show.edit.noCosts"/></em>
+					</div>
+					<div class="ideas">
+						<h3>
+							<f:translate key="show.ideas.heading" />
+						</h3>
+						<ul class="studentList">
+							<li><span class="name"><strong><f:translate key="print.label.idea.name"/></strong></span><span class="class"><strong><f:translate key="print.label.idea.class"/></strong></span></li>
+						</ul>	
+					</div>
+					<div class="hidden promoter">
+						<h3 class="promoterHeading">
+							<f:translate key="show.promoter.heading" />
+						</h3>
+						<ul class="studentList">
+							<li><span class="name"><strong><f:translate key="print.label.promoter.name"/></strong></span><span class="class"><strong><f:translate key="print.label.promoter.class"/></strong></span></li>
+						</ul>	
+					</div>
+				</div>
+				<div class="previewLinks">
+					<a href="#" onclick="window.parent.jQuery.fancybox.close(); return false;" class="closeLink" title=""><f:translate key="offer.preview.button.cancel"/></a>
+					<a href="#" onclick="window.parent.jQuery.fancybox.close(); return false;" class="close buttonLink" title=""><f:translate key="offer.preview.button.change"/></a>
+					<a href="#" onclick="window.parent.jQuery('#newOffer').submit(); return false;" class="buttonLink" title=""><f:translate key='offer.create.submit'/></a>
+				</div>
+			</f:else>	
+		</f:if>	
+	</div>
+</f:section>

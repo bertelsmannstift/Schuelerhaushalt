@@ -1,0 +1,422 @@
+{namespace sh=Tx_ItaoShhOffers_ViewHelpers}
+<f:layout name="Default" />
+
+<f:section name="main">
+
+<f:if condition="{ranking}">
+	<div class="showRanking"><strong><f:format.printf arguments="{0: ranking, 1: offer.votes}"><f:translate key="offer.show.result"/></f:format.printf></strong></div>
+</f:if>	
+<div class="offerDetailHeadLine">	
+	<div class="meta offerNumber">
+		<f:translate key="offer.show.number"/>: {offer.internalId}
+	</div>
+
+	<h1>{offer.title}</h1>
+
+	<f:if condition="{rights.showLikes}">
+		<div class="offerLikesDislikes printHide">
+			<span class="likes">
+				<f:count subject="{offer.likes}"/>
+			</span>
+			<span class="dislikes">
+				<f:count subject="{offer.dislikes}"/>
+			</span>
+		</div>
+	</f:if>
+</div>
+<p class="offerDescription">
+	<f:format.nl2br>{offer.description}</f:format.nl2br>
+</p>
+<f:if condition="{offer.images}">
+	<div class="offerImages">
+		<f:for each="{offer.images}" as="image">
+			<div class="OfferImage">
+				<f:image src="uploads/tx_itaoshhoffers/{image}" maxHeight="200" maxWidth="300" alt="{offer.title}" title="{offer.title}"/>
+			</div>
+		</f:for>
+	</div>	
+</f:if>
+<f:if condition="{ 0: offer.costs }">
+	<f:then>
+		<div class="costs">
+			<span class="print"><f:translate key="offer.show.print.costs"/></span>
+			<span class="printHide"><f:translate key="offer.show.costs"/></span>
+			<f:if condition="{offer.costsEdited}">
+				<f:then>
+					<strong>{offer.costs}&euro;</strong>
+				</f:then>
+				<f:else>
+					<f:if condition="{offer.costsStudent}">
+						<f:then>
+							<strong>{offer.costsStudent}&euro;</strong>
+						</f:then>
+						<f:else>
+							<em><f:translate key="offer.show.edit.noCosts"/></em>
+						</f:else>
+					</f:if>
+				</f:else>
+			</f:if>
+		</div>
+	</f:then>		
+</f:if>
+
+<f:if condition="{offer.comments}">
+	<f:then>
+		<f:for each="{offer.comments}" as="comment">
+			<div class="commentEntry">
+				<p>
+					<strong><f:translate key="show.comment.heading"/>:</strong> <f:format.nl2br>{comment.text}</f:format.nl2br>
+				</p>
+			</div>
+		</f:for>
+	</f:then>
+</f:if>
+
+<f:if condition="{0: offer.status.uid} == {0: 2}">
+	<f:if condition='{rights.sort}'>
+		<f:if condition="{0:offer.actSorting} == {0: 1}">
+			<f:render partial="Functions" arguments="{offer : offer, dislike : 1, unsort : 1, returnAction : 'show', oldStatus : offer.actSorting}"/>
+		</f:if>
+		<f:if condition="{0:offer.actSorting} == {0: 2}">
+			<f:render partial="Functions" arguments="{offer : offer, like : 1, unsort : 1, returnAction : 'show', oldStatus : offer.actSorting}"/>
+		</f:if>
+		<f:if condition="{0:offer.actSorting} == {0: FALSE}">
+			<f:render partial="Functions" arguments="{offer : offer, dislike : 1, like : 1, returnAction : 'show', oldStatus : 0}"/>
+		</f:if>
+	</f:if>
+</f:if>	
+
+<f:if condition="{rights.showStudents}">
+	<div class="ideas">
+		<h3><f:translate key="show.ideas.heading" /></h3>
+		<ul class="studentList">
+			<li>
+				<span class="name">
+					<strong><f:translate key="print.label.idea.name"/></strong>
+				</span>
+				<span class="class">
+					<strong><f:translate key="print.label.idea.class"/></strong>
+				</span>
+			</li>
+			<f:for each="{offer.ideaFrom}" as="idea">
+				<li>
+					<span class="name">
+						{idea.name}
+					</span>
+					<span class="class">
+						{idea.class}
+					</span> 
+				</li>
+			</f:for>
+		</ul>	
+	</div>
+	<f:if condition="{offer.promotedFrom}">
+		<div class="promoter">
+			<h3 class="promoterHeading">
+				<f:translate key="show.promoter.heading" />
+			</h3>
+
+			<ul class="studentList">
+				<li>
+					<span class="name">
+						<strong><f:translate key="print.label.promoter.name"/></strong>
+					</span>
+					<span class="class">
+						<strong><f:translate key="print.label.promoter.class"/></strong>
+					</span>
+				</li>
+				<f:for each="{offer.promotedFrom}" as="promoter">
+					<li>
+						<span class="name">
+							{promoter.name}
+						</span>
+						<span class="promoterClass">
+							{promoter.class}
+						</span>
+					</li>
+				</f:for>
+			</ul>	
+		</div>
+	</f:if>	
+</f:if>	
+
+<f:if condition="{rights.print}">
+	<div class="printOffer">
+		<input type="submit" class="buttonLink" value="Vorschlag drucken" onclick="javascript:window.print()"/>
+	</div>
+</f:if>
+
+<f:if condition="{rights.edit}">
+	<ul class="tabNavigation showAction">
+		<f:if condition='{rights.comment}'>
+			<f:if condition="{offer.comments}">
+				<f:then>
+					<li class="commentTabNav">
+						<f:translate key="offer.show.edit.tabNavigation.editComment"/>
+					</li>
+				</f:then>
+				<f:else>
+					<li class="commentTabNav">
+						<f:translate key="offer.show.edit.tabNavigation.comments"/>
+					</li>
+				</f:else>
+			</f:if>
+		</f:if>
+		<f:if condition='{rights.editOffer}'>
+			<li class="promoterTabNav">
+				<f:translate key="offer.show.edit.tabNavigation.promoter"/>
+			</li>
+		</f:if>
+		<f:if condition='{rights.editCosts}'>
+			<li class="costsTabNav">
+				<f:translate key="offer.show.edit.tabNavigation.costs"/>
+			</li>
+		</f:if>	
+		<f:if condition='{rights.defineChildOffers}'>
+			<f:if condition="{0: offer.status.uid} == {0: 2}">
+				<li class="becomeChildOfTab">
+					<f:translate key="offer.show.edit.tabNavigation.becomeChildOffer"/>
+				</li>
+			</f:if>	
+		</f:if>
+		
+	</ul>
+	<div class="tabContainer">
+		<f:if condition='{rights.comment}'>
+			<f:if condition="{offer.comments}">
+				<f:then>
+					<div id="commentTab" class="tabContent">
+						<f:for each="{offer.comments}" as="comment">
+							<f:form id="editComment" action="updateComment" class="jsValidationForm" enctype="multipart/form-data" name="comment" object="{comment}" arguments="{offerUid : offer.uid}" >
+								<fieldset id="newComment">
+									<f:form.textarea rows="5" cols="45" class="jsRequired offerComment" property="text" />
+									<f:form.submit class="buttonLink" value="<f:translate key='show.comment.save'/>" />
+								</fieldset>
+							</f:form>	
+						</f:for>
+					</div>
+				</f:then>
+				<f:else>
+					<div id="commentTab" class="tabContent">
+						<span class="add">
+							<a href="#" onClick="jQuery('#newComment').show(); return false;"><f:translate key='show.comment.add'/></a>
+						</span>	
+						<f:form id="newComment" action="addOfferData" class="jsValidationForm" enctype="multipart/form-data"  name="offer" arguments="{ offer : offer }">
+							<fieldset id="newComment">
+								<f:form.textarea rows="5" cols="45" class="jsRequired offerComment" name="comment[text]" />
+							</fieldset>
+							<f:form.submit class="buttonLink" value="<f:translate key='show.comment.save'/>" />
+							<a class="cancelLink" href="#" onClick="jQuery('.offerComment').val('');jQuery('#newComment').hide(); return false;">
+								<f:translate key="show.comment.cancel"/>
+							</a>
+						</f:form>	
+					</div>	
+				</f:else>	
+			</f:if>	
+		</f:if>
+		<f:if condition='{rights.editOffer}'>
+			<div class="tabContent" id="promoterTab">
+				<f:form id="newPromoter" action="addOfferData" class="jsValidationForm" enctype="multipart/form-data"  name="offer" arguments="{ offer : offer }">
+					<fieldset id="promotedFrom">
+						<span class="add">
+							<a href="#" onclick="createPromoterField();return false;">
+								<f:translate key="offer.create.function.addPromoter"/>
+							</a>
+						</span>	
+						<div class="fieldsInARow promoterLabels" style="display:none;">
+							<label class="first" for="tx_itaoshhoffers_offers[promotedFrom][name]"><f:translate key="offer.create.name"/></label>
+							<label class="last" for="tx_itaoshhoffers_offers[promotedFrom][class]"><f:translate key="offer.create.class"/></label>
+							<div class="additionalFields">
+								
+							</div>
+						</div>
+						<f:form.hidden id="promotedFromNames" name="promotedFrom[names]" value="" />
+						<f:form.hidden id="promotedFromClasses" name="promotedFrom[classes]" value="" />
+					</fieldset>
+					<f:form.submit id="savePromoter" style="display: none;" value="<f:translate key='show.promoter.save'/>" />
+				</f:form>
+			</div>	
+		</f:if>
+		<f:if condition="{rights.editCosts}">
+			<div class="tabContent" id="costsTab">
+				<f:if condition="{offer.costs}">
+					<f:then>
+						<f:if condition="{offer.costsEdited}">
+							<span class="meta"><f:translate key="offer.show.edit.fixedCosts"/>: {offer.costs}&euro;</span>
+						</f:if>
+						<span class="meta"><f:translate key="offer.show.edit.costs"/>: {offer.costsStudent}&euro;</span>
+					</f:then>
+					<f:else>
+						<span class="meta"><f:translate key="offer.show.edit.noCosts"/></span>
+					</f:else>
+				</f:if>
+				
+				<f:form id="editCosts" action="update" class="jsValidationForm" name="offer" object="{offer}" >
+					<f:form.textfield class="numberValidation" property="costs" />
+					<f:form.hidden value="1" property="costsEdited" />
+					<f:form.submit class="buttonLink" value="<f:translate key='offer.show.save.costs'/>" />
+				</f:form>
+			</div>	
+		</f:if>
+		<f:if condition='{rights.defineChildOffers}'>
+			<f:if condition="{0: offer.status.uid} == {0: 2}">
+				<div class="tabContent" id="becomeChildOfTab">
+					<f:if condition='{offer.childOffers}'>
+						<f:then>
+							<p class="error">
+								<f:translate key="offer.show.edit.error.childOffers"/>
+							</p>
+						</f:then>
+						<f:else>
+							<h4>
+								<f:translate key="offer.show.edit.becomeChildOffer"/>
+							</h4>
+							<f:form id="becomeChildOf" action="becomeChildOf" name="offer" object="{offer}" arguments="{childOffer : offer}">
+								<fieldset id="possibleParents">
+									<div>
+										<select id="parentSelect" name="tx_itaoshhoffers_offers[offer]">
+											<option></option>
+											<f:for each="{possibleParents}" as="parentOffer">
+												<f:if condition="{0: offer.uid} != {0: parentOffer.uid}">
+													<option value="{parentOffer.uid}">{parentOffer.title} (Nr. {parentOffer.internalId})</option>
+												</f:if>
+											</f:for>
+										</select>
+									</div>	
+									<f:form.submit  class="buttonLink" value="<f:translate key='show.parent.save'/>" />
+									<f:for each="{possibleParents}" as="parentOffer">
+										<div class="hidden" id="offer_{parentOffer.uid}"><f:format.printf arguments="{0: offer.internalId, 1: parentOffer.internalId}"><f:translate key="getChild.confirm"/></f:format.printf></div>	
+									</f:for>
+								</fieldset>
+							</f:form>	
+						</f:else>
+					</f:if>	
+				</div>
+			</f:if>	
+		</f:if>	
+	</div>
+</f:if>
+<f:if condition="{rights.markAsEdited}">
+	<f:if condition="{offer.edited}">
+		<f:then>
+			<div class="markAsEdited unmark">
+				<f:link.action class="jsChangesLink" action="markAsEdited" arguments="{offer : offer, mark : 0, school : school, returnAction: 'show'}">
+					<f:translate key="offer.unmarkAsEdited"/>
+				</f:link.action>			
+			</div>	
+		</f:then>
+		<f:else>
+			<div class="markAsEdited">
+				<f:link.action class="jsChangesLink" action="markAsEdited" arguments="{offer : offer, mark : 1, school : school, returnAction: 'show' }">
+					<f:translate key="offer.markAsEdited"/>
+				</f:link.action>			
+			</div>	
+		</f:else>
+	</f:if>
+</f:if>
+
+<f:if condition="{offer.childOffers}">
+	<div class="childOffers accordion">
+		<p>
+			<f:translate key="offer.show.childOffers"/>
+		</p>	
+		<f:for each="{offer.childOffers}" as="childOffer">
+			<div class="childOfferEntry accordionElement">
+				<div class="childOfferTitleLine accordionPreview">
+					<div class="rowContent"><span class="left clickHandler">{childOffer.title} (Nr. {childOffer.internalId})</span><span class="rowFunctions"><f:if condition='{rights.defineChildOffers}'><span class="removeChild"><f:link.action class="jsChangesLink printHide" action="becomeChildOf" arguments="{ offer : offer, removeChild: 1, childOffer: childOffer.uid }"><f:translate key="offer.show.removeChild"/></f:link.action></span></f:if><span class="clickHandler accordionArrow"></span></span></div>
+				</div>
+				<div class="childOfferContent accordionDetail">
+					<div class="accordionContent">
+						<p class="offerDescription">
+							<f:format.nl2br>{childOffer.description}</f:format.nl2br>
+						</p>
+						<f:if condition="{childOffer.images}">
+							<div class="offerImages">
+								<f:for each="{childOffer.images}" as="childOfferImage">
+									<div class="OfferImage">
+										<f:image src="uploads/tx_itaoshhoffers/{childOfferImage}" maxHeight="100" maxWidth="124" alt="{childOffer.title}" title="{childOffer.title}"/>
+									</div>
+								</f:for>
+							</div>	
+						</f:if>
+
+						<f:if condition="{rights.showStudents}">
+							<div class="ideas">
+								<f:translate key="show.ideas.heading" />
+								<ul class="studentList">
+									<li>
+										<span class="name">
+											<strong><f:translate key="print.label.idea.name"/></strong>
+										</span>
+										<span class="class">
+											<strong><f:translate key="print.label.idea.class"/></strong>
+										</span>
+									</li>
+									<f:for each="{childOffer.ideaFrom}" as="idea">
+										<li>
+											<span class="name">
+												{idea.name}
+											</span>
+											<span class="class">
+												{idea.class}
+											</span> 
+										</li>
+									</f:for>
+								</ul>	
+							</div>
+							<f:if condition="{childOffer.promotedFrom}">
+								<div class="promoter">
+
+									<f:translate key="show.promoter.heading" />
+
+
+									<ul class="studentList">
+										<li>
+											<span class="name">
+												<strong><f:translate key="print.label.promoter.name"/></strong>
+											</span>
+											<span class="class">
+												<strong><f:translate key="print.label.promoter.class"/></strong>
+											</span>
+										</li>
+										<f:for each="{childOffer.promotedFrom}" as="promoter">
+											<li>
+												<span class="name">
+													{promoter.name}
+												</span>
+												<span class="promoterClass">
+													{promoter.class}
+												</span>
+											</li>
+										</f:for>
+									</ul>	
+								</div>
+							</f:if>	
+						</f:if>	
+					</div>
+				</div>
+			</div>
+		</f:for>	
+	</div>
+</f:if>
+
+<f:if condition="{0: rights.editStatus, 1: school.offerAutomaticallyApproved, 2: school.refStatus.uid} == {0: 1, 1: 0, 2: settings.phases.submit}">
+	<div class="approveOffer">
+		<f:if condition="{0: offer.status.uid} != {0: 2}">
+			<div class="setStatus">
+				<f:link.action class="jsChangesLink buttonLink" action="setOfferStatus" arguments="{offer : offer, returnAction: 'show', status : 2}">
+					<f:translate key="offer.approveOffers.link.approve"/>
+				</f:link.action>
+			</div>	
+		</f:if>
+		<f:if condition="{0: offer.status.uid} != {0: 3}">
+			<div class="setStatus">
+				<f:link.action class="jsChangesLink buttonLink" action="setOfferStatus" arguments="{offer : offer, returnAction: 'show', status : 3}">
+					<f:translate key="offer.approveOffers.link.deny"/>
+				</f:link.action>
+			</div>	
+		</f:if>	
+	</div>
+</f:if>
+
+</f:section>

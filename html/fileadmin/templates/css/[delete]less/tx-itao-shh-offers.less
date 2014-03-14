@@ -1,0 +1,509 @@
+.tx-itao-shh-offers {
+
+	& .offerEntry {
+		background: #f5f5f5;
+		margin-bottom: 20px;
+		overflow: hidden;
+		padding: 10px;
+		& header {
+			float: right;
+			.clearfix;
+			& .offerCrdate {
+				border-right: 1px solid @baseColor;
+				padding-right: 6px;
+			}
+			& .offerNumber {
+				padding-left: 6px;
+			}
+		}
+		& h3 {
+			color: @baseColor;
+			font-size: 1.428571429em;
+			margin: 0 0 10px 0 ;
+			font-weight: bold;
+			text-decoration: underline;
+			&:hover {
+				text-decoration: none;
+				color: @darkGreen;
+			}
+		}
+		
+		& > a {
+			text-decoration: none;
+		}
+	}
+	& .offerFunctions {
+		float: right;
+	}
+	
+	& .offerFunctionLink {
+		border-top: 1px solid #e7e7e7;
+		border-bottom: 1px solid #b2b1b1;
+		border-left: 1px solid #e7e7e7;
+		border-right: 1px solid #b2b1b1;
+		display: block;
+		float: left;
+		padding: 5px 0px;
+		margin-left: 10px;
+		.simpleVGradient(#ececec,#cecece);
+		&:hover {
+			border-top: 1px solid #b2b1b1;
+			border-bottom: 1px solid #e7e7e7;
+			border-left: 1px solid #b2b1b1;
+			border-right: 1px solid #e7e7e7;
+			.simpleVGradient(#cecece,#ececec);
+		}
+		& a {
+			color: @baseColor;
+			text-decoration: none;
+			display: block;
+			padding-left: 25px;
+			padding-right: 10px;
+			margin-left: 6px;
+		}
+		
+		&.like a {
+			background: url(../img/upvote.png) no-repeat top left transparent;
+		}
+		
+		&.like:hover a {
+			background: url(../img/upvote_hover.png) no-repeat top left transparent;
+		}
+		
+		&.dislike a {
+			background: url(../img/downvote.png) no-repeat top left transparent;
+	
+		}
+		
+		&.dislike:hover a {
+			background: url(../img/downvote_hover.png) no-repeat top left transparent;
+		}
+	}
+	.offerBox {
+		margin-bottom: 20px;
+		& .offerTop {
+			height: 4px;
+			background: url(../img/offer_top.png) repeat-x top left #fff;
+		}
+		
+		& .offerTopLeft {
+			float: left;
+			height: 4px;
+			width: 4px;
+			background: url(../img/offer_top_left.png) no-repeat top left transparent;
+		}
+		
+		& .offerTopRight {
+			float: right;
+			height: 4px;
+			width: 4px;
+			background: url(../img/offer_top_right.png) no-repeat top right transparent;
+		}
+		
+		& .offerMiddle {
+			background: url(../img/offer_left.png) repeat-y top left transparent;
+			padding-left: 4px;
+		}
+		
+		& .offerDescription {
+			margin: 0px;
+			background: url(../img/offer_right.png) repeat-y top right #fff;
+			padding: 10px;
+		}
+		
+		& .offerBottom {
+			background: url(../img/offer_bottom.png) repeat-x top right #fff;
+			height: 4px;
+			position: relative;
+		}
+		
+		.offerBottomRight {
+			float: right;
+			height: 4px;
+			width: 4px;
+			background: url(../img/offer_bottom_right.png) no-repeat top left transparent;
+		}
+		
+		.offerBottomLeft {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 25px;
+			width: 53px;
+			background: url(../img/offer_bottom_left.png) no-repeat top right transparent;
+		}
+	}
+	
+}
+
+.offerFunctionLink.unsort {
+	border: none;
+	background: transparent;
+	& a {
+		color: @darkGreen;
+		text-decoration: underline;
+		padding: 0;
+		margin: 0;
+	}
+	
+	&:hover {
+		border: none;
+		background: transparent;
+	}
+}
+.likedOffers.leftCol {
+	width: 300px;
+	float: left;
+	margin-right: 20px;
+}
+
+.likedOffers.rightCol{
+	width: 300px;
+	float: left;
+}
+
+
+.tx-itao-shh-offers .leftCol header , 
+.tx-itao-shh-offers .rightCol header {
+	float: none;
+}
+
+
+.offerImages {
+	margin: 20px auto;
+	.clearfix;
+	& .OfferImage {
+		.clearfix;
+		float: left;
+		max-width: 30%;
+		margin: 0 10px;
+		& img {
+			max-width: 100% !important;
+			height: auto!important;
+		}
+	}
+}
+.commentEntry {
+	padding: 20px;
+	background: @alternateBackground;	
+}
+
+.iframeContent h1 {
+	color: @baseColor;
+	font-size: 20px;
+}
+
+.iframeContent .tx-itao-shh-offers {
+	.clearfix;
+}
+.leftCol .offerFunctionLink , .rightCol .offerFunctionLink {
+	float: right;
+	margin-bottom: 10px;
+	&.unsort {
+		float: none;
+		& a {
+			margin-top: 5px;
+			clear: both;
+			display: block;
+			text-align: right;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+} 
+ 
+
+.likedOffers.leftCol > h3 {
+	background: url(../img/arrow_big_green.png) no-repeat left center transparent;
+	font-weight: bold;
+	padding-left: 35px;
+}
+.likedOffers.rightCol > h3 {
+	background: url(../img/arrow_big_red.png) no-repeat left center transparent;
+	font-weight: bold;
+	padding-left: 35px;
+}
+
+#newOffer {
+	margin-top: 30px;
+	& fieldset {
+		margin: 10px 0;
+	}
+	& br {
+		display: none;
+	}
+	label {
+		display: block;
+		font-weight: bold;
+		float: left;
+	}
+	& input[type="text"] {
+		height: 32px;
+	}
+	& .fieldsInARow {
+		margin-bottom:  10px;	
+		.clearfix;
+		&.ideaLabels{
+			margin-bottom: 0px;
+		}
+		
+		&.promoterLabels {
+			margin-bottom: 0px;
+		}
+	}
+	
+	& label[for="costsHelp"] {
+		.clearfix;
+		display: block;
+		float: left;
+		margin-top: 20px;
+	}
+	
+
+	
+	
+	& input[name="tx_itaoshhoffers_offers[newOffer][costsHelp]"]	{
+		margin: 24px 0 10px 1em;
+		float: left;
+		.clearfix;
+	}
+	
+	& #images {
+		clear: both;
+		
+		& input {
+			margin-bottom: 10px;
+		}
+		
+		& label {
+			margin-right: 10px;
+			font-weight: bold;
+			margin-right: 5px;
+			display: block;
+			float: left;
+		}
+		
+		.deleteField {
+			margin-left: 8px;
+			padding-left: 15px;
+			background: url(../img/minus_icon.png) no-repeat left center transparent !important; 
+		}
+	}
+	
+	#addImageField {
+		background: url(../img/plus_icon.png) no-repeat left center transparent; 
+		padding-left: 15px
+	}
+	& .promoterFields.fieldsInARow {
+		.clearfix;	
+	}
+	
+	& input[name="tx_itaoshhoffers_offers[newOffer][title]"] {
+		width: 100%;
+	}
+	& label[for="costs"] {float:left;}
+	
+	input[name="tx_itaoshhoffers_offers[newOffer][costs]"] {
+		background: url(../img/euro_icon.png) no-repeat 230px center #fff; 
+		width: 40%;
+		float: right;
+	}
+	& textarea[name="tx_itaoshhoffers_offers[newOffer][description]"] {
+		width: 100%;
+		padding: 0;
+		height: 180px;
+		margin-bottom: 10px;
+	}
+	
+	& input[name="tx_itaoshhoffers_offers[ideaFrom][name]"] {
+		width: 75%; 
+		float: left;	
+	}
+	& label[for="tx_itaoshhoffers_offers[ideaFrom][class]"]{
+		width: 20%;
+		float: right;
+	}
+	& input[name="tx_itaoshhoffers_offers[ideaFrom][class]"] {
+		width: 20%;
+		float: right;
+	}
+	
+	& input[name="tx_itaoshhoffers_offers[promotedFrom][name]"] {
+		width: 75%;
+		mergin-right: 5%;
+		float: left;
+	}
+	
+	& label[for="tx_itaoshhoffers_offers[promotedFrom][class]"] {
+		width: 20%;
+		float: right;
+	}
+	& input[name="tx_itaoshhoffers_offers[promotedFrom][class]"] {
+		width: 20%;
+		float: right;
+	}
+	
+	& #ideaFrom a{
+		background: url(../img/plus_icon.png) no-repeat left center transparent; 
+		padding-left: 15px
+	}
+	
+	& #promotedFrom a {
+		background: url(../img/plus_icon.png) no-repeat left center transparent; 
+		padding-left: 15px;
+		
+	}
+	
+	& a.deleteField {
+			background: url(../img/minus_icon.png) no-repeat left center transparent !important; 
+	}
+	
+	& input[type="submit"] {
+		float: right;
+		font-weight: bold;
+	}
+	
+	input[type="reset"] {
+		font-weight: bold;
+		float: right;
+	}
+	
+
+	& legend {
+		font-weight: bold;
+	}
+	
+}
+
+ .requiredFields {
+	font-style: italic;
+	color: #808080;
+}
+
+textarea[name="tx_itaoshhoffers_offers[newComment][text]"] {
+	display: block;
+	height: 200px;
+	max-width: 100%;
+	width: 700px;
+	padding: 10px;
+}
+
+.promoter, .promoterHeading {
+
+}
+
+.ideas {
+	.clearfix;
+	
+	& h3 {
+		font-size: 16px;
+		font-style: italic;
+		font-weight: bold;
+		margin-bottom: 0;
+	}
+	& .ideaFrom {
+		float: left;
+		margin-right: 10px;
+	}
+	& .name {
+		font-weight: bold;
+	}
+	
+	& .promoterClass {
+		font-style: italic;
+	}
+	& ul.ideaFrom {
+		list-style:none;
+		padding-left: 0;
+	}
+}
+#newComment {
+	clear: both;
+	
+	& input[type="submit"] {
+		float: left;
+		margin-right: 10px;
+	}
+}
+.printOffer {
+	margin: 10px;
+	float: right;
+}
+
+.iframeContent {
+	& ,costs{
+		.clearfix;
+		& span {
+			display: block;
+		}
+		
+		& input[type="text"] {
+			width: 80%;
+		}
+		
+		& input[type="submit"] {
+			float: left;
+		}
+	} 
+} 
+
+.meta {
+	display: block;
+    float: right;
+    font-weight: bold;
+    margin-right: 25px;
+}
+
+.info.commented {
+	background: url(../img/comment.png) no-repeat top left transparent;
+	display: block;
+	margin-top: 20px;
+	vertical-align: middle;
+	padding-left: 35px;
+	padding-top: 2px;
+}
+
+.tabNavigation {
+	.clearfix;
+	// background: @alternateBackground;
+	border-bottom: 3px solid #f0f0f0;
+	padding-left: 0px;
+	& > li {
+		.simpleVGradient(#edede8,#a2a29d);
+		border: 1px solid @sideboxGrey;
+		border-bottom: none;
+		border-radius: 4px 4px  0 0;
+		cursor: pointer;
+		display: block;
+		float: left;
+		font-weight: bold;
+		font-size: 12px;
+		padding: 5px 10px;
+		margin: 0 0.5em;
+		&:hover {
+			.simpleVGradient(#7cc071,#568e4b);
+			color: #fff;
+		}
+		
+		&.active {
+			.simpleVGradient(#7cc071,#568e4b);
+			color: #fff;
+		}
+	}
+	
+	&:first-child {
+		margin-left: 0px;
+	}
+}
+.tabContent {
+	display: none;
+}
+
+#costsTab .meta {
+	float: none;
+}
+
+.print {
+	display: none;
+}

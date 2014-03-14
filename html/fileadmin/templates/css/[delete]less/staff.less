@@ -1,0 +1,99 @@
+.staff {
+	// outer wrap for each member
+	& .member{
+		.clearfix;
+		margin: 15px 0;
+		& .memberImage {
+			float: left;
+			margin-right: 1em;
+			.clearfix;
+		}
+		.memberData {
+			margin-top: 2em;
+			& .name {
+				border-bottom: 1px solid @darkGreen;
+				display: block;
+				overflow: hidden;
+				& a {
+					color: @baseColor;
+					font-weight: bold;
+					text-decoration: none;
+					&:hover {
+						color: @darkGreen;
+					}
+				}
+			}
+			& .position {
+				display: block;
+				font-size: 1em;
+				font-style: italic;
+			}
+			& .email {
+				background: url(../img/staff_email_icon.png) no-repeat left center transparent;
+				display: block;
+				margin-top: 0.5em;
+				padding-left: 35px;
+				overflow: hidden;
+			}
+		}
+	}
+	
+}
+
+.tx-jpstaff-pi1-members-detail.styled-form {
+	.clearfix;
+	& textarea {
+		width: 580px;
+		height: 300px; 
+	}
+	
+	& .firstName {
+		float: left;
+		width: 50%;
+		& input[type="text"]{
+			width: 290px;
+		}
+	}
+	& .lastNamed {
+		float: left;
+		width: 50%;
+		& input[type="text"]{
+			width: 290px;
+		}
+	}
+	
+	& .email input[type="text"] {
+		width: 600px;
+	}
+	& .telephone input[type="text"] {
+		width: 600px;
+	}
+	
+	& input[type="submit"] {
+		float: right;
+		margin-top: 20px;
+		margin-right: 17px;
+	}
+	
+	& label {
+		font-weight: bold;
+	}
+	
+	& .csc-mailform-field {
+		margin-bottom: 10px;
+	}
+	& .wrap {
+		.clearfix;
+	}
+	& .styled-form {
+		clear: both; 
+		margin-top: 20px;
+	}
+	& .imageWrapper {
+		float: left;
+		margin-right: 20px;
+	}
+	& .e-mail  {
+		display:none;
+	}
+}

@@ -1,0 +1,1340 @@
+<!-- ###TEMPLATE_COMMUNE_STARTPAGE### begin -->
+<h2 class="newH2">Kommunenübersicht</h2>
+<!--<p>Bitte wählen Sie die Schule aus:<br /><br /></p>-->
+<div class="unternehmen_overview">
+	<div class="filter_oben">
+		</form>		
+
+		<table  border="0" cellspacing="1" cellpadding="2" class="typo3-dblist">		
+			###TH_HEADER###
+			###COMMUNES_ROWS###
+		</table>
+					
+		###JS_EDIT###	
+	</div>
+</div>		
+
+<!-- ###TEMPLATE_COMMUNE_STARTPAGE### end -->
+
+<!-- ###TYPO3_NEW_LINK### begin -->
+<a onclick="window.location.href='alt_doc.php?returnUrl=mod.php%3F%26M%3DtxitaoshhmanagerM0_txitaoshhmanagerM###MODULNR######BACK_PARAMS######TCA_PARAMS###&amp;edit[###OBJECT_TYPE###][###PID_COMMUNES###]=new'; return false;" href="#">
+	<span class="link_newpruefer_text">###OBJECT_LABEL###</span>
+</a>
+<!-- ###TYPO3_NEW_LINK### end -->
+
+
+<!-- ###TYPO3_EDIT_LINK### begin -->
+<a title="###OBJECT_LABEL###" onclick="window.location.href='alt_doc.php?returnUrl='+T3_THIS_LOCATION+'###BACK_PARAMS######TCA_PARAMS###&amp;edit[###OBJECT_TYPE###][###OBJECT_UID###]=edit'; return false;" href="#">
+	<img src="###IMAGEPATH###edit.png" title="###OBJECT_LABEL###" alt="###OBJECT_LABEL###" />###EDIT_TEXT###
+	<!--<span class="t3-icon t3-icon-actions t3-icon-actions-document t3-icon-document-open"></span>-->
+</a>
+<!-- ###TYPO3_EDIT_LINK### end -->
+
+
+<!-- ###TEMPLATE_TABLEHEADER### begin -->
+		<tr class="t3-row-header">
+			<td>Name der Kommune</td>
+			<td>zugeordnete Schulen</td>
+		</tr>
+<!-- ###TEMPLATE_TABLEHEADER### end -->
+
+
+
+<!-- ###TEMPLATE_TABLEROWS_COMMUNES### begin -->
+		<tr class="db_list_normal">
+			
+			<td>
+					###COMMUNE_NAME###
+			</td>
+			<td class="">
+				<div class="kunde aktiv">
+ 					<ul class="akt_kundenlist"> 
+ 						###REFED_SCHOOLS### 						
+				 	</ul>
+				</div>
+ 			</td>
+		</tr>
+<!-- ###TEMPLATE_TABLEROWS_COMMUNES### end -->
+
+
+<!-- ###TEMPLATE_REFED_SCHOOLS### begin -->
+		<li>
+ 			<a href="###INDEXPATH###&communeid=###COMMUNEID###&schoolid=###SCHOOLID###&beuser_school=1&smnr=25"  title="Direkt zu dieser Schule wechseln">###SC_TITLE###</a> ###SC_ORT###
+ 		</li>
+<!-- ###TEMPLATE_REFED_SCHOOLS### end -->
+
+<!-- ###TEMPLATE_REFED_SCHOOLS_NORIGHTS### begin -->
+		<li>
+ 			###SC_TITLE### ###SC_ORT###
+ 		</li>
+<!-- ###TEMPLATE_REFED_SCHOOLS_NORIGHTS### end -->
+
+
+<!--=============================================== KOMMUNEN-DETAILS ======================================================= -->
+
+
+
+<!-- ###TEMPLATE_COMMUNE_DETAILPAGE### begin -->
+	<h2 class="newH2">Schulen der Kommune</h2>	
+	<h3 class="uppercase">###COMMUNE_TITLE###</h3>
+<!-- ###TEMPLATE_COMMUNE_DETAILPAGE### end -->
+
+
+
+<!-- ###TEMPLATE_SCHOOL_OVERVIEWTABLE### end -->	
+
+	<br />
+
+	<h3>Bitte w&auml;hlen Sie eine Schule aus: </h3>
+	<table  border="0" cellspacing="1" cellpadding="2" class="typo3-dblist">		
+		###TH_HEADER_SCHOOLS###
+		###SCHOOLS_ROWS###
+	</table>
+					
+		###JS_EDIT###	
+<!-- ###TEMPLATE_SCHOOL_OVERVIEWTABLE### end -->
+
+<!-- ###TEMPLATE_TABLEHEADER_SC### begin -->
+		<tr class="t3-row-header">
+			<td>Name der Schule</td>
+			<td>Phase</td>
+			<td>Website-Benutzer</td>
+		</tr>
+<!-- ###TEMPLATE_TABLEHEADER_SC### end -->
+
+
+
+<!-- ###TEMPLATE_TABLEROWS_SCHOOLS### begin -->
+		<tr class="db_list_normal">
+			
+			<td>
+					###SCHOOL_NAME###
+			</td>			
+			<td class=""><img src="/typo3conf/ext/itao_shh_manager/layout/images/###STATUS_IMAGE###" alt="###STATUS_LABEL###" title="###STATUS_LABEL###">&nbsp;###STATUS_LABEL###</td>
+			<td class="">insgesamt ###ANZ_USER_GES###, davon ###REG_USERANZ### registriert</td>
+		</tr>
+<!-- ###TEMPLATE_TABLEROWS_SCHOOLS### end -->
+
+
+<!-- ###TEMPLATE_NO_SCHOOLS_TABLE### begin -->
+		<tr>	
+ 			<td class="no_kunden" colspan="6">
+ 				<div class="typo3-message message-notice">
+ 					<div class="message-header">Keine Ergebnisse!</div>
+ 					<div class="message-body">Für diese Kommune wurden noch keine Schulen angelegt.</div>
+ 				</div>
+ 			</td>			
+ 		</tr>
+<!-- ###TEMPLATE_NO_SCHOOLS_TABLE### end -->
+
+
+<!--=============================================== FUER TAB SCHULE ======================================================= -->
+
+
+<!-- ###TEMPLATE_SCHOOL_DETAILPAGE### begin -->
+	<h2 class="newH2">Aktueller Status/Phase der Schule</h2>	
+	<h3 class="uppercase">###SCHOOL_TITLE### ###SC_ORT###</h3>
+	###JS_EDIT###
+<!-- ###TEMPLATE_SCHOOL_DETAILPAGE### end -->
+
+
+
+<!-- ###TEMPLATE_SCHOOL_DETAIL_CONTENT### begin -->
+
+<div class="dt_stammdaten_all">
+	<div class="dt_stammdaten_all_1">&nbsp;<!--Rand links--></div>
+	<div class="dt_stammdaten_all_2">
+		###BOX_VORBEREITUNG###	
+		###BOX_ONLINE###	
+		###BOX_ABSTIMMUNG###
+		###BOX_ERGEBNIS###
+	</div>
+	
+	<div class="dt_stammdaten_all_3">&nbsp;<!--Trennung Main / Sidebox--></div>
+	<div class="dt_stammdaten_all_4">
+		###SIDEBOX###
+	</div>
+	<div class="dt_stammdaten_all_5">&nbsp;<!--Rand rechts--></div>
+</div>
+<!-- ###TEMPLATE_SCHOOL_DETAIL_CONTENT### end -->
+
+
+<!--=============================================== FUER BENUTZER EINER SCHULE ======================================================= -->
+
+
+<!-- ###TEMPLATE_USER_DETAILPAGE### begin -->
+	<h2 class="newH2">Zugangsdaten anlegen</h2>	
+	<h3 class="uppercase">###SCHOOL_TITLE### ###SC_ORT###</h3>
+	###JS_EDIT###
+<!-- ###TEMPLATE_USER_DETAILPAGE### end -->
+
+
+<!-- ###TEMPLATE_USER_DETAIL_CONTENT### begin -->
+<div class="dt_stammdaten_all">
+	<div class="dt_stammdaten_all_1">&nbsp;<!--Rand links--></div>
+	<div class="dt_stammdaten_all_2">
+		<!--<div style="color:red;font-weight:bold;">ACHTUNG!! IST IN ARBEIT!!! (Ticket 3164)</div><br />-->
+			###BOX_VERWALTUNG_KOMMUNE###
+			###BOX_VERWALTUNG_SCHULE###
+			###BOX_SCHUELERVERTRETUNG###
+			###BOX_SCHUELER###
+			###BOX_MODERATION_KOMMUNE###
+			###BOX_MODERATION_SCHULE###
+			<!--###BOX_MODERATION_GAST###-->
+	</div>
+	
+	<div class="dt_stammdaten_all_3">&nbsp;<!--Trennung Main / Sidebox--></div>
+	<div class="dt_stammdaten_all_4">
+		###SIDEBOX###
+	</div>
+	<div class="dt_stammdaten_all_5">&nbsp;<!--Rand rechts--></div>
+</div>
+<!-- ###TEMPLATE_USER_DETAIL_CONTENT### end -->
+
+
+<!-- ###BOX_BODY_VERW_KOMMUNE### begin -->
+		<form action="###FORM_ACTION_GENACC###" method="POST">
+			
+			<div class="zwpruefung_body">
+				<table>
+					<tr><td style="width:48%;">						
+						<table>
+							<tr>
+								<td>bereits generiert:</td>
+								<td>###ANZ_VERWKOMMUNE### Accounts</td>
+							</tr>
+							<tr>
+								<td>davon registriert:</td>
+								<td>###ANZ_VERWKOMMUNE_REG### Accounts</td>
+							</tr>
+							<tr>
+								<td>Neue Accounts generieren:</td>
+								<td>###GENERATE_ACCOUNTS###</td>
+							</tr>
+						</table>
+					</td>					
+					<td style="width:4%;">&nbsp;</td>
+					
+					<td style="width:48%;">	
+						###DOWNLOAD_ACCOUNTS###
+						###UPDATE_ACCOUNTS###
+					</td></tr>
+				</table>
+				
+			</div>
+		</form>
+
+<!-- ###BOX_BODY_VERW_KOMMUNE### end -->
+
+<!-- ###TEMP_DOWNLOAD_ACCOUNTS### begin -->
+<div class="download mitarbeiterpdf">
+	<a target="_blank" href="###PFAD_DOWNLOAD###">
+		<u>Download: Seriendruck der Gruppen-Zugangsdaten (PDF)</u>
+	</a>
+</div>
+<!-- ###TEMP_DOWNLOAD_ACCOUNTS### end -->
+
+
+<!-- ###TEMP_UPDATE_ACCOUNTS### begin -->
+<br />
+<div class="download mitarbeiterpdf_update">
+	<a href="###PFAD_UPDATE_FEACCOUNTS###">
+		<u>PDF aktualisieren (es werden KEINE neuen Accounts generiert)</u>
+	</a>
+</div>
+<!-- ###TEMP_UPDATE_ACCOUNTS### end -->
+
+
+
+<!-- ###TEMPL_GENERATE_ACCOUNTS### begin -->
+		<input type="text" size="10" name="anz_acc_###GROUPID###" value="" /> 
+		<input type="submit" value="Accounts generieren" />
+<!-- ###TEMPL_GENERATE_ACCOUNTS### end -->
+
+
+<!-- ###BOX_BODY_VERW_SCHULE### begin -->
+		<form action="" method="POST">
+			<br />
+			<div class="zwpruefung_body">
+				Zugangsdaten fuer Verwaltung - Schule
+				<br /><br />
+			</div>
+			
+			<br />
+		</form>
+
+<!-- ###BOX_BODY_VERW_SCHULE### end -->
+
+
+<!-- ###BOX_BODY_SCHUELERVERTRETUNG### begin -->
+		<form action="" method="POST">
+			<br />
+			<div class="zwpruefung_body">
+				Zugangsdaten fuer Schuelervertretung
+				<br /><br />
+			</div>
+			
+			<br />
+		</form>
+
+<!-- ###BOX_BODY_SCHUELERVERTRETUNG### end -->
+
+
+<!-- ###BOX_BODY_SCHUELER### begin -->
+		<form action="" method="POST">
+			<br />
+			<div class="zwpruefung_body">
+				Zugangsdaten fuer Schueler
+				<br /><br />
+			</div>
+			
+			<br />
+		</form>
+
+<!-- ###BOX_BODY_SCHUELER### end -->
+
+
+<!--=============================================== FUER BOXEN der SCHULPHASEN ======================================================= -->
+
+
+<!-- ###BOX_BODY_VORBEREITUNG### begin -->
+		<form action="###FORMURL###" method="POST">
+			<div class="zwpruefung_body">	
+				
+ 				
+				<h4>Checkliste - Was muss erledigt sein bevor die n&auml;chste Phase aktiv werden kann:</h4>
+				
+				<div class="checklist_status">
+					&ndash; Inhalte der Schulseite sind eingepflegt<br />
+					&ndash; Benutzer wurden angelegt (Lehrer, Sch&uuml;lervertreter, Sch&uuml;ler etc.)<br />								
+				</div>
+ 				
+				<div class="switchbutton">
+					<input type="submit" name="switchstatus" value="In die n&auml;chste Phase schalten" ###SCHALTE_AKTIV### onclick="return confirm('Wollen Sie wirklich den Status \'Vorschl\xE4ge einreichen\' setzen?');" />
+					<input type="hidden" name="neuePhase"  value="2" />
+				</div>
+							
+				
+				<!-- steht ab Phase 2 drin, was noch alles gemacht werden muss, um die Vorbereitung abschlie&szlig;en zu k&ouml;nnen <br /><br />-->
+				<!--
+				###ZWBERICHT_STOPPEN### 
+				-->
+			</div>
+		</form>
+
+<!-- ###BOX_BODY_VORBEREITUNG### end -->
+
+
+<!-- ###BOX_BODY_ONLINE### begin -->
+		<form action="###FORMURL###" method="POST">
+			<div class="zwpruefung_body">
+				
+ 				
+				<h4>Checkliste - Was muss erledigt sein bevor die n&auml;chste Phase aktiv werden kann:</h4>
+				
+				<div class="checklist_status">
+					&ndash; Es wurden ausreichend Vorschl&auml;ge eingereicht<br />
+					&ndash; Vorschl&auml;ge, Kosten und Kommentare wurden bearbeitet (k&ouml;nnen aber noch in n&auml;chster Phase bearbeitet werden)<br />		
+					
+					<br />
+					<b>Achtung:</b> Wenn Sie in die n&auml;chste Phase umschalten, k&ouml;nnen keine Vorschl&auml;ge mehr erstellt werden!						
+				</div>
+				
+				<div class="switchbutton">
+					<input type="submit" name="switchstatus" value="In die n&auml;chste Phase schalten" ###SCHALTE_AKTIV### onclick="return confirm('Wollen Sie wirklich den Status \'Abstimmung\' setzen?');" />
+					<input type="hidden" name="neuePhase"  value="3" />
+				</div>
+				
+				<!--
+				Hier steht drin, was noch alles gemacht werden muss, um die Online-Diskussions abschlie&szlig;en zu k&ouml;nnen <br /><br />
+				
+				###ZWBERICHT_STOPPEN### 
+				-->
+			</div>
+		</form>
+
+<!-- ###BOX_BODY_ONLINE### end -->
+
+<!-- ###BOX_BODY_ABSTIMMUNG### begin -->
+		<form action="###FORMURL###" method="POST">
+			<div class="zwpruefung_body">		
+ 				
+				<h4>Checkliste - Was muss erledigt sein bevor die n&auml;chste Phase aktiv werden kann:</h4>
+				
+				<div class="checklist_status">
+					&ndash; Die Abstimmung wurde in Ihrer Schule durchgef&uuml;hrt<br />								
+					&ndash; <a href="###LINK_STIMMENEINGABE###"><u>Die Ergebnisse (Stimmen) m&uuml;ssen pro Vorschlag eingepflegt werden</u></a> <br />	
+					&ndash; Es werden ###ANZAHL_RESULTS### Vorschl&auml;ge auf der Ergebnisseite angezeigt <span class="edit_anzresults ###CLASS_ANZRES###">###CHANGE_ANZRESULTS_LINK###</span>	<br />										
+				</div>	
+				
+				<div class="switchbutton">
+					<input type="submit" name="switchstatus" value="In die n&auml;chste Phase schalten" ###SCHALTE_AKTIV### onclick="return confirm('Wollen Sie wirklich den Status \'Ergebnis\' setzen?');" />
+					<input type="hidden" name="neuePhase"  value="5" />
+				</div>
+				
+				<!--Hier steht drin, was noch alles gemacht werden muss, um das Ergebnis freizuschalten<br /><br />
+				
+				###ZWBERICHT_STOPPEN### -->
+			</div>
+		</form>
+
+<!-- ###BOX_BODY_ABSTIMMUNG### end -->
+
+<!-- ###BOX_BODY_ERGEBNIS### begin -->
+		<form action="###FORMURL###" method="POST">
+			<div class="zwpruefung_body">		
+ 				<h4>Checkliste - Was muss in dieser Phase noch erledigt werden:</h4>
+				
+				<div class="checklist_status">		
+					<!--<span class="listgrey">Keine Todos in dieser Phase</span>		<br />	-->					
+					&ndash; <a href="/typo3conf/ext/templavoila/mod1/index.php?&M=web_txtemplavoilaM1&id=###LINKID_RESULTPAGE###"><u>Bei Bedarf: Ergebnisseite bearbeiten, um den aktuellen Stand wiederzugeben</u></a><br />	
+					&ndash; Es werden ###ANZAHL_RESULTS### Vorschl&auml;ge auf der Ergebnisseite angezeigt <span class="edit_anzresults ###CLASS_ANZRES###">###CHANGE_ANZRESULTS_LINK###</span>	<br />							
+				</div>			
+				
+				<!--Hier steht drin, was noch alles gemacht werden muss, um das Ergebnis freizuschalten<br /><br />
+				
+				###ZWBERICHT_STOPPEN### -->
+			</div>
+		</form>
+
+<!-- ###BOX_BODY_ERGEBNIS### end -->
+
+<!-- ###SWITCHBACK### begin -->
+<span class="switchback">
+	<a href="###URLSCHWITCHBACK###"  onclick="return confirm('Wollen Sie wirklich in diese Phase zur\xFCckschalten?');"><img src="###IMAGEPATH###switchbackicon.png" /> In diese Phase zur&uuml;ckstellen</a>
+</span>
+<!-- ###SWITCHBACK### end -->
+
+
+
+<!-- ###BOX_BASIC### begin -->
+
+<div class="contentbox ###BOXTOPIC### ###ACTIVITY###">
+		<div class="header" id="contentbox_###BOXTOPIC###" >
+			<h3><a href="#" onClick="toggler_s('bodycont_###BOXTOPIC###','contentbox_###BOXTOPIC###');">###BOXHEADER###: <span class="###STATUS_ERH_CLASS###">###STATUS_BEZ###</span></a>
+				###EDITHEADER###
+			</h3>
+			
+		</div>
+		<div class="###BOXCONTENT_CLASS###" id="bodycont_###BOXTOPIC###">###BOXBODY###</div>	
+</div>
+<!-- ###BOX_BASIC### end -->
+
+
+
+
+<!-- ###BOX_JS### end -->
+<script language="JavaScript" type="text/javascript">
+	<!--
+function toggler(id, iconid) {
+			if (document.getElementById(id).className=="content_auf") {	
+				document.getElementById(id).setAttribute("class", "content_zu");
+				document.getElementById(id).setAttribute("className", "content_zu");
+				document.getElementById(iconid).setAttribute("class", "boxzu");
+				document.getElementById(iconid).setAttribute("className", "boxzu");
+			} else {
+				document.getElementById(id).setAttribute("class", "content_auf");
+				document.getElementById(id).setAttribute("className", "content_auf");
+				document.getElementById(iconid).setAttribute("class", "boxauf");
+				document.getElementById(iconid).setAttribute("className", "boxauf");
+			}
+		}
+		
+		
+		function toggler_s(id, iconid) {
+			if (document.getElementById(id).className=="boxcontent") {	
+				document.getElementById(id).setAttribute("class", "content_zu");
+				document.getElementById(id).setAttribute("className", "content_zu");
+				document.getElementById(iconid).setAttribute("class", "header");
+				document.getElementById(iconid).setAttribute("className", "header");
+			} else {
+				document.getElementById(id).setAttribute("class", "boxcontent");
+				document.getElementById(id).setAttribute("className", "boxcontent");
+				document.getElementById(iconid).setAttribute("class", "header");
+				document.getElementById(iconid).setAttribute("className", "header");
+			}
+		}
+	
+	
+	
+	//-->
+</script>
+
+<!-- ###BOX_JS### end -->
+
+
+
+<!-- ###SIDEBOX_SCHOOL### begin -->
+		<div class="sidebox unternehmen">
+			<div class="boxheader"> 
+				<h3 id="box_unternehmen" class="boxauf" onClick="toggler('box_unternehmen_content','box_unternehmen');">
+					<a href="#">Schuldetails</a>			
+				</h3>
+				<div class="edit kunde">###EDITLINK###</div>
+			</div>
+				
+			<div id="box_unternehmen_content" class="content_auf">
+					<table class="schooldetails">
+						<tr><td style="width:170px;"><label>Name der Schule:</label></td>	
+								<td>###SCHOOL_TITLE###</td>
+						</tr>
+						<tr><td><label>Adresse:</label></td>	
+								<td>###SC_ZIP### ###SC_CITY###</td>
+						</tr>
+						<!--
+						<tr><td><label>Hauptseite:</label></td>	
+								<td>###SC_MAIN###</td>
+						</tr>
+						<tr><td><label>Von mir sortiert:</label></td>	
+								<td>###SC_SORTED###</td>
+						</tr>
+						<tr><td><label>Meine Vorschläge:</label></td>	
+								<td>###SC_MYOFFERS###</td>
+						</tr>
+						<tr><td><label>Ergebnisseite:</label></td>	
+								<td>###SC_RESULT###</td>
+						</tr>
+						-->				
+					</table>
+			</div>
+		</div>
+<!-- ###SIDEBOX_SCHOOL### end -->
+
+
+
+
+<!-- ###SIDEBOX_USER### begin -->
+<!--		<div class="sidebox unternehmen">
+			
+			<div class="boxheader"> 
+				<h3 id="box_unternehmen" class="boxauf" onClick="toggler('box_unternehmen_content','box_unternehmen');">
+					<a href="#">Zusammenfassung</a>			
+				</h3>
+				
+			</div>
+				
+			<div id="box_unternehmen_content" class="content_auf">
+				Insgesamt: ###ANZ_ACCOUNTS_GESAMT### Accounts<br />
+				<br />
+				
+			</div>
+			
+		</div>-->
+<!-- ###SIDEBOX_USER### end -->
+
+
+
+<!--=============================================== FUER VORSCHLÄGE EINER SCHULE ======================================================= -->
+
+Details zu den 
+<!-- ###TEMPLATE_OFFERS_DETAILPAGE### begin -->
+	<h2 class="newH2">Vorschl&auml;ge der Schule</h2>	
+	<h3 class="uppercase">###SCHOOL_TITLE### ###SC_ORT###</h3>
+	###JS_EDIT###
+<!-- ###TEMPLATE_OFFERS_DETAILPAGE### end -->
+
+
+
+<!-- ###TEMPLATE_OFFERS_DETAIL_CONTENT### begin -->
+<div class="dt_stammdaten_all">
+	<div class="dt_stammdaten_all_1">&nbsp;<!--Rand links--></div>
+	<div class="dt_stammdaten_all_2 vorschlaege">
+		<form action="###FORMACTION###" method="POST" name="pruefer_suche" id="pruefer_suche">
+			<div class="pruefer_suche">
+				<div class="prsu_inp">
+					<input type="input" name="search_value" value="###SEARCH_VALUE###" size="55" class="searchfield" 
+						 onfocus="if (this.value != '###SEARCH_VALUE_STD###') {this.select();} else {this.value = ''};" onblur="if (this.value == '') {this.value = '###SEARCH_VALUE_STD###';}"	
+					/>
+					<input type="submit" name="search_pruefer" value="Suchen" class="suchbutton" />&nbsp;&nbsp;
+					<input type="submit" name="search_reset" value="Alle Vorschl&auml;ge anzeigen" class="suchbutton ###DISPLAY_CLASS_SEARCH###" />
+				</div>
+			</div>
+			
+			<div class="anz_ergebnisse">(###ANZ_ERGEBNISSE### Vorschl&auml;ge gefunden)</div>
+			<br />
+			<br />
+		</form>
+		
+		###LINK_DOC_GEN###
+		
+		<table  border="0" cellspacing="1" cellpadding="2" class="typo3-dblist">		
+			<tr class="t3-row-header">
+				<td style="width:40px;"><a href="###SORTPATH_INTERNAL_ID###" class="###SORT_CLASS_INTERNAL_ID### th_sort">Nr.</a></td>
+				<!--<td style="width:30px;"></td>
+				<td style="width:30px;"></td>
+				-->
+				<td><a href="###SORTPATH_TITLE###" class="###SORT_CLASS_TITLE### th_sort">Titel</a></td>
+				<td><a href="###SORTPATH_SUBMITTED###" class="###SORT_CLASS_SUBMITTED### th_sort">Eingereicht von</a></td>
+				<td>Kosten</td>
+				<td><a href="###SORTPATH_DATE###" class="###SORT_CLASS_DATE### th_sort">Datum</a></td>
+				<td><a href="###SORTPATH_STATUS###" class="###SORT_CLASS_STATUS### th_sort">Status</a></td>
+				<td><a href="###SORTPATH_CLASSIDEA###" class="###SORT_CLASS_CLASSIDEA### th_sort">Klasse d. Ideengebers</a></td>
+				<td><a href="###SORTPATH_COMMENTED###" class="###SORT_CLASS_COMMENTED### th_sort">kommentiert</a></td>
+				<td><a href="###SORTPATH_HELP###" class="###SORT_CLASS_HELP### th_sort">Hilfe erw&uuml;nscht</a></td>
+				<td><a href="###SORTPATH_LIKES###" class="###SORT_CLASS_LIKES### th_sort">gef&auml;llt</a> /
+					<br /><a href="###SORTPATH_DISLIKES###" class="###SORT_CLASS_DISLIKES### th_sort">gef&auml;llt nicht</a></td>
+				<!--<td>In Bearbeitung durch</td>-->
+			</tr>
+			###TABLEROWS_OFFERS###
+		</table>
+			
+		###LINK_DOC_GEN###
+	</div>
+	
+	<div class="dt_stammdaten_all_3">&nbsp;<!--Trennung Main / Sidebox--></div>
+	<div class="dt_stammdaten_all_4 vorschlaege">
+		###SIDEBOX###
+	</div>
+	<div class="dt_stammdaten_all_5">&nbsp;<!--Rand rechts--></div>
+</div>
+<!-- ###TEMPLATE_OFFERS_DETAIL_CONTENT### end -->
+
+<!-- ###T_GENERATE_DOC### begin -->
+<div class="docdownload">
+	<img src="/typo3conf/ext/itao_shh_manager/layout/images/pdf_icon.png" /> <a href="###LINK_UPDATE_PDF###" target="_blank"><u>Download Wahlzettel-Dokument als *.pdf &raquo;</u></a> <br />
+	<img src="/typo3conf/ext/itao_shh_manager/layout/images/word.png" /> <a href="###LINK_UPDATE_DOC###" target="_blank"><u>Download Wahlzettel-Dokument als *.doc &raquo;</u></a><br /><br />
+	
+</div>
+<!-- ###T_GENERATE_DOC### end -->
+
+
+			<!--<td class="td_center listgrey">###EDIT_OFFER_LINK###</td>	
+			<td class="td_center listgrey"><a href="###DETAIL_OFFER_LINK###" title="Details des Vorschlags ansehen"><img src="/typo3conf/ext/itao_shh_manager/layout/images/preview.png"></a></td>			
+			-->
+<!-- ###TEMPLATE_TABLEROWS_OFFERS### begin -->
+		<tr class="db_list_normal">
+			<td class="td_center listgrey">###OFFERID###</td>
+			<td><a href="###DETAIL_OFFER_LINK###" title="Details des Vorschlags ansehen">
+					###OFFER_TITLE###</a>
+			</td>			
+			<td>###SUBMITTED_BY###</td>
+			<td style="text-align:right;">###COSTS###</td>
+			<td>###DATE###</td>
+			<td class="">
+				<img src="/typo3conf/ext/itao_shh_manager/layout/images/###STATUS_IMAGE###" alt="###STATUS_LABEL###" title="###STATUS_LABEL###">&nbsp;###STATUS_LABEL###</td>
+			<!--<td class="">###ASSIGNED_TO###</td>-->
+			
+			<td>###CLASSIDEA###</td>
+			<td>###COMMENTED###</td>
+			<td>###HELP_WANTED###</td>
+			<td><!--<span class="statusGreen">###LIKES###</span> / <span class="statusRed">###DISLIKES###</span>-->
+				###DIS_LIKES###
+				</td>
+		</tr>
+<!-- ###TEMPLATE_TABLEROWS_OFFERS### end -->
+
+
+
+<!-- ###SIDEBOX_OFFERS### begin -->
+		<div class="sidebox unternehmen">
+			<div class="boxheader"> 
+				<h3 id="box_unternehmen" class="boxauf" onClick="toggler('box_unternehmen_content','box_unternehmen');">
+					<a href="#">Zusammenfassung</a>			
+				</h3>
+				<!--<div class="edit kunde">###EDITLINK###</div>-->
+			</div>
+				
+			<div id="box_unternehmen_content" class="content_auf"><br />
+				<b>###ANZ_OFFERS_GESAMT###</b> Vorschl&auml;ge insgesamt eingereicht<br /><br />
+				<img src="/typo3conf/ext/itao_shh_manager/layout/images/state_offer_1.png" alt="Vorschl&auml;ge neu eingereicht" title="Vorschl&auml;ge neu eingereicht">
+					<b>###ANZ_OFFERS_SUBMITTED###</b> Vorschl&auml;ge neu eingereicht<br /><br />
+					
+				<img src="/typo3conf/ext/itao_shh_manager/layout/images/state_offer_2.png" alt="Vorschl&auml;ge freigeschaltet" title="Vorschl&auml;ge freigeschaltet"> 
+					<b>###ANZ_OFFERS_RELEASED###</b> Vorschl&auml;ge freigeschaltet<br /><br />
+					
+				<img src="/typo3conf/ext/itao_shh_manager/layout/images/state_offer_3.png" alt="Vorschl&auml;ge abgewiesen" title="Vorschl&auml;ge abgewiesen"> 
+					<b>###ANZ_OFFERS_DISMISSED###</b> Vorschl&auml;ge abgewiesen<br />
+				<br />
+			</div>
+		</div>
+<!-- ###SIDEBOX_OFFERS### end -->
+
+
+<!-- ###TEMPLATE_NO_OFFERS### begin -->
+		<tr>	
+ 			<td class="no_kunden" colspan="10">
+ 				<div class="typo3-message message-notice">
+ 					<div class="message-header">Keine Ergebnisse!</div>
+ 					<div class="message-body">F&uuml;r diese Schule wurden noch keine Vorschl&auml;ge eingereicht.</div>
+ 				</div>
+ 			</td>			
+ 		</tr>
+<!-- ###TEMPLATE_NO_OFFERS### end -->
+
+
+<!--=============================================== FUER VORSCHLAG IM DETAIL ======================================================= -->
+
+
+<!-- ###TEMPLATE_OFFER_VIEW### begin -->
+	<h2 class="newH2">Vorschlag im Detail <span class="listgrey">(ID ###OFFER_INTID###)</span></h2>	
+	<h3 class="uppercase">###SCHOOL_TITLE### ###SC_ORT###</h3>
+	###JS_EDIT###
+<!-- ###TEMPLATE_OFFER_VIEW### end -->
+
+<!-- ###TEMPLATE_OFFER_VIEW_CONTENT### begin -->
+<div class="dt_stammdaten_all">
+	<div class="dt_stammdaten_all_1">&nbsp;<!--Rand links--></div>
+	<div class="dt_stammdaten_all_2" >
+			<!--###BACKLINK###-->
+			###FUNKTIONSLEISTE###
+		<div class="offer_detail">
+			<table style="width:100%;">
+				<tr>
+					<!------- hier jetzt Inhalte des Vorschlags -------->
+					<td>
+						<table>
+							
+							<tr>
+								<td colspan="2" class="off_title"><br />###OFF_TITLE###</td>
+							</tr>
+							<tr>
+								<td colspan="2"><br /><p>###OFF_DESCRIPTION###</p><br /></td>
+							</tr>
+							<tr>
+								<td style="width:150px;">Kosten:</td>
+								<td>###OFF_COSTS### (###OFF_HELP###Hilfe gew&uuml;nscht)<br /> 
+									  
+								</td>
+							</tr>
+							
+							<tr>
+								<td >Kosten lt. Verwaltung:</td>
+								<td >###COSTS_VERWALTUNG###</td>
+									  
+								</td>
+							</tr>
+							
+							<tr>
+								<td><br />Kommentar Verwaltung:</td>
+								<td><br />###OFF_COMMENTS###
+									</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+							</tr>
+			
+						</table>
+					</td>
+					
+					<!------- hier jetzt images -------->
+					<td>
+						<table>
+							<tr>
+								<td><br /><br />###OFF_IMAGES###</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>	
+				
+			<br /><br /><br /><br />###BACKLINK###	
+				<!--<div class="imagesOffer">###OFF_IMAGES###</div>-->
+				
+		</div>
+			
+	</div>
+	
+	<div class="dt_stammdaten_all_3">&nbsp;<!--Trennung Main / Sidebox--></div>
+	<div class="dt_stammdaten_all_4">
+		###SIDEBOX###
+	</div>
+	<div class="dt_stammdaten_all_5">&nbsp;<!--Rand rechts--></div>
+</div>
+<!-- ###TEMPLATE_OFFER_VIEW_CONTENT### end -->
+
+
+
+
+<!-- ###SIDEBOX_OFFER_DETAIL### begin -->
+		<div class="sidebox unternehmen">
+			<div class="boxheader"> 
+				<h3 id="box_unternehmen" class="boxauf" onClick="toggler('box_unternehmen_content','box_unternehmen');">
+					<a href="#">Meta-Informationen</a>			
+				</h3>
+				<!--<div class="edit kunde">###EDITLINK###</div>-->
+			</div>
+				
+			<div id="box_unternehmen_content" class="content_auf">
+				<table class="off_detail_sidebox">
+					<tr>
+						<td style="width:120px;">Status</td>
+						<td><img src="/typo3conf/ext/itao_shh_manager/layout/images/###STATUS_IMAGE###" alt="###STATUS_LABEL###" title="###STATUS_LABEL###">
+					###STATUS_LABEL###</td>
+					</tr>
+					<!--<tr>
+						<td>Log:</td>
+						<td>###ACTIONS### ("dieser Vorschlag wurde...")</td>
+					</tr>
+					-->
+					<tr>
+						<td class="off_date">eingereicht am </td>
+						<td class="off_date">###OFF_DATE###</td>
+					</tr>
+					<tr>
+						<td>von Benutzer </td>
+						<td>###OFF_USER###</td>
+					</tr>
+					<tr>
+						<td>Idee von </td>
+						<td>###OFF_IDEAFROM###</td>
+					</tr>
+					
+					<tr>
+						<td>Unterst&uuml;tzt von </td>
+						<td>###OFF_SUPPORTS###</td>
+					</tr>
+					
+					<tr>
+						<td><br />Gef&auml;llt</td>
+						<td><br />###OFF_LIKES###</td>
+					</tr>
+					
+					<tr>
+						<td>Gef&auml;llt nicht</td>
+						<td>###OFF_DISLIKES###</td>
+					</tr>
+					
+				</table>
+			</div>
+		</div>
+<!-- ###SIDEBOX_OFFER_DETAIL### end -->
+
+
+
+<!-- ###OFFER_FUNCTIONS### begin -->
+			<div class="functions_offer">
+				Diesen Vorschlag 
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				<span class="offer_func_1">
+					###EDIT_OFFER_LINK###
+				</span>	
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				
+				<span class="offer_func_1 ###DISPLAY_FUNC_1###">
+					<a href="###OFFER_FUNCPATH###&activate=1" onclick="return confirm('Wollen Sie diesen Vorschlag wirklich freischalten?');">
+						<img src="/typo3conf/ext/itao_shh_manager/layout/images/state_offer_2.png" alt="Vorschlag freigeben" title="Vorschlag freigeben" /> 
+						freigeben
+					</a>
+				</span>				
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				<span class="offer_func_2 ###DISPLAY_FUNC_2###">
+					<a href="###OFFER_FUNCPATH###&deact=1" onclick="return confirm('Wollen Sie diesen Vorschlag wirklich sperren?');">
+						<img src="/typo3conf/ext/itao_shh_manager/layout/images/state_offer_3.png" alt="Vorschlag sperren" title="Vorschlag sperren" /> 
+						 deaktivieren (sperren)
+					</a>
+				</span>
+				
+				
+			</div>
+<!-- ###OFFER_FUNCTIONS### end -->
+
+
+
+
+<!--=============================================== FUER BE-BENUTZER EINER SCHULE/Kommune ======================================================= -->
+
+<!-- ###TEMPLATE_BEUSER_DETAILPAGE### begin -->
+	<h2 class="newH2">Administrator Schule anlegen</h2>	
+	<h3 class="uppercase">###SCHOOL_TITLE### ###SC_ORT###</h3>
+	###JS_EDIT###
+<!-- ###TEMPLATE_BEUSER_DETAILPAGE### end -->
+
+
+<!-- ###TEMPLATE_BEUSER_DETAIL_CONTENT### begin -->
+<div class="dt_stammdaten_all">
+	<div class="dt_stammdaten_all_1">&nbsp;<!--Rand links--></div>
+	<div class="dt_stammdaten_all_2">
+			###BOX_BE_REDADMIN_KOMMUNE###
+			###BOX_BE_MOD_KOMMUNE###
+			###BOX_BE_REDADMIN_SCHULE###
+			###BOX_BE_MOD_SCHULE###
+			<!--###BOX_MODERATION_GAST###-->
+	</div>
+	
+	<div class="dt_stammdaten_all_3">&nbsp;<!--Trennung Main / Sidebox--></div>
+	<div class="dt_stammdaten_all_4">
+		###SIDEBOX###
+	</div>
+	<div class="dt_stammdaten_all_5">&nbsp;<!--Rand rechts--></div>
+</div>
+<!-- ###TEMPLATE_BEUSER_DETAIL_CONTENT### end -->
+
+
+
+
+
+<!-- ###BOX_BODY_BEUSER### begin -->
+		<form action="###FORM_ACTION_GENACC###" method="POST">
+			
+			<div class="zwpruefung_body">
+				<table>
+					<tr><td style="width:48%;">						
+						<table>
+							<tr>
+								<td>bereits generiert:</td>
+								<td>###ANZ_VERWKOMMUNE### Accounts</td>
+							</tr>
+							<tr>
+								<td>Neue Accounts generieren:</td>
+								<td>###GENERATE_ACCOUNTS###</td>
+							</tr>
+						</table>
+					</td>					
+					<td style="width:4%;">&nbsp;</td>
+					
+					<td style="width:48%;">	
+						###DOWNLOAD_ACCOUNTS###
+						###UPDATE_ACCOUNTS###
+					</td></tr>
+				</table>
+				
+			</div>
+		</form>
+
+<!-- ###BOX_BODY_BEUSER### end -->
+
+<!-- ###TEMP_DOWNLOAD_BEACCOUNTS### begin -->
+<div class="download mitarbeiterpdf">
+	<a target="_blank" href="###PFAD_DOWNLOAD###">
+		<u>Download: Seriendruck der Redakteurs-Zugangsdaten (PDF)</u>
+	</a>
+</div>
+<!-- ###TEMP_DOWNLOAD_BEACCOUNTS### end -->
+
+
+<!-- ###TEMP_UPDATE_BEACCOUNTS### begin -->
+<br />
+<div class="download mitarbeiterpdf_update">
+	<a href="###PFAD_UPDATE_BEACCOUNTS###">
+		<u>PDF aktualisieren (es werden KEINE neuen Accounts generiert)</u>
+	</a>
+</div>
+<!-- ###TEMP_UPDATE_BEACCOUNTS### end -->
+
+
+
+<!-- ###TEMPL_GENERATE_BEACCOUNTS### begin -->
+		<input type="text" size="10" name="anz_beacc_###GROUPID###" value="" /> 
+		<input type="submit" value="Accounts generieren" />
+<!-- ###TEMPL_GENERATE_BEACCOUNTS### end -->
+
+
+
+
+<!--=============================================== FUER FE-BENUTZER-EDIT EINER SCHULE/Kommune ======================================================= -->
+
+
+Details zu den 
+<!-- ###TEMPLATE_FEUSER_EDITPAGE### begin -->
+	<h2 class="newH2">Bearbeitung der Website-Benutzer der Schule</h2>	
+	<h3 class="uppercase">###SCHOOL_TITLE### ###SC_ORT###</h3>
+	###JS_EDIT###
+<!-- ###TEMPLATE_FEUSER_EDITPAGE### end -->
+
+
+<!-- ###TEMPLATE_FEUSER_EDIT_CONTENT### begin -->
+<div class="dt_stammdaten_all">
+	<div class="dt_stammdaten_all_1">&nbsp;<!--Rand links--></div>
+	<div class="dt_stammdaten_all_2 vorschlaege">
+		<form action="###FORMACTION###" method="POST" name="pruefer_suche" id="pruefer_suche">
+			<div class="pruefer_suche pruefer_filter">
+				<div class="prsu_inp">
+					<input type="input" name="search_valueuser" value="###SEARCH_VALUE###" size="55" class="searchfield" 
+						 onfocus="if (this.value != '###SEARCH_VALUE_STD###') {this.select();} else {this.value = ''};" onblur="if (this.value == '') {this.value = '###SEARCH_VALUE_STD###';}"	
+					/>
+					<input type="submit" name="search_pruefer" value="Suchen" class="suchbutton" />&nbsp;&nbsp;
+					<input type="submit" name="search_reset" value="Alle Benutzer anzeigen" class="suchbutton ###DISPLAY_CLASS_SEARCH###" />
+					<!-- filter -->
+					<br /><br />
+					Filter Benutzerstatus: 
+					<select name="filter_state" class="filter_state" onChange="document.pruefer_suche.submit();">
+						<option value="0" ###PRESEL_0###>--alle---</option>
+						<option value="1" ###PRESEL_1###>nur aktive Benutzer anzeigen</option>
+						<option value="2" ###PRESEL_2###>nur gesperrte Benutzer anzeigen</option>
+					</select>
+					
+					
+					Filter Benutzergruppen: 
+					<select name="filter_usergroups"  onChange="document.pruefer_suche.submit();">
+						<option value="0">--alle---</option>
+						###OPTIONS_USERGROUPS###
+					</select>
+			
+				</div>
+			</div>
+				
+				
+			
+		
+			
+			<div class="anz_ergebnisse">(###ANZ_ERGEBNISSE### Benutzer gefunden)</div>
+			<br />
+			<br />
+		</form>
+		
+		<table  border="0" cellspacing="1" cellpadding="2" class="typo3-dblist">		
+			<tr class="t3-row-header">
+				<td style="width:40px;">User-ID</td>
+				<td>Vorname</td>
+				<td>Nachname</td>
+				<td>Klasse</td>
+				<td>Username</td>
+				<td>Gruppe</td>
+				<td>Status</td>
+				<td>sperren / freigeben</td>
+				<td>Passwort zur&uuml;cksetzen</td>
+				<td>PW bereits zur&uuml;ckgesetzt?</td>
+				<!--<td>In Bearbeitung durch</td>-->
+			</tr>
+			###TABLEROWS_FEUSEREDIT###
+		</table>
+			
+	</div>
+	
+	<div class="dt_stammdaten_all_3">&nbsp;<!--Trennung Main / Sidebox--></div>
+	<div class="dt_stammdaten_all_4 vorschlaege">
+		###SIDEBOX###
+	</div>
+	<div class="dt_stammdaten_all_5">&nbsp;<!--Rand rechts--></div>
+</div>
+<!-- ###TEMPLATE_FEUSER_EDIT_CONTENT### end -->
+
+				
+				<td><a href="###SORTPATH_FIRSTNAME###" class="###SORT_CLASS_FIRSTNAME### th_sort">Vorname</a></td>
+				<td><a href="###SORTPATH_LASTNAME###" class="###SORT_CLASS_LASTNAME### th_sort">Nachname</a></td>
+				<td><a href="###SORTPATH_USERNAME###" class="###SORT_CLASS_USERNAME### th_sort">Username</a></td>
+				<td><a href="###SORTPATH_USERGROUP###" class="###SORT_CLASS_USERGROUP### th_sort">Gruppe</a></td>
+
+
+
+<!-- ###TEMPLATE_TABLEROWS_USERSEDIT### begin -->
+		<tr class="db_list_normal">
+			<td class="td_center listgrey">###USERID###</td>
+			<td>###FIRSTNAME###</td>			
+			<td>###LASTNAME###</td>
+				<td>###SCHOOLCLASS###</td>
+			<td>###USERNAME###</td>
+			<td class="">###USERGROUP###</td>		
+			<td class="td_center"><img src="/typo3conf/ext/itao_shh_manager/layout/images/userstate_###STATUS_IMAGE###.png" alt="###STATUS_TITLE###" title="###STATUS_TITLE###">&nbsp;###USER_STATUS_LABEL###</td>
+			<td><a href="###LINK_DE_ACT_USER###" onclick="return confirm('Wollen Sie diesen User wirklich ###USERACTION_LABEL###?');">Diesen Benutzer ###USERACTION_LABEL###</td>
+			<td><a href="###LINK_PW_ORIGINAL###" onclick="return confirm('Wollen Sie das Passwort dieses Benutzers wirklich zur\xFCcksetzen?');">Passwort zur&uuml;cksetzen</td>
+			<td>###ZURUECKGESETZT###</td>
+		</tr>
+<!-- ###TEMPLATE_TABLEROWS_USERSEDIT### end -->
+
+
+
+<!-- ###TEMPLATE_NO_USERSEDIT### begin -->
+		<tr>	
+ 			<td class="no_kunden" colspan="10">
+ 				<div class="typo3-message message-notice">
+ 					<div class="message-header">Keine Ergebnisse!</div>
+ 					<div class="message-body">Keine Benutzer gefunden.</div>
+ 				</div>
+ 			</td>			
+ 		</tr>
+<!-- ###TEMPLATE_NO_USERSEDIT### end -->
+
+
+<!--=============================================== Fuer WAHLZETTEL-GENERIERUNG ======================================================= -->
+
+
+
+<!-- ###TEMPLATE_WAHLZETTEL_DOC### begin -->
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset="UTF-8">
+
+	<title>Wahlzettel</title>
+	<style type="text/css">
+		body {font-family: Arial; font-size: 12pt; margin-left:10px;}
+		h1 { font-size:16pt; font-weigth: bold; text-align:center;}
+		h2 { font-size:14pt; text-decoration: underline; }
+		table {border: 0px; }
+		th {background:#fff; color: #000; border-bottom:2px solid black; line-height:18pt;padding-right: 3px;padding-left: 3px;}
+		td {border-bottom: 1px solid black; line-height:18pt;padding-right: 3px;padding-left: 3px; padding-bottom:3px;}
+		.treven {background:#ccc;}
+	</style>
+</head><body>
+<h1>Wahlzettel ###SCHOOLNAME###</h1>
+<center>Bitte maximal 3 Vorschl###ESC_AE###ge ankreuzen!</center>
+<br />
+<table style="width:100%;" cellspacing="0">
+	<tr>
+		<th style="width:60%;text-align:left;">Vorschlag</th>
+		<th style="width:20%;">Kosten</th>
+		<th style="width:10%;">Nummer</th>
+		<th style="width:5%;">&nbsp;</th>
+		<th style="width:5%;">&nbsp;</th>
+	</tr>
+	
+	###ALLVORSCHLAGE_FOR_DOC###
+	
+</table>
+</body></html>
+
+<!-- ###TEMPLATE_WAHLZETTEL_DOC### end -->
+
+<!-- ###TEMPLATE_WAHLZETTEL_DOC_ROWS### begin -->
+	<tr>
+		<td>###OFFER_TITLE###</td>
+		<td style="text-align:right;">###OFFER_COSTS###</td>
+		<td style="text-align:center;">###OFFER_INTID###</td>
+		<td>&nbsp;</td>
+		<td style="text-align:center;">
+			<img src="http://www.schuelerhaushalt.de/typo3conf/ext/itao_shh_manager/layout/images/kaestchen.gif" />
+		</td>
+	</tr>
+<!-- ###TEMPLATE_WAHLZETTEL_DOC_ROWS### end -->
+
+			<div style="border:1px solid black;height:25px;width:25px;">&nbsp;</div>
+
+
+<!--=============================================== ALT - AUS ZFA ======================================================= -->
+
+<!-- ###TEMPLATE_TABLEROWS_NOCUSTOMERS### begin -->
+
+		<tr>	
+			<td colspan="10" class="no_kunden">###TEXT###</td>			
+		</tr>
+<!-- ###TEMPLATE_TABLEROWS_NOCUSTOMERS### end -->
+
+
+
+
+
+
+
+
+
+
+<!-- ###TEMPLATE_FEHLENDE_PRUEFER_ALL### begin -->
+	<ul class="mess_fehl_pruef">
+		###LIST_ITEMS###	
+	</ul>
+<!-- ###TEMPLATE_FEHLENDE_PRUEFER_ALL### end -->
+
+<!-- ###TEMPLATE_FEHLENDE_PRUEFER_ROW### begin -->
+	<li>###UNTERNEHMEN### (###ORT###) mit ###KONTAK_VORNAME### ###KONTAK_NACHNAME### als Ansprechpartner</li>
+<!-- ###TEMPLATE_FEHLENDE_PRUEFER_ROW### end -->
+
+
+
+
+
+
+<!-- ###TEMPLATE_CUSTOMER_DETAIL_GENERAL_STATUS1### begin -->
+		###JS_EDIT###
+		<div class="kunde">
+		<!-- ************************ 1. Teil - Kundendaten *********************************** -->	
+			<h3 class="first">Basisdaten Fa. ###KUNDENNAME###</h3>			
+			<table class="kuBase">					
+					<tr>
+						<td style="width:33%;">Unternehmensbezeichnung und Rechtsform: </td><td style="width:33%;">###KUNDENNAME###</td>
+						<td rowspan="8" class="kuBaseEdit" style="width:33%;">
+							<span class="edit">###EDITLINK###	</span>
+							<br /><br />
+							Aktueller Status: <b>###AKT_STATUS_TITLE###</b><br /><br />
+							
+							<b>Status &auml;ndern:</b><br /> <br />
+							###ANNEHMEN_ABLEHNENLINK### ###RESETLINK###							<br />
+						</td>
+					</tr>
+					
+					<tr><td>Name Gesch&auml;ftsf&uuml;hrer: </td><td>###BOSS_FIRSTNAME### ###BOSS_LASTNAME###</td></tr>
+					<tr><td>Anzahl Mitarbeiter: </td><td>###ANZ_MAS###</td></tr>
+					<tr><td>Name Ansprechpartner: </td><td>###CONTACT_FIRSTNAME### ###CONTACT_LASTNAME###</td></tr>
+					<tr><td>E-Mail:</td><td>###CONTACT_EMAIL###</td></tr>
+					<tr><td>Stra&szlig;e: </td><td>###ADDRESS###</td></tr>
+					<tr><td>PLZ, Ort: </td><td>###PLZ### ###ORT###</td></tr>
+					<tr><td>Bemerkung:</td><td>###BEMERKUNG###</td></tr>
+									
+				</table>
+				<br /><br />
+				<h3>In diesem Status sind nicht mehr Bearbeitungsm&ouml;glichkeiten freigeschaltet!</h3>			
+							
+				<br /><br />
+			###BACKLINK_STARTPAGE###
+
+					
+		
+			<br /><br />
+			Das Layout wird &uuml;berarbeitet!
+		</div>
+		<br />
+		
+
+<!-- ###TEMPLATE_CUSTOMER_DETAIL_GENERAL_STATUS1### end -->
+
+
+
+<!-- ###TEMPLATE_CUSTOMER_DETAIL_STAMMDATEN### begin -->
+###JS_EDIT###
+
+<div class="dt_stammdaten_all">
+	<div class="dt_stammdaten_all_1">&nbsp;<!--Rand links--></div>
+	
+	<div class="dt_stammdaten_all_2"> 		
+	<!-- ========================= INHALT MAIN ============================== -->
+			###BOX_STATUS###
+					
+		###BOX_VERTRAG###
+				
+		###BOX_RECHNUNG###
+		###BOX_PRUEFER###
+		
+				
+	</div>
+	
+	<div class="dt_stammdaten_all_3"> &nbsp;<!--Rand dazwischen--></div>
+	
+	
+	<!-- ========================= INHALT RECHTS ============================== -->
+	<div class="dt_stammdaten_all_4">
+		<div class="ansprechperson"><b>Ansprechpartner:</b> ###CONTACT_FIRSTNAME### ###CONTACT_LASTNAME###</div>
+		<div  class="email"><u>
+			###NEWMAIL_CONTACTPERSON###
+			</u></div>
+		<!-- 
+			<a href="">###CONTACT_EMAIL###</a> -->
+		<!-- ---------------- Box Unternehmen -->
+		<div class="sidebox unternehmen">
+			<div class="boxheader"> 
+				<h3 id="box_unternehmen" class="boxauf" onClick="toggler('box_unternehmen_content','box_unternehmen');">
+					<a href="#">Unternehmensdetails</a>				
+				</h3>
+				<div class="edit kunde"><u>###EDITLINK###</u></div>
+			</div>
+			<div id="box_unternehmen_content" class="content_auf">
+				<div class="mitarbeiter">###ANZ_MAS### Mitarbeiter</div>
+				<div  class="boss"><b>Gesch&auml;ftsf&uuml;hrer:</b> <br />
+					###BOSS_FIRSTNAME### ###BOSS_LASTNAME###
+				</div>
+				<div class="www ###WWW_CLASS###">###WWW###</div>
+				<div class="address">
+					###ADDRESS###<br />
+					###PLZ### ###ORT###<br />
+					<span class="maps_link"><a href="http://maps.google.de/maps?hl=de&q=###ADRESSE_GOOGLEMAPS###&um=1&oi=geocode_result&ct=title&resnum=1&z=15&vpsrc=6" target="_blank">Adresse auf Karte zeigen</a></span>
+				</div>
+				<div class="bemerkung"><b>Bemerkungen:</b> ###BEMERKUNG###</div>
+			</div>
+		</div>
+		
+
+
+
+		
+	</div>
+	<div class="dt_stammdaten_all_5"> &nbsp;<!--Rand rechts--></div>
+</div>
+
+<script language="JavaScript" type="text/javascript">
+	<!--
+function toggler(id, iconid) {
+			if (document.getElementById(id).className=="content_auf") {	
+				document.getElementById(id).setAttribute("class", "content_zu");
+				document.getElementById(id).setAttribute("className", "content_zu");
+				document.getElementById(iconid).setAttribute("class", "boxzu");
+				document.getElementById(iconid).setAttribute("className", "boxzu");
+			} else {
+				document.getElementById(id).setAttribute("class", "content_auf");
+				document.getElementById(id).setAttribute("className", "content_auf");
+				document.getElementById(iconid).setAttribute("class", "boxauf");
+				document.getElementById(iconid).setAttribute("className", "boxauf");
+			}
+		}
+		
+		
+		function toggler_s(id, iconid) {
+			if (document.getElementById(id).className=="boxcontent") {	
+				document.getElementById(id).setAttribute("class", "content_zu");
+				document.getElementById(id).setAttribute("className", "content_zu");
+				document.getElementById(iconid).setAttribute("class", "header");
+				document.getElementById(iconid).setAttribute("className", "header");
+			} else {
+				document.getElementById(id).setAttribute("class", "boxcontent");
+				document.getElementById(id).setAttribute("className", "boxcontent");
+				document.getElementById(iconid).setAttribute("class", "header");
+				document.getElementById(iconid).setAttribute("className", "header");
+			}
+		}
+	
+	
+	
+	//-->
+</script>
+
+<!-- ###TEMPLATE_CUSTOMER_DETAIL_STAMMDATEN### end -->
+
+
+
+
+
+
+
+<!-- ###BOX_BODY_STATUS### begin -->
+<div class="statusbody">
+		Aktueller Status: <b>###AKT_STATUS_TITLE###</b><br /><br />
+		
+		<div class="status_actions ###DISPLAY_CLASS_1###">
+			<b>Status &auml;ndern:</b><br /> <br />
+			###ANNEHMEN_ABLEHNENLINK### ###RESETLINK###		
+			<br />
+		</div>
+		
+		<div class="status_info ###DISPLAY_CLASS_2###">
+			<div class="typo3-message message-information">
+				<div class="message-header">Hinweis:</div>
+				<div class="message-body">
+					Alle weiteren Status-&Auml;nderungen werden vom Pr&uuml;fer im Evaluations-Modul vorgenommen.
+				</div>
+			</div>
+		</div>
+
+</div>
+<!-- ###BOX_BODY_STATUS### end -->
+
+
+
+
+
+
+<!-- ###BOX_BODY_VERTRAG### begin -->
+<div class="statusbody">
+		###STATUS_INFOTEXT###
+		
+		<form action="" method="POST">
+			###INPUT_FELD_VT###
+		</form>
+
+</div>
+<!-- ###BOX_BODY_VERTRAG### end -->
+
+
+
+
+<!-- ###BOX_BODY_RECHNUNG### begin -->
+<div class="statusbody">
+		###STATUS_INFOTEXT###
+		
+		<form action="" method="POST">
+			###INPUT_FELD_VT###
+		</form>
+
+</div>
+<!-- ###BOX_BODY_RECHNUNG### end -->
+
+
+
+<!-- ###BOX_BODY_PRUEFER### begin -->
+<div class="statusbody">
+		<a href="#" onclick="window.location.href='alt_doc.php?returnUrl='+T3_THIS_LOCATION+'%26prueferChange=1%26prueferFormer=###PRUEFERID###&amp;edit[fe_users][###KUNDENID###]=edit&columnsOnly=tx_itaozfaregister_companyname,tx_itaozfadatamanager_refpruefer'; return false;" title="Pr&uuml;fer zuordnen"> 
+			<u>Pr&uuml;fer zuordnen &raquo;</u>
+		</a>
+
+</div>
+<!-- ###BOX_BODY_PRUEFER### end -->
+
+
+
+

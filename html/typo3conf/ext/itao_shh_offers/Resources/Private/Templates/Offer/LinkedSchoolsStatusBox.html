@@ -1,0 +1,20 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+	<f:if condition="{schools}">
+		<table class="schoolsStatusBox">
+			<tr>
+				<th><f:translate key="school.status.th.school"/></th>
+				<th><f:translate key="school.status.th.phase"/></th>
+			</tr>
+			<f:for each="{schools}" as="school">
+				<f:cycle values="{0: 'odd', 1: 'even'}" as="zebraClass">
+					<tr class="{zebraClass}">
+				</f:cycle>
+					<td><f:link.page pageUid="{school.data.refSchoolpage}">{school.data.title}</f:link.page></td>
+					<td>{school.data.refStatus.title}</td>
+				</tr>
+			</f:for>
+		</table>
+	</f:if>
+</f:section>

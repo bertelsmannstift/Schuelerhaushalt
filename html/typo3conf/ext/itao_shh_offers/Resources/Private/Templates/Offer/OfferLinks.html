@@ -1,0 +1,33 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+	<f:if condition="{0: school.refStatus.uid} == {0: settings.phases.result}">
+		<f:then>
+			<h3><f:translate key="offer.links.heading"/></h3>
+			<strong><f:translate key="offer.links.subHeading" /></strong>
+			<ul class="linkList">
+				<li>
+					<f:link.page pageUid="{school.resultpage}"><f:translate key="offer.links.results"/></f:link.page>
+				</li>
+				<f:if condition="{loggedOut}">
+					<f:then>
+						<li>
+							<f:link.page pageUid="{offersPage}"><f:translate key="offer.links.offers"/></f:link.page>
+						</li>
+					</f:then>
+				</f:if>
+			</ul>
+		</f:then>
+		<f:else>
+			<f:if condition="{0: school.refStatus.uid} == {0: settings.phases.vote}">
+				<f:if condition="{loggedOut}">
+					<ul class="linkList">
+						<li>
+							<f:link.page pageUid="{offersPage}"><f:translate key="offer.links.offers.preparation"/></f:link.page>
+						</li>		
+					</ul>
+				</f:if>	
+			</f:if>
+		</f:else>
+	</f:if>
+</f:section>

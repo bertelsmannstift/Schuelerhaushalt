@@ -1,0 +1,77 @@
+<T3DataStructure>
+	<meta>
+		<langDisable>1</langDisable>
+	</meta>
+	<ROOT>
+		<TCEforms>
+			<sheetTitle>Code</sheetTitle>
+		</TCEforms>
+		<type>array</type>
+		<el>
+			<switchableControllerActions>
+				<TCEforms>
+					<label>LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.title</label>
+					<config>
+						<type>select</type>
+						<size>1</size>
+						<items type="array">
+							<numIndex index="1" type="array">
+								<numIndex index="0">LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.schools</numIndex>
+								<numIndex index="1">Offer->schools; Offer->schoolData; Offer->phaseBox; Offer->schoolsStatusBox;</numIndex>
+							</numIndex>
+							<numIndex index="2" type="array">
+								<numIndex index="0">LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.schoolData</numIndex>
+								<numIndex index="1">Offer->schoolData; Offer->schools; Offer->phaseBox; Offer->schoolsStatusBox;</numIndex>
+							</numIndex>
+							<numIndex index="3" type="array">
+								<numIndex index="0">LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.phaseBox</numIndex>
+								<numIndex index="1">Offer->phaseBox; Offer->schoolData; Offer->schools; Offer->schoolsStatusBox;</numIndex>
+							</numIndex>
+							<numIndex index="4" type="array">
+								<numIndex index="0">LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.linkedSchoolsStatusBox</numIndex>
+								<numIndex index="1">Offer->linkedSchoolsStatusBox; Offer->schoolsStatusBox; Offer->phaseBox; Offer->schoolData; Offer->schools; Offer->directEntry;</numIndex>
+							</numIndex>
+							<numIndex index="5" type="array">
+								<numIndex index="0">LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.directEntry</numIndex>
+								<numIndex index="1">Offer->directEntry; Offer->linkedSchoolsStatusBox; Offer->schoolsStatusBox; Offer->phaseBox; Offer->schoolData; Offer->schools</numIndex>
+							</numIndex>
+							<numIndex index="6" type="array">
+								<numIndex index="0">LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.schoolsStatusBox</numIndex>
+								<numIndex index="1">Offer->schoolsStatusBox; Offer->phaseBox; Offer->schoolData; Offer->schools</numIndex>
+							</numIndex>
+							<numIndex index="7" type="array">
+								<numIndex index="0">LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.offerLinks</numIndex>
+								<numIndex index="1">Offer->offerLinks; Offer->schoolsStatusBox; Offer->phaseBox; Offer->schoolData; Offer->schools</numIndex>
+							</numIndex>
+						</items>
+						<maxitems>1</maxitems>
+						<minitems>1</minitems>
+					</config>
+					<onChange>reload</onChange>
+				</TCEforms>
+			</switchableControllerActions>
+			<settings.schoolData>
+				<TCEforms>
+					<label>LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.schoolData.title</label>
+					<config>
+						<type>select</type>
+						<size>1</size>
+						<items type="array">
+							<numIndex index="1" type="array">
+								<numIndex index="0">LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.schoolData.numberOfOffers</numIndex>
+								<numIndex index="1">numberOfOffers</numIndex>
+							</numIndex>
+							<numIndex index="2" type="array">
+								<numIndex index="0">LLL:EXT:itao_shh_offers/Resources/Private/Language/locallang_db.xml:flexform.schoolData.nameOfSchool</numIndex>
+								<numIndex index="1">nameOfSchool</numIndex>
+							</numIndex>
+						</items>
+						<maxitems>1</maxitems>
+						<minitems>1</minitems>
+					</config>
+					<displayCond>FIELD:switchableControllerActions:=:Offer->schoolData; Offer->schools; Offer->phaseBox; Offer->schoolsStatusBox;</displayCond>
+				</TCEforms>
+			</settings.schoolData>
+		</el>
+	</ROOT>
+</T3DataStructure>

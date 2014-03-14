@@ -1,0 +1,145 @@
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+	border: 1px solid @darkGreen;
+	color: @h2Color;
+	display: block;
+	margin-bottom: 5px;
+	line-height: auto;
+	max-width: 100%;
+	height: 32px;
+	//box-sizing: padding-box;
+	//-moz-box-sizing: padding-box;
+	//-webkit-box-sizing: padding-box;
+	outline: 0;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+	text-indent: 10px;
+	padding: 0;
+}
+
+textarea {
+	padding: 0 10px;
+}
+
+button, 
+input[type="submit"],
+input[type="reset"] {
+	.simpleVGradient(#7cc071,#568e4b);
+	text-shadow: 1px 1px 1px #fff;
+	padding: 5px 2em;
+	outline: 0;
+	&:hover {
+		.simpleVGradient(#edede8,#a2a29d);
+	}
+}
+
+fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+// mailform
+.csc-mailform {
+	margin-top: 2em;
+	//remove this style after templating. Because it's already set in the standard typo3 settings
+	ol {
+		list-style-type: none;
+		padding: 0;
+	}
+	
+	
+	label {
+		display: block;
+	}
+	
+	& input[type="text"], & textarea {
+		text-indent: 0;
+		display: block;
+		width: 75%;
+		padding:  5px;
+	}
+}
+
+legend {
+	font-weight: bold;
+}
+
+.error {
+	z-index: 300;
+	background: #F0DDDD;
+	border-radius: 4px;
+	border: 1px solid #c3c3c3;
+	padding: 2px 5px;
+	& p {
+		margin: 0;
+	}
+}
+
+/*li fieldset {
+	padding: 0;
+	ol {
+		margin: 0 !important;
+		padding: 0 !important;
+		& li {
+			padding: 0!important;
+			margin: 0!importan;
+			display: block;
+			float: left;
+			width: 40%;
+		}
+		
+		&:first-child {
+			margin-right: 10% !important;
+		}
+	}
+}*/
+
+.contact-form {
+	& fieldset {
+		margin: 0!important;
+		padding: 0!important;
+		& ol {
+			padding: 0 !important;
+			margin: 0 !important;
+			.clearfix;
+			& li {
+				display: block;
+				float: left;
+				width: 50%;
+				padding: 0 !important;
+				& input[type="text"] {
+					width: 290px;
+				}
+			}
+		}
+	}
+	.csc-form-element-fieldset {
+		li {
+			width: 50%;
+		}
+	}
+	& input[type="text"] {
+		width: 600px;
+	}
+	
+	& textarea {
+		width: 600px;
+		height: 300px;
+	}
+	
+	& input[type="submit"] {
+		margin-top: 10px;
+		margin-right: 7px;
+		float: right;
+	}
+	
+	& label {
+		width: auto !important;
+	}
+}

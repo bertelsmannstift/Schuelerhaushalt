@@ -1,0 +1,125 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+	<f:render partial="FormErrors" arguments="{object:Offer}"/>
+	<div class="requiredFields">
+		<f:translate key="create.requiredFields"/>
+	</div>
+	<f:if condition="{feedback}">
+		<span id="showFeedback"><f:link.action id="showFeedbackLink" pageUid="{settings.previewPage}" class="fancyBoxIframe" action="preview" arguments="{feedback: 1}"></f:link.action></span>
+	</f:if>
+	<div id="newOfferFormWrap">
+		<f:form action="create" class="jsValidationForm" id="newOffer" enctype="multipart/form-data"  name="newOffer" object="{newOffer}">
+			<fieldset id="offerValues">
+				<f:render partial="Offer/FormFields" />
+				<input type="hidden" id="school" name="tx_itaoshhoffers_offers[newOffer][school]" value="{school.uid}"/>
+				<input type="hidden" name="tx_itaoshhoffers_offers[newOffer][newOffer]" value="1"/>
+			</fieldset>
+			<fieldset id="images">
+				<legend>
+					<f:translate key="offer.create.images"/>
+				</legend>
+				<f:if condition="{offer.images}">
+					<f:then>
+						<f:for each="{offer.images}" as="image" iteration="objIterator">
+							<label for="tx_itaoshhoffers_offers[image]">Upload: </label>
+							<f:form.upload class="imageUpload" name="newOffer[image_{objIterator.cycle}]" value="{image}"/> 
+						</f:for>
+					</f:then>
+					<f:else>
+						<label for="tx_itaoshhoffers_offers[image]">Name</label>
+						<f:form.upload class="imageUpload" name="newOffer[image_1]" value=""/> 
+					</f:else>
+				</f:if>
+				<a href="#" id="addImageField" onclick="createImageField();return false;">Bild hinzufügen</a>
+			</fieldset>
+			<fieldset id="ideaFrom">
+				<legend>
+					<f:translate key="offer.create.ideaFrom"/>
+				</legend>
+
+				<div class="fieldsInARow ideaLabels">
+					<label class="first" for="tx_itaoshhoffers_offers[ideaFrom][name]"><f:translate key="offer.create.name"/> *</label>
+					<label class="last" for="tx_itaoshhoffers_offers[ideaFrom][class]"><f:translate key="offer.create.class"/> *</label>
+				</div>
+				<f:if condition="{ideasFrom}">
+					<f:then>
+						<f:for each="{ideasFrom}" as="idea">
+							<div class="ideaFields fieldsInARow">
+								<f:form.textfield class="first jsRequired ideaFromName" name="ideaFrom[name]" value="{idea.name}"/>
+								<f:form.textfield class="last jsRequired ideaFromClass" name="ideaFrom[class]" value="{idea.class}"/>
+							</div>
+						</f:for>
+					</f:then>
+					<f:else>	
+						<div class="ideaFields fieldsInARow">
+							<f:form.textfield class="first jsRequired ideaFromName" name="ideaFrom[name]" value=""/> 
+							<f:form.textfield class="last jsRequired ideaFromClass" name="ideaFrom[class]" value=""/>
+						</div>
+					</f:else>
+				</f:if>
+				<div class="additionalFields">
+
+				</div>
+				<a href="#" onclick="createIdeaField();return false;">
+					<f:translate key="offer.create.function.addIdea"/>
+				</a>
+				<f:form.hidden id="ideaFromNames" name="ideaFrom[names]" value="" />
+				<f:form.hidden id="ideaFromClasses" name="ideaFrom[classes]" value="" />
+			</fieldset>
+			<fieldset id="promotedFrom">
+				<legend>
+					<f:translate key="offer.create.promotedFrom"/>
+				</legend>
+				<div class="fieldsInARow promoterLabels">
+					<label class="first" for="tx_itaoshhoffers_offers[promotedFrom][name]"><f:translate key="offer.create.name"/></label>
+					<label class="last" for="tx_itaoshhoffers_offers[promotedFrom][class]"><f:translate key="offer.create.class"/></label>
+				</div>
+				<f:if condition="{promotedFrom}">
+					<f:then>
+						<f:for each="{promotedFrom}" as="promoter">
+							<div class="promoterFields fieldsInARow">
+								<f:form.textfield class="first promotedFromName" name="promotedFrom[name]" value="{promoter.name}"/> 
+								<f:form.textfield class="last promotedFromClass" name="promotedFrom[class]" value="{promoter.class}"/>
+							</div>
+							<div class="promoterFields fieldsInARow">
+								<f:form.textfield class="first promotedFromName" name="promotedFrom[name]" value="{promoter.name}"/> 
+								<f:form.textfield class="last promotedFromClass" name="promotedFrom[class]" value="{promoter.class}"/>
+							</div>
+							<div class="promoterFields fieldsInARow">
+								<f:form.textfield class="first promotedFromName" name="promotedFrom[name]" value="{promoter.name}"/> 
+								<f:form.textfield class="last promotedFromClass" name="promotedFrom[class]" value="{promoter.class}"/>
+							</div>
+							<div class="promoterFields fieldsInARow">
+								<f:form.textfield class="first promotedFromName" name="promotedFrom[name]" value="{promoter.name}"/> 
+								<f:form.textfield class="last promotedFromClass" name="promotedFrom[class]" value="{promoter.class}"/>
+							</div>	
+							<div class="promoterFields fieldsInARow">
+								<f:form.textfield class="first promotedFromName" name="promotedFrom[name]" value="{promoter.name}"/> 
+								<f:form.textfield class="last promotedFromClass" name="promotedFrom[class]" value="{promoter.class}"/>
+							</div>	
+						</f:for>
+					</f:then>
+					<f:else>
+						<f:for each="{promotedFrom}" as="promoter">
+							<f:form.textfield class="first promotedFromName" name="promotedFrom[name]" value="{promoter.name}"/>
+							<f:form.textfield class="last ipromotedFromClass" name="promotedFrom[class]" value="{promoter.name}"/>
+						</f:for>
+					</f:else>
+				</f:if>
+				<f:form.hidden id="promotedFromNames" name="promotedFrom[names]" value="" />
+				<f:form.hidden id="promotedFromClasses" name="promotedFrom[classes]" value="" />
+				<div class="additionalFields">
+
+				</div>
+				<a href="#" onclick="createPromoterField();return false;">
+					<f:translate key="offer.create.function.addPromoter"/>
+				</a>
+			</fieldset>
+			<fieldset id="formButtons">
+				<f:link.action id="previewLink" action="preview" pageUid="{settings.previewPage}" class="buttonLink fancyBoxIframe"><f:translate key="offer.preview.button"/></f:link.action>
+				<input type="reset" class="buttonLink" id="resetOfferForm"/>
+			</fieldset>
+		</f:form>
+	</div>	
+</f:section>

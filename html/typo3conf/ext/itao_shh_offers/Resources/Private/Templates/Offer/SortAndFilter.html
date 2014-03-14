@@ -1,0 +1,51 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+	<div class="sideBox">
+		<header>
+			<div class="headerLeft">&nbsp;</div>
+			<div class="headerContent sortOfferHeader"><div class="sideBoxIcon">&nbsp;</div><h4><f:translate key="offer.sort.heading" /></h4></div>
+			<div class="headerRight">&nbsp;</div>
+		</header>
+		<div class="sideBoxContent">
+			<div class="innerContent">
+				<f:form id="sort" enctype="multipart/form-data" name="sort" method="get">
+					<select onchange="setFilter('orderings', jQuery(this).val()); return false;" id="schoolDropdown" name="tx_itaoshhoffers_offers[sort]">
+						<f:for each="{sortings}" as="sorting">
+							<f:for each="{sorting.sortOption}" as="option">
+								<f:if condition="{0: option.uid} == {0: actOrderings}">
+									<f:then>
+										<option value="{option.field};{option.direction};{option.uid}" selected>{option.title}</option>
+									</f:then>
+									<f:else>
+										<option value="{option.field};{option.direction};{option.uid}">{option.title}</option>
+									</f:else>
+								</f:if>
+							</f:for>
+						</f:for>
+					</select>
+				</f:form>			
+				<f:form id="additionalFilter" enctype="multipart/form-data" name="additionalFilter" method="get">
+					<f:for each="{filters}" as="filter">
+						<div class="filterSelect">
+							<h4>{filter.title}</h4>
+							<select onchange="setFilter('additionalFilter', jQuery(this).val()); return false;" id="schoolDropdown" name="tx_itaoshhoffers_offers[filter]">
+								<option><f:translate key="offer.filter.all"/></option>
+								<f:for each="{filter.filterOption}" as="option">
+									<f:if condition="{0: option.uid} == {0: actAdditional}">
+										<f:then>
+											<option value="{option.field};{option.value};{option.uid}" selected>{option.title}</option>
+										</f:then>
+										<f:else>
+											<option value="{option.field};{option.value};{option.uid}">{option.title}</option>
+										</f:else>
+									</f:if>
+								</f:for>
+							</select>
+						</div>
+					</f:for>	
+				</f:form>	
+			</div>	
+		</div>
+	</div>
+</f:section>

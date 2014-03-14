@@ -1,0 +1,26 @@
+### Including the userfunc needed for the final link-manipulation (adding the lightbox-vars)
+### It also contains the function user_ttnewsImageMarkerFunc to enable correct splitting of caption/alttest/titletext for news-images
+includeLibs.itaofancygallery = EXT:itao_fancy_gallery/class.tx_itaofancygallery.php
+
+tt_content.image.20.1 {
+	titleText.override.field = imagecaption
+	titleText.override.htmlSpecialChars = 1
+	titleText.override.if.isTrue.field = itao_fancy_gallery
+	imageLinkWrap {	
+		typolink {
+			### Only split when links are set... otherwise lightbox will ONLY work for the first image...
+			parameter.listNum.stdWrap.if.isTrue.field = image_link
+				
+			### This returns a link, pointing to the path + name of the original image / resized lightbox image (if maxH or maxW is reached)
+			### Overriding ONLY when imagezoom AND lightbox are activated AND no link is set
+			parameter.override.cObject = IMG_RESOURCE
+			parameter.override.cObject.file.import.data = TSFE:lastImageInfo|origFile
+			parameter.override.if.isTrue.field = image_zoom
+			parameter.override.if.isTrue.field = itao_fancy_gallery
+			parameter.override.if.isFalse.field = image_link
+			
+			### Now the userfunc does the dirty work
+			userFunc = tx_itaofancygallery->main
+		}
+	}
+}

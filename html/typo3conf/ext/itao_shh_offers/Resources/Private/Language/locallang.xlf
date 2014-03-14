@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2012-10-08T09:04:08Z" product-name="itao_shh_offers">
+		<header/>
+		<body>
+			<trans-unit id="offer.number">
+				<source>Offer Number</source>
+			</trans-unit>
+			
+			<trans-unit id="offer.like">
+				<source>Like</source>
+			</trans-unit>
+			<trans-unit id="offer.dislike">
+				<source>Dislike</source>
+			</trans-unit>
+			<trans-unit id="offer.reLike">
+				<source>Gefällt mir doch</source>
+			</trans-unit>
+			<trans-unit id="offer.reDislike">
+				<source>Gefällt mir nicht mehr</source>
+			</trans-unit>
+			<trans-unit id="offer.unsort">
+				<source>Unsort</source>
+			</trans-unit>
+			<trans-unit id="offer.more">
+				<source>show Offer</source>
+			</trans-unit>
+			<trans-unit id="offer.showAll">
+				<source>Alle Vorschläge anzeigen</source>
+			</trans-unit>
+			<trans-unit id="offer.allOffers.heading">
+				<source>Alle Vorschläge</source>
+			</trans-unit>
+			<trans-unit id="offer.allOffers.commented">
+				<source>Vorschlag wurde von der Verwaltung kommentiert</source> 
+			</trans-unit>
+			<trans-unit id="offers.sorted.header.word.offer">
+				<source>Vorschläge,</source>
+			</trans-unit>
+			<trans-unit id="offers.sorted.header.like">
+				<source>die Dir gefallen</source>
+			</trans-unit>
+			<trans-unit id="offers.sorted.header.dislike">
+				<source>die Dir nicht gefallen</source>
+			</trans-unit>
+			<trans-unit id="offers.sorted.header.unsorted">
+				<source>Neue Vorschläge</source>
+			</trans-unit>
+			
+			<trans-unit id="offer.create.title">
+				<source>Titel *</source>
+			</trans-unit>
+			<trans-unit id="offer.create.description">
+				<source>Beschreibung *</source>
+			</trans-unit>
+			<trans-unit id="offer.create.costs">
+				<source>Was würde die Umsetzung ungefähr kosten?</source>
+			</trans-unit>
+			<trans-unit id="offer.create.images">
+				<source>Bilder (maximal 3)</source>
+			</trans-unit>
+			<trans-unit id="offer.create.ideaFrom">
+				<source>Die Idee stammt von</source>
+			</trans-unit>
+			<trans-unit id="offer.create.promotedFrom">
+				<source>Der Vorschlag wird unterstützt von (mindestens 5 Schüler)</source>
+			</trans-unit>
+			<trans-unit id="offer.create.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="offer.create.class">
+				<source>Klasse</source>
+			</trans-unit>
+			<trans-unit id="offer.markAsEdited">
+				<source>Als bearbeitet markieren</source>
+			</trans-unit>
+			<trans-unit id="offer.unmarkAsEdited">
+				<source>Als nicht bearbeitet markieren</source>
+			</trans-unit>
+			
+			<trans-unit id="offer.create.function.addIdea">
+				<source>Schüler hinzufügen</source>
+			</trans-unit>
+			<trans-unit id="offer.create.function.removeIdea">
+				<source>Schüler entfernen</source>
+			</trans-unit>
+			<trans-unit id="offer.create.function.addPromoter">
+				<source>Schüler hinzufügen</source>
+			</trans-unit>
+			<trans-unit id="offer.create.function.removePromoter">
+				<source>Schüler entfernen</source>
+			</trans-unit>
+			<trans-unit id="offer.create.function.addImage">
+				<source>Bild hinzufügen</source>
+			</trans-unit>
+			<trans-unit id="offer.create.function.removeImage">
+				<source>Bild entfernen</source>
+			</trans-unit>
+			<trans-unit id="offer.create.submit">
+				<source>Vorschlag veröffentlichen</source>
+			</trans-unit>
+			<trans-unit id="create.requiredFields">
+				<source>Mit * markierte Felder sind Pflichtfelder!</source>
+			</trans-unit>
+
+			<trans-unit id="myOffers.heading.status.1">
+				<source>Meine eingereichten Vorschläge</source>
+			</trans-unit>
+			<trans-unit id="myOffers.heading.status.2">
+				<source>Meine freigegebenen Vorschläge</source>
+			</trans-unit>
+			<trans-unit id="myOffers.heading.status.3">
+				<source>Meine abgewiesenen Vorschläge</source>
+			</trans-unit>
+
+			<trans-unit id="myOffers.statusBox.heading">
+				<source>Nachrichten</source>
+			</trans-unit>
+			<trans-unit id="myOffers.statusBox.noMessages">
+				<source>Keine neuen Meldungen</source>
+			</trans-unit>
+			
+<!--			<trans-unit id="offer.actionMessage.1">
+				<source>Your Offer "%s" was submitted</source>
+			</trans-unit>
+			<trans-unit id="offer.actionMessage.2">
+				<source>Your Offer "%s" was released</source>
+			</trans-unit>
+			<trans-unit id="offer.actionMessage.3">
+				<source>Your Offer "%s" was rejected</source>
+			</trans-unit>
+			<trans-unit id="offer.actionMessage.4">
+				<source>Your Offer "%s" was commented</source>
+			</trans-unit>
+			-->
+
+			<trans-unit id="offer.actionMessage.0">
+				<source>Your Offer</source>
+			</trans-unit>
+			<trans-unit id="offer.actionMessage.2">
+				<source>was released</source>
+			</trans-unit>
+			<trans-unit id="offer.actionMessage.3">
+				<source>was rejected</source>
+			</trans-unit>
+			<trans-unit id="offer.actionMessage.4">
+				<source>was commented</source>
+			</trans-unit>
+
+			<trans-unit id="offer.sorted.noOffers">
+				<source>Keine Einträge vorhanden</source>
+			</trans-unit>
+			<trans-unit id="offer.start.schoolOffers">
+				<source>Vorschläge der Schule...</source>
+			</trans-unit>
+			<trans-unit id="offer.noOffers">
+				<source>Keine Vorschläge gefunden</source>
+			</trans-unit>
+			
+			<trans-unit id="getChild.confirm">
+				<source>Den Vorschlag %s wirklich dem Vorschlag %s unterordnen?</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="numberOfOffers.text">
+				<source>Bisher sind %s Vorschläge bei uns eingegangen.</source>
+			</trans-unit>
+			<trans-unit id="numberOfOffers.oneOffer">
+				<source>Bisher ist ein Vorschlag bei uns eingegangen.</source>
+			</trans-unit>
+			
+			<trans-unit id="show.promoter.heading">
+				<source>Unterstützt von</source>
+			</trans-unit>
+			<trans-unit id="show.ideas.heading">
+				<source>Eingereicht von</source>
+			</trans-unit>
+			<trans-unit id="show.cancel">
+				<source>Abbrechen</source>
+			</trans-unit>
+			<trans-unit id="show.comment.heading">
+				<source>Kommentar Verwaltung</source>
+			</trans-unit>
+			<trans-unit id="show.comment.save">
+				<source>Kommentar speichern</source>
+			</trans-unit>
+			<trans-unit id="show.comment.add">
+				<source>Kommentar hinzufügen</source>
+			</trans-unit>
+			<trans-unit id="show.comment.cancel">
+				<source>Abbrechen</source>
+			</trans-unit>
+			<trans-unit id="show.offer.save">
+				<source>Vorschlag speichern</source>
+			</trans-unit>
+			<trans-unit id="offer.show.result">
+				<source>Abstimmungsergebnis: Platz %s (%sStimmen)</source>
+			</trans-unit>
+			<trans-unit id="show.promoter.save">
+				<source>Unterstützer speichern</source>
+			</trans-unit>
+			<trans-unit id="show.parent.save">
+				<source>Vorschlag unterordnen</source>
+			</trans-unit>
+			<trans-unit id="offer.show.number">
+				<source>Nummer</source>
+			</trans-unit>
+			<trans-unit id="offer.show.costs.title">
+				<source>Die Umsetzung kostet ungefähr:</source>
+			</trans-unit>
+			<trans-unit id="offer.show.costs">
+				<source>Die Umsetzung kostet ungefähr:</source>
+			</trans-unit>
+			<trans-unit id="offer.show.costs.help">
+				<source>Kosten noch offen</source>
+			</trans-unit>
+			<trans-unit id="offer.show.save.costs">
+				<source>Kosten speichern</source>
+			</trans-unit>
+			<trans-unit id="offer.show.edit.costs">
+				<source>Einschätzung Schülervertreter</source>
+			</trans-unit>
+			<trans-unit id="offer.show.edit.noCosts">
+				<source>(noch nicht geschätzt)</source>
+			</trans-unit>
+			<trans-unit id="offer.show.edit.fixedCosts">
+				<source>Einschätzung Kommune</source>
+			</trans-unit>
+			<trans-unit id="offer.show.edit.noFixedCosts">
+				<source>Kosten noch nicht festgelegt</source>
+			</trans-unit>
+			<trans-unit id="offer.show.edit.tabNavigation.comments">
+				<source>Kommentar hinzufügen</source>
+			</trans-unit>
+			<trans-unit id="offer.show.edit.tabNavigation.editComment">
+				<source>Kommentar editieren</source>
+			</trans-unit>
+			
+			<trans-unit id="offer.show.edit.tabNavigation.promoter">
+				<source>Unterstützer hinzufügen</source>
+			</trans-unit>
+			<trans-unit id="offer.show.edit.tabNavigation.costs">
+				<source>Kosten bearbeiten</source>
+			</trans-unit>
+			<trans-unit id="offer.show.edit.tabNavigation.becomeChildOffer">
+				<source>Vorschlag unterordnen</source>
+			</trans-unit>
+			<trans-unit id="offer.show.edit.becomeChildOffer">
+				<source>Diesen Vorschlag einem anderen Zuordnen</source>
+			</trans-unit>
+			<trans-unit id="offer.show.childOffers">
+				<source>Diesem Vorschlag wurden andere Vorschläge zugeordnet</source>
+			</trans-unit>
+			<trans-unit id="offer.show.edit.error.childOffers">
+				<source>Diesem Vorschlag wurden andere Vorschläge zugeordnet! Eine Zuordnung ist nicht möglich, da dies den Verlust der Untervoschläge mit sich ziehen würde!</source>
+			</trans-unit>
+			<trans-unit id="offer.show.removeChild">
+				<source>Vom Vorschlag lösen</source>
+			</trans-unit>
+			<trans-unit id="offer.list.costs.student">
+				<source>(Schätzung Schüler)</source>
+			</trans-unit>
+
+			<trans-unit id="print">
+				<source>Print Offer</source>
+			</trans-unit>
+				<trans-unit id="print.heading">
+				<source>Vorschlag um Schülerhaushalt</source>
+			</trans-unit>
+			<trans-unit id="print.label.idea.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="print.label.idea.class">
+				<source>Klasse</source>
+			</trans-unit>
+			<trans-unit id="print.label.promoter.name">
+				<source>Namen</source>
+			</trans-unit>
+			<trans-unit id="print.label.promoter.class">
+				<source>Klassen</source>
+			</trans-unit>
+			<trans-unit id="print.list.heading">
+				<source>Vorschlags-Liste</source>
+			</trans-unit>
+			<trans-unit id="print.list.th.internalId">
+				<source>Nummer</source>
+			</trans-unit>
+			<trans-unit id="print.list.th.title">
+				<source>Titel</source>
+			</trans-unit>
+			<trans-unit id="print.list.th.costs">
+				<source>Kosten</source>
+			</trans-unit>
+			
+			<trans-unit id="print.all.button.sheet">
+				<source>Für Aushang drucken</source>
+			</trans-unit>
+			<trans-unit id="print.all.button.list">
+				<source>Liste ausdrucken</source>
+			</trans-unit>
+			<trans-unit id="sidebox.printOffers.heading">
+				<source>Alle Vorschläge ausdrucken:</source>
+			</trans-unit>
+			<trans-unit id="offer.print.list.heading">
+				<source>Vorschlagsliste</source>
+			</trans-unit>
+
+			<trans-unit id="offer.sort.heading">
+				<source>Sortieren / Filtern nach:</source>
+			</trans-unit>
+			
+			<trans-unit id="offer.filter.heading">
+				<source>Filtern nach:</source>
+			</trans-unit>
+			<trans-unit id="offer.filter.all">
+				<source>alle anzeigen</source>
+			</trans-unit>
+			
+			<trans-unit id="phase.heading">
+				<source>Ablauf</source>
+			</trans-unit>
+			<trans-unit id="phase.number.1">
+				<source>I</source>
+			</trans-unit>
+			<trans-unit id="phase.number.2">
+				<source>II</source>
+			</trans-unit>
+			<trans-unit id="phase.number.3">
+				<source>III</source>
+			</trans-unit>
+			<trans-unit id="phase.number.4">
+				<source>IV</source>
+			</trans-unit>
+
+			<trans-unit id="school.status.th.school">
+				<source>Schule</source>
+			</trans-unit>
+			<trans-unit id="school.status.th.phase">
+				<source>Aktueller Stand</source>
+			</trans-unit>
+			<trans-unit id="school.status.th.numberOfOffers">
+				<source>Anzahl der Vorschläge</source>
+			</trans-unit>
+			
+			<trans-unit id="commune.th.commune">
+				<source>Stadt/Gemeinde</source>
+			</trans-unit>
+			<trans-unit id="commune.th.projectTime">
+				<source>Projektzeitraum</source>
+			</trans-unit>
+			
+			<trans-unit id="offer.directEntry.heading">
+				<source>Schnellzugriff</source>
+			</trans-unit>
+			<trans-unit id="offer.directEntry.select.default.commune">
+				<source>Stadt/Gemeinde</source>
+			</trans-unit>
+			<trans-unit id="offer.directEntry.select.default.school">
+				<source>(Schule auswählen...)</source>
+			</trans-unit>
+			<trans-unit id="offer.preview.images">
+				<source>(Die Bilder werden erst nach dem Abschicken übertragen)</source>
+			</trans-unit>
+			<trans-unit id="offer.preview.notice">
+				<source>Bitte schau dir deine Eingaben nochmal genau an. Du kannst unten auswählen, ob du den Vorschlag so einstellen oder ihn noch einmal überarbeiten möchtest.</source>
+			</trans-unit>
+			<trans-unit id="offer.preview.button">
+				<source>Vorschau</source>
+			</trans-unit>
+			<trans-unit id="offer.preview.button.change">
+				<source>Vorschlag ändern</source>
+			</trans-unit>
+			<trans-unit id="offer.preview.button.cancel">
+				<source>Abbrechen</source>
+			</trans-unit>
+			<trans-unit id="offer.preview.button.closeWindow">
+				<source>Fenster schliessen</source>
+			</trans-unit>
+
+			<trans-unit id="offer.approveOffers.newHeader">
+				<source>Neue Vorschläge</source>
+			</trans-unit>
+			<trans-unit id="offer.approveOffers.deniedHeader">
+				<source>Abgewiesene Vorschläge</source>
+			</trans-unit>
+			<trans-unit id="offer.approveOffers.link.approve">
+				<source>Vorschlag freigeben</source>
+			</trans-unit>
+			<trans-unit id="offer.approveOffers.link.deny">
+				<source>Vorschlag abweisen</source>
+			</trans-unit>
+
+			<trans-unit id="offerLinks.offers">
+				<source>Vorschlag abweisen</source>
+			</trans-unit>
+			<trans-unit id="offerLinks.results">
+				<source>Vorschlag abweisen</source>
+			</trans-unit>
+			<trans-unit id="heading.communes.running">
+				<source>Laufende Schülerhaushalte</source>
+			</trans-unit>
+			<trans-unit id="heading.communes.closed">
+				<source>Abgeschlossene Schülerhaushalte</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

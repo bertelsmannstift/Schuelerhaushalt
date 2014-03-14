@@ -1,0 +1,176 @@
+* {
+   background: transparent !important;
+   color: #000 !important;
+   /* Black prints faster: h5bp.com/s */
+
+   box-shadow: none !important;
+   text-shadow: none !important;
+ }
+ a,
+ a:visited {
+   text-decoration: underline;
+ }
+ /*a[href]:after {
+		 content: " (" attr(href) ")";
+	 }
+
+	 abbr[title]:after {
+		 content: " (" attr(title) ")";
+	 } */
+ /*
+	  * Don't show links for images, or javascript/internal links
+	  */
+ .ir a:after,
+ a[href^="javascript:"]:after,
+ a[href^="#"]:after {
+   content: "";
+ }
+ .printHide{
+	 display: none !important;
+ }
+ pre,
+ blockquote {
+   border: 1px solid #999;
+   page-break-inside: avoid;
+ }
+ thead {
+   display: table-header-group;
+   /* h5bp.com/t */
+
+ }
+ tr,
+ img {
+   page-break-inside: avoid;
+ }
+ img {
+   max-width: 100% !important;
+ }
+ h1 {
+	 font-size: 30px !important;
+	 text-decoration: underline;
+	 font-weight: bold;
+	 line-height: 40px;
+	 margin-top: 50px;
+ }
+ p,
+ h2,
+ h3 {
+   orphans: 3;
+   widows: 3;
+ }
+ h2,
+ h3 {
+   page-break-after: avoid;
+ }
+ input[type="text"],
+ input[type="password"],
+ input[type="email"],
+ textarea {
+   display: none;
+ }
+ .offerNumber {
+	 padding: 3px 5px;
+	 border: 1px solid #333;
+ }
+ #header,
+ #navigation,
+ #footer,
+ .tx-itao-shh-offers input,
+ .tx-itao-shh-offers textarea,
+ #newComment,
+ .offerFunctionLink {
+   display: none !important;
+ }
+ .promoter,
+ .promoterHeading {
+   display: block !important;
+ }
+ body {
+   padding: 5%;
+ }
+ #content {
+   width: 100% !important;
+ }
+ #mainContent {
+   width: 80% !important;
+   height: auto !important;
+ }
+ #sideContent {
+   width: 20%;
+   border-left: none !important;
+   border-right: none !important;
+   position: static;
+   width: 100%;
+ }
+ #sideContent > .innerContent {
+   padding-top: 0;
+ }
+
+ #sideContent .tx-felogin-pi1 {
+   display: none;
+ }
+
+ div.print {
+   display: block !important;
+ }
+ span.print {
+   display: inline !important;
+ }
+ .tabContainer,.tabNavigation,.offerFunctions,.error {
+	 display:none;
+ }
+ .iframeContent span{
+	 display: inline-block;
+ }
+ .studentList span.name{
+	 width: 80%;
+ }
+ .studentList span.class{
+	 width: 10%;
+ }
+
+ .studentList {
+	 list-style: none;
+	 margin: 0px;
+	 padding: 0px;
+ }
+
+ .studentList li {
+	 padding: 4px 0;
+	 border-bottom: 1px solid #444;
+ }
+ .commentEntry{
+	 padding: 3px 5px;
+	 border: 1px solid #333;
+	 clear: both;
+	 margin: 20px 0px 10px 10px;
+ }
+
+ .commentEntry p {
+	 margin: 0;
+	 padding: 0;
+ }
+
+
+ .costs {
+	 padding: 3px 5px;
+	 border: 1px solid #333;
+	 font-weight: bold;
+	 float: right;
+ }
+
+ .onePrintOffer{
+	 clear: both;
+	 page-break-before: always;
+/*	  page-break-inside: avoid;
+	  position: relative;
+	  overflow: hidden;*/
+	  margin-bottom: 20px;
+ }
+ .onePrintOffer:first-child{
+	 page-break-before: avoid;
+ }
+ 
+ .tx-itao-shh-offers .offerEntry h3{
+	 margin-left: 0px;
+ }

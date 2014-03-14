@@ -1,0 +1,15 @@
+# cat=basic/enable; type=boolean; label=Don't insert _CSS_DEFAULT_STYLE
+dont_default_css = 0
+
+# cat=basic/enable; type=boolean; label=Allow the "Read from path" field
+allow_read_from_path=0
+
+# cat=basic/enable; type=boolean; label=The Filelinks field is DAM.:(The "CSS Multimedia" extension change the default Filelinks field to DAM. I don't known if this makes all versions from "CSS Multimedia" and it is impossible in some version of Typo3 to check if this field is DAM or not. So please select this option if you have installed "CSS Multimedia" and the Filelinks show no results on frontend you can try to turn this option on. For more informations check the manual.)
+default_dam=0
+
+# cat=basic/enable; type=string; label=Path to file icons
+pathtoicons =
+
+TSConstantEditor.basic { 
+  description = <span style="color:red; font-weight:bold;">Warning if you use "DAM Filelinks usage (dam_filelinks)" then you must install dam_filelinks version 0.3.0 and higher. This is because in css_filelinks until version 0.2.0 was the DAM integrated but in version 0.2.0 was all DAM stuff removed and so the dam_filelinks must use HOOKS. If you don't want install new dam_filelinks version you can use the old but you must use css_filelinks version 0.1.8 and lower.</span>
+}

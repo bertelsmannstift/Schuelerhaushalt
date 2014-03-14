@@ -1,0 +1,61 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+	<f:render partial="FilterHiddenFields" arguments="{filter : filter, orderings : orderings, actTab : actTab}"/>
+	
+	<f:if condition="{rights.sort}">
+		<ul class="tabNavigation sortedOffersAction">
+			<li id="tab_0_nav">
+				<f:translate key="offers.sorted.header.unsorted"/> (<f:count subject="{unsortedOffers}"/>)
+			</li>
+			<li id="tab_1_nav">
+				<f:translate key="offers.sorted.header.word.offer"/> <f:translate key="offers.sorted.header.like"/>	(<f:count subject="{likedOffers}"/>)
+			</li>
+			<li id="tab_2_nav">
+				<f:translate key="offers.sorted.header.word.offer"/> <f:translate key="offers.sorted.header.dislike"/> (<f:count subject="{dislikedOffers}"/>)
+			</li>
+		</ul>
+	</f:if>	
+	<div id="tab_0_tab" class="unsortedOffers tabContent">
+		<f:if condition="{unsortedOffers.0}">
+			<f:then>
+				<f:for each="{unsortedOffers}" as="offer">
+					<f:render partial="OfferEntry" arguments="{offer : offer, returnAction : 'sortedOffers', actSorting: FALSE, rights : rights }"/>
+				</f:for>
+			</f:then>
+			<f:else>
+				<div class="noOffers">
+					<f:translate key="offer.sorted.noOffers"/>
+				</div>
+			</f:else>
+		</f:if>
+	</div>	
+	<div id="tab_1_tab" class="likedOffers tabContent">
+		<f:if condition="{likedOffers.0}">
+			<f:then>
+				<f:for each="{likedOffers}" as="offer">
+					<f:render partial="OfferEntry" arguments="{offer : offer, returnAction : 'sortedOffers', actSorting: '1', rights : rights }"/>
+				</f:for>
+			</f:then>
+			<f:else>
+				<div class="noOffers">
+					<f:translate key="offer.sorted.noOffers"/>
+				</div>
+			</f:else>
+		</f:if>
+	</div>
+	<div id="tab_2_tab" class="dislikedOffers tabContent">
+		<f:if condition="{dislikedOffers.0}">
+			<f:then>
+				<f:for each="{dislikedOffers}" as="offer">
+					<f:render partial="OfferEntry" arguments="{offer : offer, returnAction : 'sortedOffers', actSorting: '2', rights : rights }"/>
+				</f:for>
+			</f:then>
+			<f:else>
+				<div class="noOffers">
+					<f:translate key="offer.sorted.noOffers"/>
+				</div>
+			</f:else>
+		</f:if>
+	</div>
+</f:section>

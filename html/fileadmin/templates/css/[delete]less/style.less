@@ -1,0 +1,522 @@
+@import "includes.less";
+@maxLayoutWidth: 1280px;
+/*
+ * --------------------------------------------------------------------------------------------------
+ * BODY 
+ * --------------------------------------------------------------------------------------------------
+ */
+body {
+	font-size: @baseFontSize;
+	font-family: @baseFontFamily;
+	line-height: @baseLineheight;
+	
+	& > section {
+		.clearfix;
+		& > .innerContent {
+			.row;
+			margin: 0 auto;
+		}
+	}
+}
+
+/*
+ * --------------------------------------------------------------------------------------------------
+ * HEADER 
+ * --------------------------------------------------------------------------------------------------
+ */
+#header {
+	background: url(../img/header_bg.jpg) no-repeat center center @darkGreen;
+	
+	& > .innerContent {
+			max-width: @maxLayoutWidth; 
+			margin: 0 auto;
+			height: 194px;
+	}
+	& .tx-itao-shh-offers{
+		float: left;
+		width: 220px;
+	}
+}
+
+// header callout 
+.schoolName {
+	position: relative;
+	top: 120px;
+	left: -10px;
+	width: 220px;
+	padding: 10px;
+	background : @alternateBackground;
+	text-transform: uppercase;
+	max-height: 50px;
+	box-shadow: 4px 4px 4px #333;
+}
+
+#logout {
+	float: right;
+	background: url(../img/schloss_icon.jpg) no-repeat left top #fff;
+	background: url(../img/schloss_icon.jpg) no-repeat left top rgba(255,255,255,0.9);
+	height: 15px;
+	padding: 1px 10px 9px 35px;
+	margin-right:20px;
+	box-shadow: 0px 0px 8px #333;
+	font-size: 11px;
+}
+
+/*
+ * --------------------------------------------------------------------------------------------------
+ * NAVIGATION 
+ * --------------------------------------------------------------------------------------------------
+ */
+#navigation {
+		background: url(../img/navigation_background.png) repeat-x top center transparent;
+		height: 42px;
+		margin: 0 auto;
+		.clearfix;
+		& .innerContent {
+			z-index: 999;
+			position: relative;
+		}
+}
+
+#mainNavigation {
+	// float whole container to the left
+	position: absolute;
+	left: 0;
+	top: 0;
+
+	//settings for the level-1 ul
+	&  ul {
+		margin: 0;
+		padding-left: 0;
+		&.level-1 {
+			z-index: 55;
+		}
+		& li {
+			position: relative;
+		}
+		
+		& ul {
+			box-shadow: 1px 1px 2px @breadcrumbGrey;
+			.ieBoxShadow;
+		}
+		//settings for the li's only in level-1
+		&.level-1 > li {
+			background: url(../img/navigation_l1_border.png) no-repeat top left;
+			display: block;
+			float: left;	
+			font-size: 0,785714286em;
+			height: 33px;
+			line-height: 2,685714286;
+			padding: 6px 10px;
+			// remove the border image for the first li
+			&.first {
+				background-image: none;
+			}
+			// add hover background
+			&:hover {
+				background: url(../img/navigation_l1_hover_background.png) repeat-x top left;
+				& a {
+					color: #fff;
+				}
+			}
+			
+			&.current {
+				background: url(../img/navigation_l1_hover_background.png) repeat-x top left;
+				& a {
+					color: #fff;
+				}
+			}
+			
+			&.active {
+				background: url(../img/navigation_l1_hover_background.png) repeat-x top left;
+				& a {
+					color: #fff;
+				}
+			}
+			
+			// style the links in the first level ul
+			&  a {
+				color: @baseColor;
+				font-size: 0.785714286em;
+				text-decoration: none;
+				display: block;
+				height: 100%;
+				// remove the textdecoration while hovering
+				&:hover {
+					color: #fff;
+				}
+				& span {
+					font-weight: bold;
+				}
+			}
+			// show level-2 on hover over li
+			&:hover .level-2{
+				display: block;
+			}
+		}
+		
+		&.level-2 {
+			.simpleVGradient (#fff,#e0e0e0);
+			.ieNavL2UlBG;
+			display: none;
+			position: absolute;
+			width: 250px;
+			z-index: 30;
+			left: 0;
+			top: 36px;
+			& li {
+		
+				display: block;
+				z-index: 31;
+				//width: 100%;
+				padding:  0 5px;
+				&:hover {
+					.simpleVGradient(#59b150,#3b9332);
+				
+					& a {
+						border-top: none;
+						border-bottom: none; 
+						padding: 1px 0;
+					}
+					
+					& + li > a {
+						padding-top: 1px;
+						border-top: none;
+					}
+					& > a > span {
+						color: #fff;
+					}
+				}
+				&.first a {border-top: none;}
+				&.last a {border-bottom: none;}
+				& a {
+				
+					border-top: 1px solid #babab9;
+					border-bottom: 1px solid #fff;
+					display: block;
+				
+				}
+				
+				& a span{
+					color: @baseColor;
+					dipslay: block !important;
+					padding: 5px 0 1em 5px;
+					width: 100%;
+					display: block;
+					font-weight: bold;
+					// .padding-box;
+				} 
+				
+				&.last > a  {
+					padding-bottom: 1em;
+					& span {
+						height: 100%;
+					}
+				}
+				
+				&.hasSub > a  > span {
+					background: url(../img/main_navigation_hassub.png) no-repeat  230px center transparent;
+				}
+				
+				&.hasSub:hover{
+					& > a > span {
+					background: url(../img/main_navigation_hassub_active.png) no-repeat  230px center transparent;	
+					}
+				}
+				
+			}
+			//show level-3 on level-2 hovering
+			& > li:hover{
+				&  .level-3 {
+				display: block;
+				}
+			} 
+			
+			
+			
+			& .level-3 {
+				display: none;
+				.simpleVGradient (#fff,#e0e0e0);
+				.ieNavL2UlBG;
+				position: absolute;
+				z-index: 32;
+				left: 100%;
+				top: 0;
+				width: 250px;
+				& li {
+					&:hover {
+						.simpleVGradient(#e6e6e6,#bcbcbb);
+						& >  a span {
+							color: @baseColor;
+						}
+					}
+					
+					&.hasSub span {
+						background: none!important;
+					}
+				}
+			}
+		}
+	} 
+}
+
+#service {
+	float: right;
+	.clearfix;
+}
+
+#pageFunctions {
+	float: left;
+	.clearfix;
+	margin-top: 3px;
+	& a {
+		float: left;
+		display: block;
+		width: 22px;
+		margin: 7px 5px 0 5px;
+	}
+}
+
+#contactLink {
+	background: url(../img/contact_link_icon.png) no-repeat top transparent;
+	height: 14px;	
+	text-indent: -9999px;
+}
+#sitemapLink {
+	background: url(../img/sitemap_link_icon.png) no-repeat top transparent;
+	height: 13px;
+	text-indent: -9999px;
+}
+
+#searchbox {
+	float: left;
+	.clearfix;
+	& form {
+		margin-top: 6px;
+		margin-right: 10px;
+		.clearfix;
+		width: 172px;
+	}
+	& input {
+			.clearfix;
+			float: left;
+			height: 22px;
+			outline: none;
+			border: none;
+			font-size: 10px;
+			font-style: italic;
+			margin: 0;
+			padding: 0;
+	}
+	& input[type="text"] {
+		background: url(../img/searchbox_input.png) no-repeat top left transparent;
+		padding: 0 10px ;
+		width:124px;
+		line-height: 20px;
+	}
+	
+	& input[type="submit"] {
+		background: url(../img/searchbox_submit.png) no-repeat top left transparent;
+		width: 28px;
+	}
+	
+}
+
+/*
+ * --------------------------------------------------------------------------------------------------
+ * CONTENT AREA 
+ * --------------------------------------------------------------------------------------------------
+ */
+ 
+// outer container for the content section
+#content {
+	z-index: 1;
+	position: relative;
+	max-width: @maxLayoutWidth;
+	margin:  -3px auto 0 auto;
+	z-index: 1;
+	overflow: hidden;
+	& .innerContent {
+		position: relative;
+		//height: 100%;	
+	}
+
+}
+ #mainContent {
+
+ 	background: #fff;
+ 	.column(8);
+ 	padding-top: 22px;
+ 	clear: both;
+ 	min-height: 489px;
+ 	margin-bottom: 50px;
+ }
+ 
+ #breadcrumb {
+ 	 	display: none !important;
+ 	color: @breadcrumbGrey;
+ 	& ul {
+ 		padding-left: 0px;
+ 		.clearfix;
+ 		& li {
+ 			display: block;
+ 			float: left;
+ 			font-size: 0.857142857em;
+ 			margin: 0 5px 0 0;
+ 		}
+ 	}
+	 	
+ }
+ #sideContent {
+ 	background: @alternateBackground;
+ 	border-left: 1px solid @baseHighlight; 
+ 	border-right: 1px solid @baseHighlight;
+ 	top: 0px; 
+ 	.column(4);
+ 	position: absolute;
+ 	//margin-left: -16px;
+ 	right: 0;
+ 	height: 100%;
+ 	z-index: 1;
+ 	.clearfix;
+ 	//zoom: 1;
+ 	& > .innerContent {
+ 		height: 100%;
+ 		margin-bottom: 130px;
+ 		padding: 44px 10px 0 10px;
+ 	}
+ 	
+ 	&  .csc-textpic-imagewrap img {
+ 		max-width: 100% !important;
+ 		height: auto!important;
+ 	}
+ }
+
+
+// tables
+
+table {
+	border-spacing: 3px;
+	border-collapse: collapse;
+	& th , td {
+		border: 3px solid #fff;
+		padding: 5px;
+	}
+}
+thead {
+	& th {
+		background: @alternateBackground;
+		
+	}
+}
+
+tbody {
+	& td {
+		background: @tableGrey;
+	}
+}
+
+// csc-textpic 
+
+.csc-textpic-caption {
+	background: @alternateBackground;
+	color: @breadcrumbGrey;
+	padding: 10px;
+	font-style: italic;
+}
+
+#sideContent .csc-textpic-image {
+	display: block !important;
+} 
+#sideContent .csc-textpic-imagewrap {
+	float: none;
+}
+/*
+ * --------------------------------------------------------------------------------------------------
+ * FOOTER
+ * --------------------------------------------------------------------------------------------------
+ */
+ 
+#footer {
+	background: url(../img/footer_bg.jpg) no-repeat center bottom @darkGreen;
+	height: 260px;
+	position: relative;
+	z-index: 99;
+	& .innerContent {
+		bottom: 46px;
+		box-shadow: 2px 2px 3px @breadcrumbGrey;
+		font-size: 0.857142857em;
+		margin: 200px auto 0 auto;
+		position: relative;
+	}
+}
+#bottomService {
+	background: #fff;
+	background: rgba(255,255,255,0.8);
+	overflow: hidden;
+	padding: 10px;
+	position: relative;
+
+	& ul {
+		margin: 0;
+		padding: 0;
+		& li {
+			display: block;
+			margin: 0 0.5em 0 0;
+			padding: 0;
+			float: left;
+			& a {
+				color: @baseColor;
+			}
+			&.first {
+				border-right: 1px solid @darkGreen;
+				padding-right: 0.5em;
+			}
+		}
+	}
+}
+
+#generalInfo {
+	float: left;
+}
+
+#copyright {
+	position: absolute;
+	right: 0;
+	overflow: hidden;
+	width: 275px;
+	& a{
+		display: inline;
+		vertical-align: top;
+		& img {
+			margin-top: 2px;
+		}
+	}
+
+
+}
+#yourChoice {
+	position: absolute;
+	right: 60px;
+	top: -245px;
+	z-index: 200;
+}
+
+.schoolList  {
+	list-style: none;
+	padding-left: 0;
+}
+.schoolList > li {
+	padding-left: 35px;
+	margin-bottom: 0.8em;
+	background: url(../img/school_list.png) no-repeat left top;
+}
+
+
+/*
+ * --------------------------------------------------------------------------------------------------
+ * PRINT STYLES
+ * --------------------------------------------------------------------------------------------------
+ */
+ 
+ @import "print.less";
