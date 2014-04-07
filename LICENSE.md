@@ -1,14 +1,13 @@
-Schuelerhaushalt
-================
+
 # Source code and images
 
-The MIT license applies to the following files in this repository
-html/typo3conf/ext/itao_shh_manager
-html/typo3conf/ext/shh_offers/
-html/typo3conf/ext/ssh_redirect
-html/typo3conf/ext/zfalogin
-html/typo3conf/ext/zfaregister
-html/typo3conf/ext/itao_fix
+The MIT license applies to the following files in this repository<br>
+html/typo3conf/ext/itao_shh_manager<br>
+html/typo3conf/ext/shh_offers/<br>
+html/typo3conf/ext/ssh_redirect<br>
+html/typo3conf/ext/zfalogin<br>
+html/typo3conf/ext/zfaregister<br>
+html/typo3conf/ext/itao_fix<br>
 
 
 Copyright (C) 2013 Bertelsmann Stiftung<br>
