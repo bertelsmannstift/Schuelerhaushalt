@@ -11,7 +11,7 @@ html/typo3conf/ext/itao_fix<br>
 
 
 Copyright (C) 2013 Bertelsmann Stiftung<br>
-Beteiligungskompass<br>
+Schülerhaushalt<br>
 Carl-Bertelsmann-Str. 256<br>
 33311 Gütersloh<br>
 Germany<br>
